@@ -60,28 +60,28 @@ if scale:
         model_guess.pass_data_from_folder_scaled(folder=f"data/{zone}/Scaled/random-{seed}", missing_rate=mis,
                                                  approach="guess",
                                                  scale_time_period=5,
-                                                 saved_plot_folder=f"Plots/GM_Plots/{zone}_plots/random_{seed}/guess",
+                                                 saved_plot_folder=f"Plots/GM_plots/{zone}_plots/random_{seed}/guess",
                                                  saved_data_folder=f"Results/GM_Results/{zone}_results/random_{seed}",
                                                  bins=np.arange(float(bin[0]), float(bin[1]), float(bin[2])))
     if "exp" in gravity_model:
         model_exp = Js.GM()
         model_exp.pass_data_from_folder_scaled(folder=f"data/{zone}/Scaled/random_{seed}", missing_rate=mis,
                                                approach="exp",
-                                               saved_plot_folder=f"Plots/GM_Plots/{zone}_plots/random_{seed}/exp",
+                                               saved_plot_folder=f"Plots/GM_plots/{zone}_plots/random_{seed}/exp",
                                                saved_data_folder=f"Results/GM_Results/{zone}_results/random_{seed}",
                                                bins=np.arange(float(bin[0]), float(bin[1]), float(bin[2])))
     if "power" in gravity_model:
         model_power = Js.GM()
         model_power.pass_data_from_folder_scaled(folder=f"data/{zone}/Scaled/random_{seed}",
                                                  missing_rate=mis, approach="power",
-                                                 saved_plot_folder=f"Plots/GM_Plots/{zone}_plots/random_{seed}/power",
+                                                 saved_plot_folder=f"Plots/GM_plots/{zone}_plots/random_{seed}/power",
                                                  saved_data_folder=f"Results/GM_Results/{zone}_results/random_{seed}",
                                                  bins=np.arange(float(bin[0]), float(bin[1]), float(bin[2])))
     if "tanner" in gravity_model:
         model_tanner = Js.GM()
         model_tanner.pass_data_from_folder_scaled(folder=f"data/{zone}/Scaled/random_{seed}", missing_rate=mis,
                                                   approach="tanner",
-                                                  saved_plot_folder=f"Plots/GM_Plots/{zone}_plots/random_{seed}/tanner",
+                                                  saved_plot_folder=f"Plots/GM_plots/{zone}_plots/random_{seed}/tanner",
                                                   saved_data_folder=f"Results/GM_Results/{zone}_results/random_{seed}",
                                                   bins=np.arange(float(bin[0]), float(bin[1]), float(bin[2])))
     print("NNS")
@@ -158,7 +158,7 @@ else:
         model_guess = Js.GM()
         model_guess.pass_data_from_folder_not_scaled(folder=f"data/{zone}/Not_Scaled/random_{seed}", missing_rate=mis,
                                                      approach="guess", scale_time_period=5,
-                                                     saved_plot_folder=f"Plots/GM_Plots/{zone}_plots/random_{seed}/guess",
+                                                     saved_plot_folder=f"Plots/GM_plots/{zone}_plots/random_{seed}/guess",
                                                      saved_data_folder=f"Results/GM_Results/{zone}_results/random_{seed}",
                                                      )
     if "exp" in gravity_model:
@@ -166,20 +166,20 @@ else:
         model_exp.pass_data_from_folder_not_scaled(folder=f"data/{zone}/Not_Scaled/random_{seed}",
                                                    missing_rate=mis,
                                                    approach="exp",
-                                                   saved_plot_folder=f"Plots/GM_Plots/{zone}_plots/random_{seed}/exp",
+                                                   saved_plot_folder=f"Plots/GM_plots/{zone}_plots/random_{seed}/exp",
                                                    saved_data_folder=f"Results/GM_Results/{zone}_results/random_{seed}")
     if "power" in gravity_model:
         model_power = Js.GM()
         model_power.pass_data_from_folder_not_scaled(folder=f"data/{zone}/Not_Scaled/random_{seed}",
                                                      missing_rate=mis,
                                                      approach="power",
-                                                     saved_plot_folder=f"Plots/GM_Plots/{zone}_plots/random_{seed}/power",
+                                                     saved_plot_folder=f"Plots/GM_plots/{zone}_plots/random_{seed}/power",
                                                      saved_data_folder=f"Results/GM_Results/{zone}_results/random_{seed}")
     if "tanner" in gravity_model:
         model_tanner = Js.GM()
         model_tanner.pass_data_from_folder_not_scaled(folder=f"data/{zone}/Not_Scaled/random_{seed}", missing_rate=mis,
                                                       approach="tanner",
-                                                      saved_plot_folder=f"Plots/GM_Plots/{zone}_plots/random_{seed}/tanner",
+                                                      saved_plot_folder=f"Plots/GM_plots/{zone}_plots/random_{seed}/tanner",
                                                       saved_data_folder=f"Results/GM_Results/{zone}_results/random_{seed}")
 
     if neural_network:
