@@ -251,12 +251,14 @@ def plot_fn(data, save=True, show=True, model=None, bins=None) -> None:
     plt.ylabel("#")
     plt.title(f'Histogram of Values')
     folder = "Plots"
-    sub_folder = f"{model[:-4]}"
+    zone = model.split("_")[0]
+    seed = model.split("_")[1]
+    sub_folder = f"{zone}_plots/random_{seed}"
     if save:
-        directory = f"{folder}/{sub_folder}"
+        directory = f"{folder}/NN_plots/{sub_folder}"
         if not os.path.exists(directory):
             os.makedirs(directory)
-        fig_r.savefig(f"{folder}/{sub_folder}/{model}mis.png")
+        fig_r.savefig(f"{folder}/NN_plots/{sub_folder}/{model}mis.png")
 
     if show:
         plt.show()
