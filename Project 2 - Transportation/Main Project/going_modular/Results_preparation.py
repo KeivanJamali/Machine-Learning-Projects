@@ -16,7 +16,9 @@ def prepare(zones: list, approaches_list: list, Ml: list, rand: list, miss_rate:
         else:
             approaches = [i for i in approaches_list if i in ["exp", "power", "tanner", "guess"]]
         for zone in zones:
+            print(f"we are in {zone}")
             for approach in approaches:
+                print(approach)
                 data = []
                 for i in rand:
                     if ml == "NN":
@@ -32,6 +34,7 @@ def prepare(zones: list, approaches_list: list, Ml: list, rand: list, miss_rate:
                 mae = pd.DataFrame(0, index=range(len(miss_rate)), columns=["mae"])
                 rmse = pd.DataFrame(0, index=range(len(miss_rate)), columns=["rmse"])
                 for i in range(len(rand)):
+                    print(i)
                     rmse.iloc[:, 0] = rmse.iloc[:, 0] + data[i].iloc[:, 0]
                     mae.iloc[:, 0] = mae.iloc[:, 0] + data[i].iloc[:, 1]
                     r2.iloc[:, 0] = r2.iloc[:, 0] + data[i].iloc[:, 2]

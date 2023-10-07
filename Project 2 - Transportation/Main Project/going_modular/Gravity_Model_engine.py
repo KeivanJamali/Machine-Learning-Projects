@@ -354,13 +354,13 @@ class GM:
 
     def _save_data(self, folder, miss):
         if not os.path.exists(f"{folder}/data_GM_{self.approach}.csv"):
-            data_test = pd.DataFrame({"Predict1": self.predict_od_shaped, "Real1": self.real_od_shaped})
+            data_test = pd.DataFrame({"Predict1.0": self.predict_od_shaped, "Real1.0": self.real_od_shaped})
             data_test.to_csv(f"{folder}/data_GM_{self.approach}.csv")
         else:
             data_last = pd.read_csv(f"{folder}/data_GM_{self.approach}.csv")
             data_last = data_last.iloc[:, 1:]
-            data_last[f"Predict{int(miss * 10)}"] = self.predict_od_shaped
-            data_last[f"Real{int(miss * 10)}"] = self.real_od_shaped
+            data_last[f"Predict{miss * 10:.1f}"] = self.predict_od_shaped[0:len(data_last.index)]
+            data_last[f"Real{miss * 10:.1f}"] = self.real_od_shaped[0:len(data_last.index)]
             data_last.to_csv(f"{folder}/data_GM_{self.approach}.csv")
 
     def _error(self, real_od: pd.DataFrame, od_test: pd.DataFrame, print_it: bool = True) -> None:
@@ -381,7 +381,7 @@ class GM:
         # self.mse_t = sum(self.mse)
         # self.rmse = np.sqrt(self.mse_t)
         self.mae = mean_absolute_error(self.real_od_shaped, self.predict_od_shaped)
-        self.mse = mean_squared_error(self.real_od_shaped, self.predict_od_shaped)
+        self.mse = mean_squared_error(self.real_od_shaped, self.predict_od_shaped, squared=False)
         self.rmse = self.mse ** 0.5
 
         self.r2 = r2_score(self.real_od_shaped, self.predict_od_shaped)
@@ -483,13 +483,13 @@ class GM:
         if model_of_plot is None:
             model_of_plot = ["R2", "MSE", "RMSE", "MAE", "Hist"]
         for i in missing_rate:
-            od = pd.read_csv(f"{folder}/train_data/at_miss{i:.1f}_train_od_matrix.csv", encoding='latin-1')
+            od = pd.read_csv(f"{folder}/train_data/at_miss{i:.2f}_train_od_matrix.csv", encoding='latin-1')
             od.index = od.iloc[:, 0]
             od = od.iloc[:, 1:]
             od.columns = od.columns.astype(int)
             od = od.applymap(lambda x: float(x) if isinstance(x, str) and x.replace('.', '', 1).isdigit() else x)
 
-            test_od = pd.read_csv(f"{folder}/test_data/at_miss{i:.1f}_test_od_matrix.csv", low_memory=False)
+            test_od = pd.read_csv(f"{folder}/test_data/at_miss{i:.2f}_test_od_matrix.csv", low_memory=False)
             test_od.index = test_od.iloc[:, 0]
             test_od = test_od.iloc[:, 1:]
             test_od.columns = test_od.columns.astype(int)
@@ -562,13 +562,13 @@ class GM:
             model_of_plot = ["R2", "MSE", "RMSE", "MAE", "Hist"]
         for i in missing_rate:
             sub_folder = int(i * 100)
-            od = pd.read_csv(f"{folder}/{sub_folder}/at_miss{i:.1f}_train_od_matrix.csv")
+            od = pd.read_csv(f"{folder}/{sub_folder}/at_miss{i:.2f}_train_od_matrix.csv")
             od.index = od.iloc[:, 0]
             od = od.iloc[:, 1:]
             od.columns = od.columns.astype(int)
             od = od.applymap(lambda x: float(x) if isinstance(x, str) and x.replace('.', '', 1).isdigit() else x)
 
-            test_od = pd.read_csv(f"{folder}/{sub_folder}/at_miss{i:.1f}_test_od_matrix.csv", low_memory=False)
+            test_od = pd.read_csv(f"{folder}/{sub_folder}/at_miss{i:.2f}_test_od_matrix.csv", low_memory=False)
             test_od.index = test_od.iloc[:, 0]
             test_od = test_od.iloc[:, 1:]
             test_od.columns = test_od.columns.astype(int)
@@ -631,6 +631,8 @@ class GM:
             fig_r2 = plt.figure(figsize=(14, 6))
             plt.subplot(1, 2, 1)
             plt.scatter(self.real_od_shaped, self.predict_od_shaped)
+            b = max(max(self.real_od_shaped), max(self.predict_od_shaped))
+            plt.scatter([0, b], [0, b])
             plt.xlabel('Actual Values')
             plt.ylabel('Predicted Values')
             plt.title(f'Scatter Plot of Actual vs Predicted Values (R2 score: {self.r2:.2f})')

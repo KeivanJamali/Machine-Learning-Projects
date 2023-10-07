@@ -104,13 +104,13 @@ class DataLoader_Me:
         self.travel_time = pd.read_csv(f"{folder_name}/travel_time_matrix.csv")
         self.travel_time.index = self.travel_time.iloc[:, 0]
         self.travel_time = self.travel_time.iloc[:, 1:]
-        self.train_data = pd.read_csv(f"{folder_name}/at_miss{miss_rate}_train_od_matrix.csv")
+        self.train_data = pd.read_csv(f"{folder_name}/at_miss{miss_rate:.2f}_train_od_matrix.csv")
         self.train_data.index = self.train_data.iloc[:, 0]
         self.train_data = self.train_data.iloc[:, 1:]
-        self.val_data = pd.read_csv(f"{folder_name}/at_miss{miss_rate}_val_od_matrix.csv", low_memory=False)
+        self.val_data = pd.read_csv(f"{folder_name}/at_miss{miss_rate:.2f}_val_od_matrix.csv", low_memory=False)
         self.val_data.index = self.val_data.iloc[:, 0]
         self.val_data = self.val_data.iloc[:, 1:]
-        self.test_data = pd.read_csv(f"{folder_name}/at_miss{miss_rate}_test_od_matrix.csv", low_memory=False)
+        self.test_data = pd.read_csv(f"{folder_name}/at_miss{miss_rate:.2f}_test_od_matrix.csv", low_memory=False)
         self.test_data.index = self.test_data.iloc[:, 0]
         self.test_data = self.test_data.iloc[:, 1:]
 
@@ -202,7 +202,7 @@ def evaluate_model(model: torch.nn.Module, val: torch.utils.data.DataLoader) -> 
             real.append(y)
         val_mae /= len(val)
         val_mse /= len(val)
-        val_rmse = val_mse ** 0.5
+        val_rmse = val_mse  # because squared is True
         data_nums = [np.array(predict).reshape(-1, 1), np.array(real).reshape(-1, 1)]
         val_r2 = r2_score(data_nums[1], data_nums[0])
     return [val_rmse, val_mae, val_r2], data_nums
@@ -231,10 +231,11 @@ def test_model(model: torch.nn.Module, test: torch.utils.data.DataLoader) -> [Li
 
 
 def plot_fn(data, save=True, show=True, model=None, bins=None) -> None:
-    """Plot R2 and Histogram."""
+    """Plot R2 and Histogram.
+    :param data: [predict, real]"""
     fig_r = plt.figure(figsize=(14, 6))
     plt.subplot(1, 2, 1)
-    plt.scatter(data[0].squeeze(), data[1].squeeze())
+    plt.scatter(data[1].squeeze(), data[0].squeeze())
     b = max(max(data[0]), max(data[1]))
     plt.scatter([0, b[0]], [0, b[0]])
     plt.xlabel('Actual Values')
@@ -251,8 +252,12 @@ def plot_fn(data, save=True, show=True, model=None, bins=None) -> None:
     plt.ylabel("#")
     plt.title(f'Histogram of Values')
     folder = "Plots"
-    zone = model.split("_")[0]
-    seed = model.split("_")[1]
+    if model.split("_")[0] == "Chicago":
+        zone = model.split("_")[0] + "_" + model.split("_")[1]
+        seed = model.split("_")[2]
+    else:
+        zone = model.split("_")[0]
+        seed = model.split("_")[1]
     sub_folder = f"{zone}_plots/random_{seed}"
     if save:
         directory = f"{folder}/NN_plots/{sub_folder}"
