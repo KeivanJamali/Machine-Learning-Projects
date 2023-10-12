@@ -224,7 +224,7 @@ def test_model(model: torch.nn.Module, test: torch.utils.data.DataLoader) -> [Li
             real.append(y)
         test_mae /= len(test)
         test_mse /= len(test)
-        test_rmse = test_mse ** 0.5
+        test_rmse = test_mse # Because Squaer is True
         data_nums = [np.array(predict).reshape(-1, 1), np.array(real).reshape(-1, 1)]
         test_r2 = r2_score(data_nums[1], data_nums[0])
     return [test_rmse, test_mae, test_r2], data_nums

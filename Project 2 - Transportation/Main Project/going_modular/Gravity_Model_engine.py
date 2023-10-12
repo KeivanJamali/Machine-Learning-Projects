@@ -374,7 +374,7 @@ class GM:
 
         self.predict_od_shaped = self.od_matrix_predicted.values[mask]
         self.real_od_shaped = real_od.values[mask]
-        # self.mae = np.abs(self.predict_od_shaped - self.real_od_shaped)
+        self.mae = np.abs(self.predict_od_shaped - self.real_od_shaped)
         # self.mae_t = sum(self.mae)
         # self.mse = np.power(self.predict_od_shaped - self.real_od_shaped, 2) / len(self.predict_od_shaped)
         # self.mse = self.mse.astype(float)
@@ -483,7 +483,7 @@ class GM:
         if model_of_plot is None:
             model_of_plot = ["R2", "MSE", "RMSE", "MAE", "Hist"]
         for i in missing_rate:
-            od = pd.read_csv(f"{folder}/train_data/at_miss{i:.2f}_train_od_matrix.csv", encoding='latin-1')
+            od = pd.read_csv(f"{folder}/train_data/at_miss{i:.2f}_train_od_matrix.csv", low_memory=False)
             od.index = od.iloc[:, 0]
             od = od.iloc[:, 1:]
             od.columns = od.columns.astype(int)
@@ -562,7 +562,7 @@ class GM:
             model_of_plot = ["R2", "MSE", "RMSE", "MAE", "Hist"]
         for i in missing_rate:
             sub_folder = int(i * 100)
-            od = pd.read_csv(f"{folder}/{sub_folder}/at_miss{i:.2f}_train_od_matrix.csv")
+            od = pd.read_csv(f"{folder}/{sub_folder}/at_miss{i:.2f}_train_od_matrix.csv", low_memory=False)
             od.index = od.iloc[:, 0]
             od = od.iloc[:, 1:]
             od.columns = od.columns.astype(int)
