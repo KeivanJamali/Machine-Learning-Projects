@@ -4,7 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dad042aa-356a-437a-acd8-e3457c040c1e" name="Changes" comment="" />
+    <list default="true" id="dad042aa-356a-437a-acd8-e3457c040c1e" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project 5 - LOS Prediction/Paper/Data/A systematic review of machine learning classification methodologies for modelling passenger mode choice.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project 5 - LOS Prediction/Paper/Data/Comparing hundreds of machine learning classifiers and discrete choice models in predicting travel behavior An empirical benchmark.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project 5 - LOS Prediction/Paper/Data/Machine learning travel mode choices Comparing the performance of an extreme gradient boosting model with a multinomial logit model.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project 5 - LOS Prediction/Paper/Data/Modelling mode choice with machine learning algorithms.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project 5 - LOS Prediction/Paper/Data/Predicting travel mode choice with 86 machine learning classifiers An empirical benchmark study.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project 5 - LOS Prediction/Paper/Data/Using ensembles of decision trees to predict transport mode choice decisions Effects on predictive success and uncertainty estimates.pdf" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -16,6 +25,9 @@
         <option value="Jupyter Notebook" />
       </list>
     </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -33,7 +45,11 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
 }</component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -49,7 +65,14 @@
       <workItem from="1697720960065" duration="591000" />
       <workItem from="1697813300969" duration="2519000" />
       <workItem from="1697899907899" duration="36000" />
+      <workItem from="1698759507456" duration="4304000" />
+      <workItem from="1699029120368" duration="9000" />
+      <workItem from="1699253600053" duration="199000" />
+      <workItem from="1699342212170" duration="644000" />
     </task>
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
 </project>
