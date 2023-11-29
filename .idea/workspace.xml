@@ -5,14 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dad042aa-356a-437a-acd8-e3457c040c1e" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Project 2 - Transportation/Main Project/Results Presentation.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Project 5 - LOS Prediction/Main Project/DataLoader/DataLoader.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Project 5 - LOS Prediction/Main Project/DataLoader/test1.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Project 5 - LOS Prediction/Main Project/DataLoader/test2.ipynb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project 5 - LOS Prediction/Paper/Data/A systematic review of machine learning classification methodologies for modelling passenger mode choice.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project 5 - LOS Prediction/Paper/Data/Comparing hundreds of machine learning classifiers and discrete choice models in predicting travel behavior An empirical benchmark.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project 5 - LOS Prediction/Paper/Data/Machine learning travel mode choices Comparing the performance of an extreme gradient boosting model with a multinomial logit model.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project 5 - LOS Prediction/Paper/Data/Modelling mode choice with machine learning algorithms.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project 5 - LOS Prediction/Paper/Data/Predicting travel mode choice with 86 machine learning classifiers An empirical benchmark study.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project 5 - LOS Prediction/Paper/Data/Using ensembles of decision trees to predict transport mode choice decisions Effects on predictive success and uncertainty estimates.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project 2 - Transportation/Main Project/All_Results.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Project 2 - Transportation/Main Project/All_Results.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project 5 - LOS Prediction/Main Project/Raw_Data/Description.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project 5 - LOS Prediction/Main Project/Raw_Data/metr-la.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project 5 - LOS Prediction/Paper/Data/Research Project_interview_version.pptx" beforeDir="false" afterPath="$PROJECT_DIR$/Project 5 - LOS Prediction/Paper/Data/Research Project_interview_version.pptx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,6 +24,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Python Script" />
         <option value="Jupyter Notebook" />
       </list>
     </option>
@@ -36,12 +39,16 @@
   &quot;associatedIndex&quot;: 3
 }</component>
   <component name="ProjectId" id="2WhmM2UlhFK5rqqagaspeO7QXej" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
@@ -49,9 +56,43 @@
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pathVariables&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\All Python\Machine-Learning-Projects\Project 5 - LOS Prediction\Main Project\DataLoader" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="ML_vir_nn" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Machine-Learning-Projects" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Project 2 - Transportation/Main Project" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Project 2 - Transportation/Main Project/ML_vir_nn.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.ML_vir_nn" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -69,10 +110,25 @@
       <workItem from="1699029120368" duration="9000" />
       <workItem from="1699253600053" duration="199000" />
       <workItem from="1699342212170" duration="644000" />
+      <workItem from="1700131399877" duration="951000" />
+      <workItem from="1700132843233" duration="529000" />
+      <workItem from="1700133387834" duration="126000" />
+      <workItem from="1700142633318" duration="32000" />
+      <workItem from="1700155362245" duration="2053000" />
+      <workItem from="1700212938892" duration="71000" />
+      <workItem from="1700214587147" duration="174000" />
+      <workItem from="1700740942826" duration="4961000" />
+      <workItem from="1700812109059" duration="31000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/Machine_Learning_Projects$ML_vir_nn.coverage" NAME="ML_vir_nn Coverage Results" MODIFIED="1700133466340" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Project 2 - Transportation/Main Project" />
   </component>
 </project>
