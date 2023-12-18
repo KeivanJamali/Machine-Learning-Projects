@@ -22,7 +22,7 @@ class GreenShield_EXP:
         self.r = r
         self.q = q
 
-    def fit(self, p0=None) -> str:
+    def fit(self, p0=None):
         """
         params:
         p0: list = initial values - must be 3
@@ -30,7 +30,20 @@ class GreenShield_EXP:
         """
         if p0 is None:
             p0 = [0, 0, 0]
-        try:
+        # try:
+        if self.k_j is None:
+            fit_results = curve_fit(self._greenshield_exp2, [self.u, self.r], self.q, p0=p0, full_output=True)
+            msg = fit_results[3]
+            self.parameters["a"] = fit_results[0][0]
+            self.parameters["b"] = fit_results[0][1]
+            self.parameters["c"] = fit_results[0][2]
+            self.parameters["k_j"] = fit_results[0][3]
+
+            self.predicted_q = self._greenshield_exp2([self.u, self.r], self.parameters["a"],
+                                                      self.parameters["b"], self.parameters["c"], self.parameters["k_j"])
+            print(msg)
+
+        else:
             fit_results = curve_fit(self._greenshield_exp, [self.k_j, self.u, self.r], self.q, p0=p0, full_output=True)
             msg = fit_results[3]
             self.parameters["a"] = fit_results[0][0]
@@ -39,9 +52,9 @@ class GreenShield_EXP:
 
             self.predicted_q = self._greenshield_exp([self.k_j, self.u, self.r], self.parameters["a"],
                                                      self.parameters["b"], self.parameters["c"])
-            return msg
-        except:
-            return "[ERROR] There is something wrong in fitting!"
+            print(msg)
+        # except:
+        #     print("[ERROR] There is something wrong in fitting!")
 
     @staticmethod
     def _greenshield_exp(x, a: float, b: float, c: float) -> float:
@@ -60,10 +73,26 @@ class GreenShield_EXP:
         q = x[0] * (x[1] - (x[1] ** 2) * (np.exp(a * (x[2] ** b) - c)))
         return q
 
+    @staticmethod
+    def _greenshield_exp2(x, a: float, b: float, c: float, k_j: float) -> float:
+        """
+        params:
+        x: list: include [u, r]
+        k_j: float: Jam density of the traffic flow.
+        u: float: Space mean speed of the traffic flow. (km/hour)
+        r: float: Rainfall intensity. (mm)
+
+        a: float: calibration parameter of model.
+        b: float: calibration parameter of model.
+        c: float: calibration parameter of model.
+        returns: q: flow: Traffic flow. (veh/hour)
+        """
+        q = k_j * (x[0] - (x[0] ** 2) * (np.exp(a * (x[1] ** b) - c)))
+        return q
+
     def plot(self):
         plt.scatter(self.u, self.q, label='Data')
-        plt.plot(self.u, self._greenshield_exp([self.k_j, self.u, self.r], self.parameters["a"], self.parameters["b"],
-                                               self.parameters["c"]), color='red', label='Fit')
+        plt.scatter(self.u, self.predicted_q, color='red', label='Fit')
         plt.legend()
         plt.xlabel('x')
         plt.ylabel('y')
@@ -73,7 +102,9 @@ class GreenShield_EXP:
         print("Fitted Parameters:")
         print("a =", self.parameters["a"], end="  ===  ")
         print("b =", self.parameters["b"], end="  ===  ")
-        print("c =", self.parameters["c"])
+        print("c =", self.parameters["c"], end=" === ")
+        if self.k_j:
+            print("k_j =", self.parameters["k_j"])
         print("____________________________________________________")
         print("Error Parameters:")
         print("R2 =", self.Error["R2"], end="  ===  ")
