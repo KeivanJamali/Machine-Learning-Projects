@@ -41,11 +41,12 @@ class DataLoader_MultiCity:
         self._transform_hourly_data()
         print(f"[INFO] Data #transformed# successfully.")
         ########################### should change
-        self.transformed_data = self.transformed_data.iloc[:len(self.weather_data), :]
-        self.weather_data["interval"] = self.transformed_data["interval"]
+        self.weather_data["hour"] = self.weather_data["interval"] // 3600
+        self.weather_data["date"] = self.weather_data["day"] + pd.to_timedelta(self.weather_data["hour"],
+                                                                                     unit="h")
         ###########################
-        self.merged_data = self.transformed_data.merge(self.weather_data[["day", "interval", "rainfall"]],
-                                                       on=["day", "interval"], how="left")
+        self.merged_data = self.transformed_data.merge(self.weather_data[["date", "rainfall"]],
+                                                       on=["date"], how="left")
         print(f"[INFO] Data merged with weather successfully.")
         self.train_data, self.val_data, self.test_data = self._split_scale(self.merged_data, train_size=0.8,
                                                                            val_size=0.1, test_size=0.1)
@@ -85,6 +86,7 @@ class DataLoader_MultiCity:
             else:
                 raise KeyError(f"There is no ##{c}## in the list. please pick one of these cities: {self.cities}")
 
+        merged_data.drop(merged_data[merged_data["error"] == 1].index, inplace=True)  # drop Error = 1
         new_data = DataLoader_MultiCity(data=merged_data, detectors_data=self.detectors_data,
                                         weather_data=self.weather_data, full_data=True)
         print(f"[INFO] {chosen_city} was/were picked successfully.")
@@ -110,17 +112,11 @@ class DataLoader_MultiCity:
     def _transform_hourly_data(self):
         self.transformed_data = self.data.copy()  # make a copy.
         self.transformed_data["day"] = pd.to_datetime(self.transformed_data["day"])  # date will be datetime now.
-        self.transformed_data = self.transformed_data.iloc[:, [0, 1, 3, 4]]  # get columns [day, interval, flow, occ]
-
-        interval_difference = self.transformed_data.iloc[1, 1] - self.transformed_data.iloc[0, 1]  # fine distance
-        golden_num = 3600 // interval_difference
-        self.transformed_data = self.transformed_data.groupby(self.transformed_data.index // golden_num).transform(
-            "mean").iloc[[i for i in range(0, len(self.data), golden_num)], :]  # merge data in hour unit
-
-        self.transformed_data["occ"] = self.transformed_data["occ"] / 1000  # max was 999.99.
-
-        # mask = self.transformed_data["occ"] == 0.0
-        # self.transformed_data[mask] = 1
+        self.transformed_data["hour"] = self.transformed_data["interval"] // 3600
+        self.transformed_data = self.transformed_data[["day", "hour", "flow", "occ"]]  # get columns
+        self.transformed_data["date"] = self.transformed_data["day"] + pd.to_timedelta(self.transformed_data["hour"],
+                                                                                     unit="h")
+        self.transformed_data = self.transformed_data.groupby(["day", "hour"]).mean()  # merge data in hour unit
         print(f"[INFO] data loaded successfully.")
         self._occupancy_to_speed(car_length=self.car_length)  # find density and speed and add columns.
         print(f"[INFO] speed and density produced successfully.")
@@ -131,6 +127,7 @@ class DataLoader_MultiCity:
         self.transformed_data["density"] = self.transformed_data["occ"].apply(
             lambda x: (x * 1) / (car_length + detector_length))
         self.transformed_data["speed"] = self.transformed_data["flow"] / self.transformed_data["density"]
+
 
     def _save(self):
         self.train_data.to_csv(self.path / "traffic_data_luzern_train.csv")

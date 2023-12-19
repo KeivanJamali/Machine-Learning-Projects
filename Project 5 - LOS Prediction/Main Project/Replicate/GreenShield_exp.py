@@ -103,8 +103,10 @@ class GreenShield_EXP:
         print("a =", self.parameters["a"], end="  ===  ")
         print("b =", self.parameters["b"], end="  ===  ")
         print("c =", self.parameters["c"], end=" === ")
-        if self.k_j:
+        try:
             print("k_j =", self.parameters["k_j"])
+        except:
+            pass
         print("____________________________________________________")
         print("Error Parameters:")
         print("R2 =", self.Error["R2"], end="  ===  ")

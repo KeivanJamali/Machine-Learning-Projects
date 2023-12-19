@@ -5,9 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dad042aa-356a-437a-acd8-e3457c040c1e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Project 5 - LOS Prediction/Main Project/DataLoader/luzern-40000.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project 5 - LOS Prediction/Main Project/DataLoader/my_weather.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project 5 - LOS Prediction/Main Project/DataLoader/weather.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Project 5 - LOS Prediction/Main Project/DataLoader/DataLoader.py" beforeDir="false" afterPath="$PROJECT_DIR$/Project 5 - LOS Prediction/Main Project/DataLoader/DataLoader.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Project 5 - LOS Prediction/Main Project/DataLoader/Data_Loader.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Project 5 - LOS Prediction/Main Project/DataLoader/Data_Loader.ipynb" afterDir="false" />
@@ -140,6 +137,7 @@
       <workItem from="1702806045587" duration="25445000" />
       <workItem from="1702877536349" duration="4454000" />
       <workItem from="1702893691494" duration="2229000" />
+      <workItem from="1703002305782" duration="2556000" />
     </task>
     <servers />
   </component>
