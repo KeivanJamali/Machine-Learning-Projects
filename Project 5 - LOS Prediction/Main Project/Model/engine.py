@@ -1,5 +1,6 @@
 import torch
 from tqdm.auto import tqdm
+from torch.utils.tensorboard import SummaryWriter
 
 
 def train_step(model: torch.nn.Module,
@@ -49,13 +50,21 @@ def train(model: torch.nn.Module,
           val_dataloader: torch.utils.data.DataLoader,
           loss_fn: torch.nn.Module,
           optimizer: torch.optim.Optimizer,
-          epochs: int = 32,
+          epochs: int,
+          experiment_name: str,
+          model_name: str,
+          early_stop_patience: int = None,
           device: str = "cpu") -> dict[str, list]:
+    best_loss = float("inf")  # for early stopping
+    early_stop = 0
     results = {"train_loss": [],
                "train_acc": [],
                "val_loss": [],
                "val_acc": []}
     model.to(device)
+
+    writer = create_writer(experiment_name=experiment_name,
+                           model_name=model_name, extra=str(epochs)+"epoch")
 
     for epoch in tqdm(range(epochs)):
         train_loss, train_acc = train_step(model=model,
@@ -75,5 +84,44 @@ def train(model: torch.nn.Module,
         results["train_loss"].append(train_loss)
         results["val_acc"].append(val_acc)
         results["val_loss"].append(val_loss)
+        if writer:
+            writer.add_scalars(main_tag="Loss",
+                               tag_scalar_dict={"Train_loss": train_loss,
+                                                "Validation_Loss": val_loss},
+                               global_step=epoch)
+            writer.add_scalars(main_tag="Accuracy",
+                               tag_scalar_dict={"Train_accuracy": train_acc,
+                                                "Validation_accuracy": val_acc},
+                               global_step=epoch)
+            writer.add_graph(model=model,
+                             input_to_model=torch.randn(32, 6).to(device))
+            writer.close()
+        # early stopping
+        if val_loss <= best_loss:
+            best_loss = val_loss
+            early_stop = 0
+        else:
+            early_stop += 1
+        if early_stop_patience and early_stop >= early_stop_patience:
+            print(f"Early_Stop_at_ {epoch} Epoch")
+            break
 
     return results
+
+
+def create_writer(experiment_name: str,
+                  model_name: str,
+                  extra: str = None):
+    """Creates torch.utils.tensorboard.writer.SummaryWriter() instance tracking to a specific directory."""
+    from datetime import datetime
+    import os
+    # get timestamp of current date in reverse order : YYYY_MM_DD | datetime.now().strftime("%Y-%m-%d-%H-%M-%S") |
+    timestamp = datetime.now().strftime("%Y-%m-%d-%H")
+
+    # create log directory
+    if extra:
+        log_dir = os.path.join("runs", timestamp, experiment_name, model_name, extra)
+    else:
+        log_dir = os.path.join("runs", timestamp, experiment_name, model_name)
+    print(f"[INFO] create SummaryWriter saving to {log_dir}")
+    return SummaryWriter(log_dir=log_dir)

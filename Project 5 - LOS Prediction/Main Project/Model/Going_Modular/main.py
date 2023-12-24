@@ -23,7 +23,7 @@ if args.seed == -379:  # default of seed
     seed = random.choice(range(1000))
 else:
     seed = args.seed
-if args.early_stopping > 0:
+if args.early_stop > 0:
     early_stop_count = args.early_stop
 else:
     early_stop_count = None
@@ -45,7 +45,7 @@ NUM_EPOCHS = int(hyper_parameters[1])
 model1 = model_architecture.LOS_Classification_V0(in_put=INPUT_SHAPE, hidden_units=HIDDEN_UNITS, out_put=OUTPUT_SHAPE)
 
 loss_fn = nn.CrossEntropyLoss()
-optimizer = torch.optim.Adam(params=model1.parameters(), lr=hyper_parameters[2])
+optimizer = torch.optim.Adam(params=model1.parameters(), lr=float(hyper_parameters[2]))
 
 model1_results = engine.train(model=model1,
                               train_dataloader=train_dataloader,
