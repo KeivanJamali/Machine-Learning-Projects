@@ -93,8 +93,6 @@ def train(model: torch.nn.Module,
                                tag_scalar_dict={"Train_accuracy": train_acc,
                                                 "Validation_accuracy": val_acc},
                                global_step=epoch)
-            writer.add_graph(model=model,
-                             input_to_model=torch.randn(32, 6).to(device))
             writer.close()
         # early stopping
         if val_loss <= best_loss:
