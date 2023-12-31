@@ -1,0 +1,1001 @@
+Event_name,Date,Duration,Number_of_Attendance,International,Expenses,Place,Renting,Capacity,Sound_System_quality
+Global Summit Data Science,2019-01-04,180,94,True,69,Mechanic,30,150,5
+Virtual Event Sentiment Analysis,2019-01-04,292,223,True,15,Jaber,20,280,5
+International Congress Natural Language Processing,2019-01-09,243,60,True,108,Kahroba,120,100,3
+International Workshop Smart Cities,2019-01-11,281,143,False,59,Mechanic,30,150,5
+Global Summit Machine Learning,2019-01-17,74,43,False,17,Mechanic,30,150,5
+International Workshop Genetic Algorithms,2019-01-19,171,100,True,157,Kahroba,120,100,3
+Symposium Machine Vision,2019-01-20,191,67,False,30,Borgeii,12,90,2
+Annual Symposium Explainable Robotics,2019-01-21,280,12,True,98,Kahroba,120,100,3
+Technical Colloquium Deep Learning,2019-01-23,166,46,True,12,Kahroba,120,100,3
+Symposium Augmented Reality,2019-01-24,167,85,True,14,Mechanic,30,150,5
+Forum Cloud Computing,2019-01-24,188,65,False,11,Sabz,10,120,1
+International Workshop Sports Analytics,2019-01-27,272,37,False,96,Theater,18,150,2
+Annual Symposium Internet of Things,2019-02-03,133,28,True,13,Theater,18,150,2
+Annual Symposium Social Network Analysis,2019-02-03,70,61,False,193,Kahroba,120,100,3
+Conference Artificial Intelligence,2019-02-04,191,86,False,640,Theater,18,150,2
+Conference Swarm Intelligence,2019-02-07,236,78,False,172,Kahroba,120,100,3
+Annual Computer-Assisted Diagnosis,2019-02-12,118,627,False,965,Jabari,10,1000,1
+Annual Symposium Cloud Computing,2019-02-13,91,42,False,11,Kahroba,120,100,3
+Congress Information Retrieval,2019-02-13,36,92,True,24,Mechanic,30,150,5
+Global Summit Text Mining,2019-02-15,194,73,True,554,Mechanic,30,150,5
+Expert Panel Computer-Assisted Language Learning,2019-02-19,149,264,False,106,Jaber,20,280,5
+International Congress Computer-Assisted Language Learning,2019-02-21,275,14,False,28,Borgeii,12,90,2
+Forum Big Data,2019-02-27,98,20,False,26,Kahroba,120,100,3
+Global Explainable AI,2019-03-03,31,26,True,877,Theater,18,150,2
+International Congress Sports Analytics,2019-03-04,192,117,False,84,Sabz,10,120,1
+International Congress Artificial Intelligence,2019-03-06,138,95,True,18,Sabz,10,120,1
+International Artificial Intelligence,2019-03-10,198,39,False,10,Sabz,10,120,1
+Annual Machine Learning,2019-03-10,220,78,False,74,Theater,18,150,2
+Hackathon Augmented Reality,2019-03-13,245,139,False,72,Theater,18,150,2
+Expert Panel Human-Computer Interaction,2019-03-13,149,101,True,161,Theater,18,150,2
+International Deep Learning,2019-03-14,58,80,False,30,Kahroba,120,100,3
+Annual Symposium Explainable AI,2019-03-16,163,117,False,19,Theater,18,150,2
+International Workshop Healthcare,2019-03-17,117,80,True,507,Mechanic,30,150,5
+Forum Natural Language Processing,2019-03-18,179,22,False,1422,Kahroba,120,100,3
+Forum Computer Graphics,2019-03-20,157,105,True,15,Theater,18,150,2
+Conference Recommender Systems,2019-03-20,131,126,False,998,Jaber,20,280,5
+Industry Expo Speech Recognition,2019-03-21,253,46,False,24,Sabz,10,120,1
+World Computer-Assisted Diagnosis,2019-03-30,139,10,True,10,Borgeii,12,90,2
+Summit Predictive Analytics,2019-04-01,73,926,True,464,Jabari,10,1000,1
+Academic Seminar Natural Language Processing,2019-04-02,153,36,True,174,Mechanic,30,150,5
+Forum Healthcare,2019-04-03,222,101,False,55,Theater,18,150,2
+International Congress Quantum Computing,2019-04-04,300,226,False,25,Jaber,20,280,5
+Summit Internet of Things,2019-04-05,274,148,False,20,Rabiee,25,300,4
+Annual Social Network Analysis,2019-04-07,59,52,False,26,Theater,18,150,2
+Congress Computer-Aided Drug Design,2019-04-08,77,196,False,627,Jaber,20,280,5
+World Forum Deep Learning,2019-04-08,59,85,False,94,Borgeii,12,90,2
+Thought Leadership Retreat Internet of Things,2019-04-11,297,68,False,27,Kahroba,120,100,3
+Summit Sports Analytics,2019-04-11,238,101,True,16,Sabz,10,120,1
+Symposium Computer-Assisted Diagnosis,2019-04-12,153,218,False,18,Jaber,20,280,5
+Global Summit Data Mining,2019-04-13,196,286,True,26,Rabiee,25,300,4
+Virtual Event Healthcare Informatics,2019-04-13,160,82,True,93,Jaber,20,280,5
+Conference Sports Analytics,2019-04-15,153,99,False,29,Jaber,20,280,5
+Industry Expo Bioinformatics,2019-04-17,220,82,False,15,Jaber,20,280,5
+Thought Leadership Retreat Natural Language Processing,2019-04-18,189,305,False,10,Jabari,10,1000,1
+International Workshop Computer-Aided Drug Design,2019-04-18,201,61,False,27,Borgeii,12,90,2
+Summit Social Network Analysis,2019-04-18,209,97,False,189,Rabiee,25,300,4
+Expert Panel Explainable AI,2019-04-20,197,19,True,12,Borgeii,12,90,2
+Summit Information Retrieval,2019-04-22,70,66,True,172,Borgeii,12,90,2
+Industry Expo Precision Medicine,2019-04-25,209,390,True,17,Jabari,10,1000,1
+Thought Leadership Retreat Natural Language Understanding,2019-05-01,225,143,False,30,Jaber,20,280,5
+Academic Seminar Edge Computing,2019-05-05,78,84,False,16,Theater,18,150,2
+National Natural Language Processing,2019-05-07,132,210,False,23,Jaber,20,280,5
+Annual Symposium Healthcare Informatics,2019-05-08,231,64,False,20,Kahroba,120,100,3
+World Cryptography,2019-05-14,41,47,True,16,Mechanic,30,150,5
+International Congress Computer-Aided Drug Design,2019-05-15,181,142,True,413,Jaber,20,280,5
+Expert Panel Robotics,2019-05-16,255,134,False,16,Mechanic,30,150,5
+Summit Intelligent Transportation Systems,2019-05-20,55,139,False,20,Theater,18,150,2
+Annual Symposium Speech Recognition,2019-05-21,202,27,False,110,Kahroba,120,100,3
+Technical Colloquium Augmented Reality,2019-05-21,104,38,True,12,Kahroba,120,100,3
+National Conference Cryptography,2019-05-22,106,189,False,54,Jaber,20,280,5
+World Forum Network Security,2019-05-24,58,47,False,15,Borgeii,12,90,2
+Summit Network Security,2019-05-27,53,127,False,24,Mechanic,30,150,5
+World Bioinformatics,2019-05-29,299,42,False,1478,Mechanic,30,150,5
+International Congress Healthcare Informatics,2019-05-29,290,703,False,24,Jabari,10,1000,1
+Expert Panel Cognitive Computing,2019-05-31,70,511,True,1025,Jabari,10,1000,1
+World Forum Social Network Analysis,2019-06-02,99,124,True,14,Theater,18,150,2
+National Conference Virtual Reality,2019-06-03,65,43,True,498,Sabz,10,120,1
+International Congress Computer Graphics,2019-06-13,120,99,False,13,Theater,18,150,2
+Technical Colloquium Cognitive Computing,2019-06-16,262,90,True,20,Kahroba,120,100,3
+Symposium Cloud Computing,2019-06-19,244,289,True,1180,Rabiee,25,300,4
+Global Computer-Assisted Language Learning,2019-06-20,153,824,True,21,Jabari,10,1000,1
+Virtual Event Computer-Aided Drug Design,2019-06-21,219,132,True,24,Theater,18,150,2
+Industry Expo Virtual Reality,2019-06-23,177,20,True,179,Rabiee,25,300,4
+International Workshop Autonomous Systems,2019-06-24,169,157,False,1400,Rabiee,25,300,4
+Global Summit Software Engineering,2019-06-26,80,61,True,180,Sabz,10,120,1
+Virtual Event Predictive Analytics,2019-07-02,193,40,True,10,Kahroba,120,100,3
+Global Healthcare Informatics,2019-07-05,204,46,False,17,Kahroba,120,100,3
+Virtual Event Recommender Systems,2019-07-05,126,57,True,74,Borgeii,12,90,2
+World Forum Human-Computer Interaction,2019-07-08,49,51,False,15,Borgeii,12,90,2
+Global Summit Bioinformatics,2019-07-12,274,824,True,15,Jabari,10,1000,1
+International Smart Cities,2019-07-12,208,288,True,29,Rabiee,25,300,4
+Technical Colloquium Predictive Analytics,2019-07-13,78,108,False,56,Sabz,10,120,1
+Global Robotics,2019-07-15,175,169,False,25,Jaber,20,280,5
+International Federated Learning,2019-07-15,93,33,True,633,Mechanic,30,150,5
+Industry Expo Knowledge Graphs,2019-07-15,131,194,True,546,Jaber,20,280,5
+Virtual Event Knowledge Graphs,2019-07-15,224,94,False,18,Theater,18,150,2
+Thought Leadership Retreat Computational Biology,2019-07-16,142,98,True,839,Kahroba,120,100,3
+Hackathon Machine Learning,2019-07-17,106,21,False,30,Sabz,10,120,1
+Annual Natural Language Processing,2019-07-17,45,12,True,14,Borgeii,12,90,2
+World Forum Urban Analytics,2019-07-19,159,122,True,55,Mechanic,30,150,5
+National Autonomous Systems,2019-07-22,133,153,True,27,Jaber,20,280,5
+Summit Software Engineering,2019-07-22,165,14,False,976,Borgeii,12,90,2
+Virtual Event Network Security,2019-07-23,63,728,True,11,Jabari,10,1000,1
+International Congress Cryptography,2019-07-24,62,68,True,161,Borgeii,12,90,2
+National Sentiment Analysis,2019-07-24,268,22,False,27,Sabz,10,120,1
+International Congress Natural Language Understanding,2019-07-29,241,275,False,13,Jaber,20,280,5
+National Text Mining,2019-08-01,212,21,True,27,Jaber,20,280,5
+Global Artificial Intelligence,2019-08-01,48,35,False,13,Theater,18,150,2
+Annual Symposium Natural Language Processing,2019-08-02,256,52,False,187,Rabiee,25,300,4
+World Forum High-Performance Computing,2019-08-02,178,54,False,767,Sabz,10,120,1
+Summit Internet of Things Applications,2019-08-03,190,94,True,90,Kahroba,120,100,3
+Virtual Event Computational Biology,2019-08-03,286,13,True,17,Kahroba,120,100,3
+Expert Panel Recommender Systems,2019-08-04,198,73,True,400,Theater,18,150,2
+Industry Expo Internet of Medical Things,2019-08-09,288,37,False,56,Rabiee,25,300,4
+Thought Leadership Retreat Edge Computing,2019-08-10,297,145,True,190,Mechanic,30,150,5
+International Quantum Machine Learning,2019-08-11,77,587,True,154,Jabari,10,1000,1
+Global Big Data,2019-08-11,129,313,False,85,Jabari,10,1000,1
+Academic Seminar Smart Cities,2019-08-12,253,82,True,17,Borgeii,12,90,2
+Forum Recommender Systems,2019-08-14,90,240,True,670,Jabari,10,1000,1
+Conference Natural Language Processing,2019-08-14,105,57,True,571,Mechanic,30,150,5
+Academic Seminar Machine Learning,2019-08-15,167,506,False,27,Jabari,10,1000,1
+National High-Performance Computing,2019-08-17,269,34,True,85,Borgeii,12,90,2
+Industry Expo Intelligent Transportation Systems,2019-08-17,54,57,True,728,Jaber,20,280,5
+Annual Intelligent Transportation Systems,2019-08-17,235,74,False,10,Kahroba,120,100,3
+Industry Expo Internet of Things,2019-08-19,214,153,True,682,Jaber,20,280,5
+Hackathon Network Security,2019-08-19,101,34,True,556,Sabz,10,120,1
+Academic Seminar Healthcare Informatics,2019-08-20,265,68,True,25,Borgeii,12,90,2
+Hackathon Recommender Systems,2019-08-30,244,824,True,58,Jabari,10,1000,1
+Global Summit Genetic Algorithms,2019-08-30,295,83,False,392,Borgeii,12,90,2
+Congress Swarm Intelligence,2019-08-31,217,98,True,108,Kahroba,120,100,3
+National Computer-Assisted Language Learning,2019-09-01,121,69,False,159,Sabz,10,120,1
+Expert Panel Social Network Analysis,2019-09-01,281,55,False,14,Sabz,10,120,1
+Annual Symposium Artificial Intelligence,2019-09-02,274,82,False,103,Kahroba,120,100,3
+Annual Reinforcement Learning,2019-09-02,103,125,True,487,Rabiee,25,300,4
+Hackathon Human-Computer Interaction,2019-09-07,189,213,False,11,Jaber,20,280,5
+Virtual Event Data Visualization,2019-09-09,107,95,False,14,Mechanic,30,150,5
+Expert Panel Internet of Medical Things,2019-09-12,148,158,True,30,Jaber,20,280,5
+Hackathon Natural Language Processing,2019-09-14,165,26,True,92,Sabz,10,120,1
+Industry Expo Privacy-Preserving Technologies,2019-09-17,196,716,True,343,Jabari,10,1000,1
+Summit Reinforcement Learning,2019-09-19,205,116,True,708,Theater,18,150,2
+Thought Leadership Retreat Cryptography,2019-09-19,107,51,True,25,Kahroba,120,100,3
+National Social Network Analysis,2019-09-21,174,79,False,29,Kahroba,120,100,3
+Congress Internet of Medical Things,2019-09-21,50,116,False,11,Rabiee,25,300,4
+Forum Information Retrieval,2019-09-24,284,10,True,68,Rabiee,25,300,4
+Technical Colloquium Quantum Machine Learning,2019-09-25,220,58,False,54,Kahroba,120,100,3
+Global Cognitive Computing,2019-09-27,206,77,True,22,Kahroba,120,100,3
+Forum Data Mining,2019-09-28,175,34,True,110,Mechanic,30,150,5
+Technical Colloquium Speech Recognition,2019-09-29,134,55,True,186,Borgeii,12,90,2
+International Workshop Urban Analytics,2019-10-01,199,120,True,18,Rabiee,25,300,4
+National Recommender Systems,2019-10-05,123,231,False,821,Rabiee,25,300,4
+Congress Urban Analytics,2019-10-09,217,23,True,76,Borgeii,12,90,2
+Technical Colloquium Explainable Robotics,2019-10-10,186,100,True,102,Mechanic,30,150,5
+World Forum Quantum Machine Learning,2019-10-14,65,952,False,30,Jabari,10,1000,1
+International Workshop Precision Medicine,2019-10-15,34,101,False,65,Jabari,10,1000,1
+International Healthcare Informatics,2019-10-16,149,19,True,22,Kahroba,120,100,3
+Congress Big Data,2019-10-16,34,45,False,100,Borgeii,12,90,2
+Annual Cognitive Computing,2019-10-17,229,64,True,11,Kahroba,120,100,3
+Symposium Healthcare Informatics,2019-10-18,269,430,True,26,Jabari,10,1000,1
+World Forum Cognitive Computing,2019-10-23,182,77,False,70,Kahroba,120,100,3
+Global Summit Computational Neuroscience,2019-10-25,164,295,False,26,Rabiee,25,300,4
+Expert Panel Predictive Analytics,2019-10-27,293,254,False,1301,Jaber,20,280,5
+National Edge Computing,2019-10-27,84,96,False,364,Kahroba,120,100,3
+International Swarm Intelligence,2019-10-29,100,243,False,68,Jaber,20,280,5
+Industry Expo Blockchain,2019-10-30,117,101,False,27,Sabz,10,120,1
+Academic Seminar Sports Analytics,2019-10-31,238,70,True,874,Borgeii,12,90,2
+International Workshop Robotics,2019-11-02,54,157,True,1349,Rabiee,25,300,4
+International Congress Data Visualization,2019-11-02,77,49,False,27,Jaber,20,280,5
+World Forum Sports Analytics,2019-11-06,73,104,True,13,Sabz,10,120,1
+Conference Genetic Algorithms,2019-11-07,140,109,False,15,Sabz,10,120,1
+International Congress Reinforcement Learning,2019-11-13,276,23,False,29,Sabz,10,120,1
+National Computational Biology,2019-11-16,82,10,True,976,Sabz,10,120,1
+Congress Computer Vision,2019-11-18,116,79,True,12,Kahroba,120,100,3
+International Workshop Human-Computer Interaction,2019-11-19,218,274,True,666,Rabiee,25,300,4
+National Quantum Machine Learning,2019-11-19,224,311,False,30,Jabari,10,1000,1
+Global Summit Artificial Intelligence,2019-11-19,80,45,False,15,Kahroba,120,100,3
+Symposium Computational Neuroscience,2019-11-20,96,32,True,23,Rabiee,25,300,4
+Conference Machine Learning,2019-11-23,39,75,False,83,Theater,18,150,2
+World Forum Human-Robot Interaction,2019-11-24,277,99,True,66,Kahroba,120,100,3
+Expert Panel Software Engineering,2019-11-25,214,214,False,18,Jaber,20,280,5
+Annual Symposium Internet of Medical Things,2019-11-25,30,57,False,411,Mechanic,30,150,5
+World Forum Text Mining,2019-11-29,55,11,False,22,Borgeii,12,90,2
+International Predictive Analytics,2019-12-04,60,179,False,98,Jabari,10,1000,1
+Academic Seminar Cloud Computing,2019-12-04,204,59,True,15,Borgeii,12,90,2
+Symposium Internet of Medical Things,2019-12-08,119,16,False,18,Theater,18,150,2
+International Workshop Cognitive Computing,2019-12-08,82,114,False,85,Sabz,10,120,1
+Forum Data Visualization,2019-12-09,139,61,True,98,Borgeii,12,90,2
+Congress Recommender Systems,2019-12-11,255,97,False,28,Kahroba,120,100,3
+Annual Symposium Computer-Assisted Diagnosis,2019-12-11,93,953,False,657,Jabari,10,1000,1
+Annual Artificial Intelligence,2019-12-17,298,22,False,15,Borgeii,12,90,2
+Expert Panel Genetic Algorithms,2019-12-17,115,14,False,1265,Theater,18,150,2
+Industry Expo Computer Vision,2019-12-21,77,491,True,28,Jabari,10,1000,1
+World Autonomous Systems,2019-12-25,121,177,True,524,Rabiee,25,300,4
+International Congress Big Data,2019-12-25,157,14,True,1484,Borgeii,12,90,2
+National Conference Knowledge Graphs,2019-12-26,267,23,False,1289,Kahroba,120,100,3
+Industry Expo Information Retrieval,2019-12-28,157,32,False,154,Kahroba,120,100,3
+National Conference Autonomous Systems,2019-12-29,232,59,True,17,Sabz,10,120,1
+International Natural Language Processing,2019-12-29,91,27,True,15,Mechanic,30,150,5
+National Artificial Intelligence,2019-12-29,234,22,False,183,Theater,18,150,2
+World Deep Learning,2020-01-01,37,70,False,51,Kahroba,120,100,3
+Academic Seminar Quantum Machine Learning,2020-01-02,236,264,False,15,Rabiee,25,300,4
+Congress Data Mining,2020-01-04,129,10,True,89,Kahroba,120,100,3
+Symposium Cognitive Computing,2020-01-04,52,466,True,16,Jabari,10,1000,1
+International Workshop Cloud Computing,2020-01-06,31,913,False,152,Jabari,10,1000,1
+Annual Explainable Robotics,2020-01-13,148,280,True,16,Jaber,20,280,5
+International Workshop Data Science,2020-01-15,236,645,False,67,Jabari,10,1000,1
+International Workshop Machine Vision,2020-01-19,287,188,True,475,Rabiee,25,300,4
+Technical Colloquium Cloud Computing,2020-01-23,140,122,False,30,Theater,18,150,2
+Conference Computer-Assisted Diagnosis,2020-01-25,238,46,True,14,Borgeii,12,90,2
+National Precision Medicine,2020-01-26,131,143,True,12,Theater,18,150,2
+Thought Leadership Retreat Computational Neuroscience,2020-01-27,80,64,False,616,Jaber,20,280,5
+National Conference Software Engineering,2020-01-31,264,117,True,13,Theater,18,150,2
+Global Text Mining,2020-01-31,183,60,False,24,Mechanic,30,150,5
+World Smart Cities,2020-01-31,49,49,False,27,Kahroba,120,100,3
+Congress Precision Medicine,2020-02-01,153,10,False,176,Sabz,10,120,1
+Academic Seminar Speech Recognition,2020-02-02,145,59,False,466,Borgeii,12,90,2
+International Workshop Internet of Things,2020-02-03,177,87,True,91,Sabz,10,120,1
+Congress Computational Biology,2020-02-06,251,124,True,16,Mechanic,30,150,5
+Thought Leadership Retreat Sentiment Analysis,2020-02-07,280,33,False,21,Borgeii,12,90,2
+Summit Data Visualization,2020-02-07,175,25,False,27,Kahroba,120,100,3
+World Artificial Intelligence,2020-02-11,155,13,True,15,Sabz,10,120,1
+International Workshop Computational Biology,2020-02-11,58,186,False,19,Jabari,10,1000,1
+Hackathon Smart Cities,2020-02-13,197,186,True,762,Rabiee,25,300,4
+Thought Leadership Retreat Swarm Intelligence,2020-02-13,288,39,True,170,Mechanic,30,150,5
+National Healthcare,2020-02-21,288,11,True,382,Mechanic,30,150,5
+National Cloud Computing,2020-02-24,241,264,True,184,Rabiee,25,300,4
+International Workshop Computational Neuroscience,2020-02-24,252,100,False,178,Kahroba,120,100,3
+Thought Leadership Retreat Smart Cities,2020-02-24,167,73,True,21,Sabz,10,120,1
+World Healthcare,2020-02-27,213,217,False,485,Rabiee,25,300,4
+World Quantum Machine Learning,2020-02-28,198,56,True,54,Jabari,10,1000,1
+World Augmented Reality,2020-02-29,212,13,True,58,Borgeii,12,90,2
+World Forum Artificial Intelligence,2020-02-29,116,724,True,10,Jabari,10,1000,1
+Global Summit Internet of Medical Things,2020-03-01,68,88,False,67,Jaber,20,280,5
+Symposium Healthcare,2020-03-05,64,17,True,19,Mechanic,30,150,5
+Virtual Event Social Network Analysis,2020-03-06,159,227,False,19,Rabiee,25,300,4
+Conference Computer Graphics,2020-03-06,52,60,True,62,Sabz,10,120,1
+Hackathon Precision Medicine,2020-03-09,235,741,True,22,Jabari,10,1000,1
+National Conference Privacy-Preserving Technologies,2020-03-18,74,29,False,172,Kahroba,120,100,3
+Technical Colloquium Big Data,2020-03-20,159,215,False,497,Rabiee,25,300,4
+Congress Sentiment Analysis,2020-03-22,250,93,True,13,Kahroba,120,100,3
+Expert Panel Quantum Machine Learning,2020-03-22,184,108,False,1402,Rabiee,25,300,4
+Virtual Event Human-Robot Interaction,2020-03-25,147,109,False,17,Rabiee,25,300,4
+World Computational Biology,2020-03-27,254,74,True,27,Borgeii,12,90,2
+International Workshop Sentiment Analysis,2020-03-28,197,34,True,15,Kahroba,120,100,3
+International Workshop Quantum Computing,2020-03-28,191,148,True,17,Mechanic,30,150,5
+International Congress Social Network Analysis,2020-03-28,61,76,False,176,Kahroba,120,100,3
+Conference Computer Vision,2020-03-29,294,103,True,29,Sabz,10,120,1
+National Internet of Things,2020-03-29,216,55,False,182,Theater,18,150,2
+International Workshop Text Mining,2020-03-30,45,657,False,28,Jabari,10,1000,1
+International Workshop Big Data,2020-03-30,272,207,True,23,Jaber,20,280,5
+Hackathon Cryptography,2020-03-31,171,21,True,11,Borgeii,12,90,2
+International Workshop Virtual Reality,2020-04-01,99,77,False,12,Kahroba,120,100,3
+Virtual Event Artificial Intelligence,2020-04-03,161,937,True,85,Jabari,10,1000,1
+Virtual Event Cybersecurity,2020-04-03,79,28,False,106,Kahroba,120,100,3
+Summit Virtual Reality,2020-04-04,78,535,True,68,Jabari,10,1000,1
+National Conference Deep Learning,2020-04-05,109,90,True,71,Sabz,10,120,1
+Industry Expo Human-Robot Interaction,2020-04-05,130,71,False,77,Borgeii,12,90,2
+Congress Software Engineering,2020-04-05,121,56,True,20,Borgeii,12,90,2
+Summit Computational Neuroscience,2020-04-07,41,258,True,10,Jaber,20,280,5
+International High-Performance Computing,2020-04-08,188,24,False,1086,Kahroba,120,100,3
+Annual Symposium Healthcare,2020-04-10,144,63,True,1429,Sabz,10,120,1
+Thought Leadership Retreat Data Science,2020-04-10,30,62,False,28,Mechanic,30,150,5
+Hackathon Speech Recognition,2020-04-13,65,59,False,27,Theater,18,150,2
+National Human-Computer Interaction,2020-04-13,216,80,False,156,Mechanic,30,150,5
+International Workshop Data Visualization,2020-04-16,88,99,False,15,Mechanic,30,150,5
+Global Summit Internet of Things Applications,2020-04-17,201,28,True,25,Mechanic,30,150,5
+Industry Expo High-Performance Computing,2020-04-18,171,23,False,1369,Sabz,10,120,1
+Hackathon Genetic Algorithms,2020-04-19,120,78,True,15,Kahroba,120,100,3
+Technical Colloquium Urban Analytics,2020-04-19,131,54,False,14,Mechanic,30,150,5
+Thought Leadership Retreat Privacy-Preserving Technologies,2020-04-20,171,23,True,173,Rabiee,25,300,4
+National Conference Computational Biology,2020-04-22,208,19,True,20,Borgeii,12,90,2
+Industry Expo Data Science,2020-04-27,136,262,True,53,Jaber,20,280,5
+Global Summit Explainable Robotics,2020-04-28,165,35,False,376,Kahroba,120,100,3
+Global Summit Machine Vision,2020-04-28,37,79,False,98,Sabz,10,120,1
+Annual Internet of Things,2020-05-01,271,21,False,588,Sabz,10,120,1
+Virtual Event Big Data,2020-05-05,232,83,True,19,Theater,18,150,2
+Global Sports Analytics,2020-05-06,212,35,False,162,Kahroba,120,100,3
+Summit Precision Medicine,2020-05-06,107,75,False,101,Theater,18,150,2
+Congress Autonomous Systems,2020-05-06,77,78,False,21,Jabari,10,1000,1
+National Conference Genetic Algorithms,2020-05-07,227,44,True,805,Borgeii,12,90,2
+Industry Expo Autonomous Systems,2020-05-09,135,17,False,29,Rabiee,25,300,4
+Expert Panel Computer Vision,2020-05-10,265,399,False,26,Jabari,10,1000,1
+International Workshop Explainable Robotics,2020-05-10,85,28,False,19,Jaber,20,280,5
+International Workshop Bioinformatics,2020-05-11,62,95,True,17,Mechanic,30,150,5
+Hackathon Artificial Intelligence,2020-05-16,199,59,False,24,Theater,18,150,2
+Academic Seminar Intelligent Transportation Systems,2020-05-18,200,397,True,50,Jabari,10,1000,1
+National Conference Natural Language Processing,2020-05-19,76,118,True,1033,Sabz,10,120,1
+International Precision Medicine,2020-05-19,150,64,True,565,Kahroba,120,100,3
+International Workshop Reinforcement Learning,2020-05-20,174,228,False,15,Jaber,20,280,5
+Conference Network Security,2020-05-23,141,36,True,15,Borgeii,12,90,2
+International Congress High-Performance Computing,2020-05-27,121,808,True,599,Jabari,10,1000,1
+International Congress Deep Learning,2020-05-28,167,61,False,12,Kahroba,120,100,3
+Expert Panel Virtual Reality,2020-05-29,233,485,False,12,Jabari,10,1000,1
+Symposium Machine Learning,2020-06-01,42,131,True,11,Jaber,20,280,5
+Global Internet of Medical Things,2020-06-02,74,140,False,63,Mechanic,30,150,5
+International Workshop Computer-Assisted Language Learning,2020-06-05,78,91,True,14,Sabz,10,120,1
+World Natural Language Understanding,2020-06-05,171,60,True,21,Kahroba,120,100,3
+International Workshop Quantum Machine Learning,2020-06-06,118,37,False,20,Sabz,10,120,1
+International Workshop Blockchain,2020-06-06,270,459,False,15,Jabari,10,1000,1
+Forum Internet of Things,2020-06-09,217,17,True,19,Borgeii,12,90,2
+Annual Blockchain,2020-06-11,33,243,False,1043,Jabari,10,1000,1
+Virtual Event Autonomous Systems,2020-06-12,272,190,True,535,Rabiee,25,300,4
+National Computer-Assisted Diagnosis,2020-06-14,259,18,False,21,Jaber,20,280,5
+Annual Symposium Natural Language Understanding,2020-06-15,186,62,True,60,Sabz,10,120,1
+Thought Leadership Retreat Machine Learning,2020-06-18,272,34,False,621,Borgeii,12,90,2
+International Congress Software Engineering,2020-06-21,191,617,True,106,Jabari,10,1000,1
+Industry Expo Quantum Machine Learning,2020-06-24,184,135,True,30,Theater,18,150,2
+International Data Science,2020-06-24,53,122,False,613,Theater,18,150,2
+Summit Swarm Intelligence,2020-06-24,253,129,False,30,Theater,18,150,2
+Symposium Explainable AI,2020-06-27,201,123,True,423,Jaber,20,280,5
+International Congress Genetic Algorithms,2020-06-28,269,142,True,79,Jaber,20,280,5
+International Congress Human-Computer Interaction,2020-06-29,170,97,True,196,Sabz,10,120,1
+National Explainable AI,2020-07-02,243,99,True,63,Kahroba,120,100,3
+Academic Seminar Knowledge Graphs,2020-07-11,84,44,False,570,Theater,18,150,2
+Annual Human-Robot Interaction,2020-07-12,220,121,True,19,Rabiee,25,300,4
+Forum Virtual Reality,2020-07-13,113,213,True,83,Jaber,20,280,5
+Annual Symposium Information Retrieval,2020-07-13,191,177,False,188,Jaber,20,280,5
+Expert Panel Internet of Things,2020-07-14,97,58,True,666,Borgeii,12,90,2
+National Conference Predictive Analytics,2020-07-19,77,19,False,16,Sabz,10,120,1
+National Conference Healthcare Informatics,2020-07-19,95,83,False,17,Mechanic,30,150,5
+Conference Computer-Aided Drug Design,2020-07-20,35,44,False,190,Kahroba,120,100,3
+Annual Computer Graphics,2020-07-21,177,71,False,30,Theater,18,150,2
+Global Computational Neuroscience,2020-07-22,167,53,False,170,Kahroba,120,100,3
+Annual Symposium Data Science,2020-07-23,140,86,True,177,Kahroba,120,100,3
+Summit Explainable Robotics,2020-07-26,252,269,False,61,Rabiee,25,300,4
+Virtual Event Computational Neuroscience,2020-07-27,170,21,True,22,Kahroba,120,100,3
+Conference Edge Computing,2020-07-28,263,75,False,27,Theater,18,150,2
+Conference Knowledge Graphs,2020-07-31,143,55,False,1399,Theater,18,150,2
+Hackathon Virtual Reality,2020-08-03,209,28,True,57,Sabz,10,120,1
+International Congress Robotics,2020-08-05,116,323,False,16,Jabari,10,1000,1
+Global Explainable Robotics,2020-08-06,238,346,True,408,Jabari,10,1000,1
+Summit Deep Learning,2020-08-07,34,17,True,85,Sabz,10,120,1
+Symposium Social Network Analysis,2020-08-10,40,252,True,27,Rabiee,25,300,4
+Expert Panel Network Security,2020-08-10,63,119,True,10,Mechanic,30,150,5
+Conference Computer-Assisted Language Learning,2020-08-14,150,95,False,26,Mechanic,30,150,5
+International Cloud Computing,2020-08-16,85,141,True,66,Mechanic,30,150,5
+Annual Cloud Computing,2020-08-18,270,87,False,1349,Sabz,10,120,1
+Technical Colloquium Blockchain,2020-08-18,102,49,False,1109,Theater,18,150,2
+Global Social Network Analysis,2020-08-18,143,60,True,1465,Borgeii,12,90,2
+National Conference Data Mining,2020-08-21,292,161,False,15,Rabiee,25,300,4
+Global Human-Computer Interaction,2020-08-21,120,64,False,1157,Borgeii,12,90,2
+Forum Smart Cities,2020-08-25,78,69,False,13,Sabz,10,120,1
+Conference Sentiment Analysis,2020-08-26,239,174,True,27,Rabiee,25,300,4
+Global Summit Federated Learning,2020-08-28,244,77,False,510,Sabz,10,120,1
+International Computational Neuroscience,2020-08-30,42,240,False,22,Jabari,10,1000,1
+Global Machine Vision,2020-08-30,73,44,False,25,Sabz,10,120,1
+Global Summit Cloud Computing,2020-08-31,32,91,False,27,Jabari,10,1000,1
+Summit Blockchain,2020-08-31,175,29,False,25,Mechanic,30,150,5
+Summit Human-Robot Interaction,2020-09-01,39,178,False,1154,Rabiee,25,300,4
+Annual Symposium Cognitive Computing,2020-09-02,189,440,False,17,Jabari,10,1000,1
+Annual Data Mining,2020-09-05,182,30,False,79,Kahroba,120,100,3
+Industry Expo Data Visualization,2020-09-09,223,252,False,1065,Rabiee,25,300,4
+Virtual Event Smart Cities,2020-09-10,225,184,True,97,Rabiee,25,300,4
+Conference Explainable Robotics,2020-09-13,259,36,False,191,Kahroba,120,100,3
+Global Summit Information Retrieval,2020-09-13,86,41,True,179,Sabz,10,120,1
+Symposium Speech Recognition,2020-09-15,298,128,False,12,Theater,18,150,2
+International Congress Virtual Reality,2020-09-16,172,109,False,103,Jaber,20,280,5
+Forum Swarm Intelligence,2020-09-22,94,75,True,10,Jaber,20,280,5
+Academic Seminar Healthcare,2020-09-23,154,150,False,65,Theater,18,150,2
+Thought Leadership Retreat Cybersecurity,2020-09-24,195,16,False,55,Borgeii,12,90,2
+National Conference Quantum Computing,2020-09-27,106,34,True,53,Rabiee,25,300,4
+Forum Computer Vision,2020-09-28,105,644,True,19,Jabari,10,1000,1
+Annual Symposium Predictive Analytics,2020-09-28,34,32,True,22,Mechanic,30,150,5
+Summit Text Mining,2020-10-08,201,35,True,13,Borgeii,12,90,2
+World Forum Internet of Medical Things,2020-10-09,150,294,False,195,Rabiee,25,300,4
+World Forum Federated Learning,2020-10-09,137,79,True,1413,Borgeii,12,90,2
+National Conference Machine Learning,2020-10-11,299,74,False,14,Mechanic,30,150,5
+Technical Colloquium Internet of Things Applications,2020-10-12,297,144,False,788,Theater,18,150,2
+Academic Seminar Privacy-Preserving Technologies,2020-10-15,147,974,False,28,Jabari,10,1000,1
+International Congress Data Science,2020-10-17,200,165,True,160,Jaber,20,280,5
+World Edge Computing,2020-10-22,91,17,True,23,Sabz,10,120,1
+Academic Seminar Information Retrieval,2020-10-24,252,54,True,1078,Sabz,10,120,1
+Academic Seminar High-Performance Computing,2020-10-24,128,128,True,359,Theater,18,150,2
+Congress Human-Robot Interaction,2020-10-26,295,166,False,19,Jaber,20,280,5
+National Data Mining,2020-10-26,219,240,True,109,Jaber,20,280,5
+Academic Seminar Computer Vision,2020-10-27,260,527,True,150,Jabari,10,1000,1
+Congress Healthcare,2020-10-27,100,10,True,669,Borgeii,12,90,2
+Symposium Recommender Systems,2020-10-28,49,15,False,22,Kahroba,120,100,3
+Conference Human-Robot Interaction,2020-10-29,232,24,True,13,Rabiee,25,300,4
+Thought Leadership Retreat Robotics,2020-10-31,293,57,False,23,Jaber,20,280,5
+Expert Panel Deep Learning,2020-11-02,52,21,True,84,Borgeii,12,90,2
+Global Summit Social Network Analysis,2020-11-03,40,143,True,717,Rabiee,25,300,4
+Global Healthcare,2020-11-05,213,75,True,27,Theater,18,150,2
+Virtual Event Computer Vision,2020-11-05,104,67,False,14,Borgeii,12,90,2
+Global Bioinformatics,2020-11-06,299,96,False,74,Theater,18,150,2
+International Workshop Computer-Assisted Diagnosis,2020-11-10,247,62,True,157,Borgeii,12,90,2
+International Workshop Recommender Systems,2020-11-13,208,192,False,22,Rabiee,25,300,4
+World Internet of Things,2020-11-13,80,117,True,828,Mechanic,30,150,5
+Congress Natural Language Understanding,2020-11-23,195,530,False,175,Jabari,10,1000,1
+Congress Speech Recognition,2020-11-23,279,113,False,1463,Sabz,10,120,1
+Annual Symposium Human-Robot Interaction,2020-11-23,220,98,True,1184,Theater,18,150,2
+Global Summit Explainable AI,2020-11-25,162,73,False,25,Kahroba,120,100,3
+Annual Computational Neuroscience,2020-11-26,122,87,False,11,Sabz,10,120,1
+World Natural Language Processing,2020-11-27,114,715,False,151,Jabari,10,1000,1
+Symposium Explainable Robotics,2020-11-28,249,45,False,99,Mechanic,30,150,5
+Hackathon Human-Robot Interaction,2020-11-29,195,11,False,13,Borgeii,12,90,2
+Industry Expo Machine Vision,2020-11-30,232,140,True,12,Theater,18,150,2
+National Conference Natural Language Understanding,2020-12-04,274,27,False,15,Borgeii,12,90,2
+Forum Blockchain,2020-12-04,267,30,True,102,Rabiee,25,300,4
+International Congress Privacy-Preserving Technologies,2020-12-05,89,59,False,11,Mechanic,30,150,5
+Global Natural Language Processing,2020-12-09,137,78,False,21,Sabz,10,120,1
+International Workshop Intelligent Transportation Systems,2020-12-10,173,174,False,340,Jabari,10,1000,1
+International Workshop Software Engineering,2020-12-12,84,79,True,26,Borgeii,12,90,2
+Academic Seminar Precision Medicine,2020-12-12,285,93,True,11,Mechanic,30,150,5
+World Forum Smart Cities,2020-12-14,295,29,True,16,Jabari,10,1000,1
+Annual Symposium Privacy-Preserving Technologies,2020-12-19,84,81,True,23,Kahroba,120,100,3
+Global Summit Quantum Computing,2020-12-19,175,91,False,10,Theater,18,150,2
+Congress Machine Learning,2020-12-19,249,41,False,13,Sabz,10,120,1
+World Forum Machine Learning,2020-12-23,44,691,True,12,Jabari,10,1000,1
+Conference Cryptography,2020-12-23,62,36,False,175,Sabz,10,120,1
+Hackathon Explainable Robotics,2020-12-25,57,44,True,109,Mechanic,30,150,5
+Congress Cryptography,2020-12-29,281,59,False,25,Jaber,20,280,5
+Annual Federated Learning,2020-12-30,172,51,False,56,Borgeii,12,90,2
+Symposium Big Data,2021-01-04,46,124,False,25,Mechanic,30,150,5
+Technical Colloquium Computational Biology,2021-01-11,194,182,False,334,Rabiee,25,300,4
+Forum Computer-Assisted Language Learning,2021-01-12,296,279,True,1448,Jaber,20,280,5
+Annual Sports Analytics,2021-01-12,176,171,False,13,Rabiee,25,300,4
+Industry Expo Healthcare Informatics,2021-01-13,189,13,False,305,Borgeii,12,90,2
+Annual Smart Cities,2021-01-15,209,51,True,157,Sabz,10,120,1
+Annual Symposium Computational Neuroscience,2021-01-16,255,31,True,14,Borgeii,12,90,2
+Global Summit Quantum Machine Learning,2021-01-18,98,13,False,29,Kahroba,120,100,3
+Hackathon Computer Vision,2021-01-18,265,204,True,102,Jaber,20,280,5
+Hackathon Bioinformatics,2021-01-18,208,350,False,29,Jabari,10,1000,1
+Thought Leadership Retreat Predictive Analytics,2021-01-19,275,144,True,440,Rabiee,25,300,4
+National Reinforcement Learning,2021-01-20,92,217,False,29,Rabiee,25,300,4
+National Quantum Computing,2021-01-22,33,145,True,21,Mechanic,30,150,5
+National Conference Cloud Computing,2021-01-23,90,283,False,107,Rabiee,25,300,4
+International Workshop Artificial Intelligence,2021-01-23,134,90,True,150,Jabari,10,1000,1
+Symposium Human-Computer Interaction,2021-01-24,133,43,True,166,Theater,18,150,2
+Annual Computer-Assisted Language Learning,2021-01-27,120,62,True,24,Sabz,10,120,1
+World Forum Computer-Assisted Language Learning,2021-01-29,84,23,True,29,Jaber,20,280,5
+Summit Augmented Reality,2021-01-30,217,193,True,25,Jaber,20,280,5
+Global Smart Cities,2021-02-02,278,26,False,430,Theater,18,150,2
+Technical Colloquium Explainable AI,2021-02-02,147,401,False,15,Jabari,10,1000,1
+Hackathon Privacy-Preserving Technologies,2021-02-03,245,81,True,28,Kahroba,120,100,3
+Summit Genetic Algorithms,2021-02-04,106,27,True,1085,Kahroba,120,100,3
+Congress Reinforcement Learning,2021-02-05,36,12,True,169,Borgeii,12,90,2
+International Data Visualization,2021-02-08,192,17,True,20,Kahroba,120,100,3
+Global Summit Predictive Analytics,2021-02-11,114,115,True,498,Jaber,20,280,5
+National Genetic Algorithms,2021-02-12,39,45,True,11,Borgeii,12,90,2
+World Predictive Analytics,2021-02-15,96,32,True,17,Rabiee,25,300,4
+Forum Precision Medicine,2021-02-20,81,147,False,11,Mechanic,30,150,5
+Virtual Event Sports Analytics,2021-02-23,264,47,True,14,Kahroba,120,100,3
+Expert Panel Data Visualization,2021-02-23,35,754,True,13,Jabari,10,1000,1
+World Computer-Assisted Language Learning,2021-03-01,215,104,True,20,Mechanic,30,150,5
+Forum High-Performance Computing,2021-03-03,158,83,True,376,Jaber,20,280,5
+Expert Panel Smart Cities,2021-03-05,181,89,False,195,Theater,18,150,2
+Technical Colloquium Recommender Systems,2021-03-08,169,313,False,185,Jabari,10,1000,1
+Conference Internet of Medical Things,2021-03-11,162,16,True,89,Borgeii,12,90,2
+Virtual Event Robotics,2021-03-11,107,216,False,1376,Jabari,10,1000,1
+Thought Leadership Retreat Deep Learning,2021-03-16,79,184,True,17,Jaber,20,280,5
+Symposium Computational Biology,2021-03-17,177,58,False,16,Rabiee,25,300,4
+Annual Predictive Analytics,2021-03-19,281,86,False,162,Rabiee,25,300,4
+Thought Leadership Retreat Computer Graphics,2021-03-20,115,117,False,23,Mechanic,30,150,5
+Virtual Event Cognitive Computing,2021-03-20,255,242,False,20,Rabiee,25,300,4
+National Human-Robot Interaction,2021-03-24,64,40,True,26,Borgeii,12,90,2
+International Workshop Edge Computing,2021-03-25,173,63,True,65,Borgeii,12,90,2
+Conference Data Science,2021-03-26,64,106,False,16,Rabiee,25,300,4
+Symposium Cryptography,2021-03-28,282,79,False,24,Theater,18,150,2
+Symposium Virtual Reality,2021-03-29,114,85,False,26,Mechanic,30,150,5
+Virtual Event Federated Learning,2021-03-29,172,259,False,26,Jaber,20,280,5
+Technical Colloquium Intelligent Transportation Systems,2021-03-31,280,679,False,367,Jabari,10,1000,1
+Hackathon Data Mining,2021-04-02,250,130,False,186,Theater,18,150,2
+Expert Panel Computer Graphics,2021-04-06,138,114,False,15,Sabz,10,120,1
+Expert Panel Natural Language Processing,2021-04-07,240,115,True,969,Sabz,10,120,1
+Annual Symposium Software Engineering,2021-04-12,290,634,False,14,Jabari,10,1000,1
+Hackathon Computer-Assisted Diagnosis,2021-04-13,242,73,False,23,Jaber,20,280,5
+Congress Cognitive Computing,2021-04-14,282,94,False,18,Kahroba,120,100,3
+Annual Speech Recognition,2021-04-19,132,13,True,101,Theater,18,150,2
+Technical Colloquium Genetic Algorithms,2021-04-21,265,57,True,23,Theater,18,150,2
+Congress Computer-Assisted Diagnosis,2021-04-23,128,25,True,533,Kahroba,120,100,3
+Congress Sports Analytics,2021-04-24,54,431,True,84,Jabari,10,1000,1
+Global Summit Computational Biology,2021-04-26,294,63,True,152,Rabiee,25,300,4
+Annual Urban Analytics,2021-04-30,284,118,False,158,Sabz,10,120,1
+Annual Information Retrieval,2021-04-30,222,15,False,26,Kahroba,120,100,3
+National Internet of Things Applications,2021-04-30,63,702,False,29,Jabari,10,1000,1
+Global Summit Urban Analytics,2021-04-30,67,73,False,22,Borgeii,12,90,2
+Technical Colloquium Precision Medicine,2021-05-01,277,279,True,161,Rabiee,25,300,4
+Expert Panel Intelligent Transportation Systems,2021-05-01,203,61,False,11,Borgeii,12,90,2
+World Forum Edge Computing,2021-05-03,130,67,True,23,Borgeii,12,90,2
+National Internet of Medical Things,2021-05-04,77,88,True,10,Sabz,10,120,1
+Technical Colloquium High-Performance Computing,2021-05-06,245,18,False,76,Kahroba,120,100,3
+Conference Smart Cities,2021-05-07,156,39,True,11,Mechanic,30,150,5
+World Forum Predictive Analytics,2021-05-10,212,31,True,24,Sabz,10,120,1
+World Forum Internet of Things,2021-05-10,191,21,False,182,Theater,18,150,2
+Summit Cloud Computing,2021-05-15,211,70,True,14,Kahroba,120,100,3
+Academic Seminar Human-Robot Interaction,2021-05-17,172,148,False,159,Jaber,20,280,5
+Virtual Event Text Mining,2021-05-20,39,868,True,58,Jabari,10,1000,1
+Technical Colloquium Healthcare,2021-05-23,30,70,True,1208,Jaber,20,280,5
+Annual Privacy-Preserving Technologies,2021-05-23,168,130,True,15,Theater,18,150,2
+International Congress Cognitive Computing,2021-05-23,64,113,False,26,Jaber,20,280,5
+Expert Panel Natural Language Understanding,2021-05-25,300,252,False,440,Jaber,20,280,5
+International Workshop Data Mining,2021-05-26,41,40,True,19,Borgeii,12,90,2
+Annual Symposium Computer-Aided Drug Design,2021-05-26,161,38,True,20,Theater,18,150,2
+Virtual Event Cloud Computing,2021-05-28,189,48,True,12,Sabz,10,120,1
+Hackathon Explainable AI,2021-05-30,222,81,False,106,Theater,18,150,2
+Hackathon Social Network Analysis,2021-06-03,87,39,True,27,Kahroba,120,100,3
+Hackathon Information Retrieval,2021-06-04,64,46,False,29,Kahroba,120,100,3
+World Forum Quantum Computing,2021-06-06,120,174,False,21,Jaber,20,280,5
+International Intelligent Transportation Systems,2021-06-12,201,220,False,1030,Rabiee,25,300,4
+Virtual Event Reinforcement Learning,2021-06-13,107,240,False,21,Jaber,20,280,5
+World Forum Blockchain,2021-06-16,182,68,False,19,Borgeii,12,90,2
+Industry Expo Robotics,2021-06-17,269,265,True,13,Jaber,20,280,5
+Hackathon Knowledge Graphs,2021-06-17,88,82,True,27,Jaber,20,280,5
+International Workshop Explainable AI,2021-06-18,181,176,False,15,Jaber,20,280,5
+Industry Expo Genetic Algorithms,2021-06-20,131,12,False,29,Borgeii,12,90,2
+Forum Healthcare Informatics,2021-06-22,202,32,False,309,Mechanic,30,150,5
+Annual Symposium Bioinformatics,2021-06-25,81,89,False,1396,Theater,18,150,2
+International Workshop Network Security,2021-06-25,286,51,True,188,Borgeii,12,90,2
+International Congress Text Mining,2021-06-26,266,80,True,24,Kahroba,120,100,3
+Global Computer Graphics,2021-06-28,152,134,True,738,Mechanic,30,150,5
+Annual Symposium Computer Vision,2021-06-29,61,76,True,198,Sabz,10,120,1
+Symposium Software Engineering,2021-06-30,169,95,True,1435,Kahroba,120,100,3
+National Computer Graphics,2021-07-01,67,99,False,13,Theater,18,150,2
+Global Summit Knowledge Graphs,2021-07-02,207,15,False,30,Borgeii,12,90,2
+Expert Panel Cybersecurity,2021-07-03,121,83,True,23,Sabz,10,120,1
+National Robotics,2021-07-04,165,81,False,83,Borgeii,12,90,2
+Expert Panel Urban Analytics,2021-07-08,65,34,False,1085,Borgeii,12,90,2
+Conference Natural Language Understanding,2021-07-08,297,292,False,60,Rabiee,25,300,4
+World Forum Data Science,2021-07-08,70,293,True,937,Jabari,10,1000,1
+Congress Computational Neuroscience,2021-07-08,244,73,False,65,Borgeii,12,90,2
+International Workshop Human-Robot Interaction,2021-07-09,184,268,True,19,Jaber,20,280,5
+Technical Colloquium Computer-Aided Drug Design,2021-07-10,136,86,True,20,Mechanic,30,150,5
+Forum Cybersecurity,2021-07-10,39,208,False,26,Rabiee,25,300,4
+Thought Leadership Retreat Healthcare Informatics,2021-07-11,288,56,True,23,Kahroba,120,100,3
+Symposium Smart Cities,2021-07-11,82,86,True,27,Rabiee,25,300,4
+Conference Reinforcement Learning,2021-07-11,238,119,False,516,Mechanic,30,150,5
+Congress Artificial Intelligence,2021-07-13,175,151,True,58,Rabiee,25,300,4
+Annual Symposium Computer-Assisted Language Learning,2021-07-14,123,414,True,103,Jabari,10,1000,1
+Industry Expo Cloud Computing,2021-07-14,126,31,False,88,Rabiee,25,300,4
+Hackathon High-Performance Computing,2021-07-15,77,113,True,437,Sabz,10,120,1
+Global Federated Learning,2021-07-18,275,36,False,25,Sabz,10,120,1
+Thought Leadership Retreat Data Visualization,2021-07-20,44,562,True,162,Jabari,10,1000,1
+Virtual Event High-Performance Computing,2021-07-21,180,61,True,382,Borgeii,12,90,2
+National Swarm Intelligence,2021-07-22,141,58,False,29,Jaber,20,280,5
+Technical Colloquium Data Visualization,2021-07-23,136,38,True,30,Borgeii,12,90,2
+World Forum Sentiment Analysis,2021-07-25,57,138,False,20,Jaber,20,280,5
+Academic Seminar Computer-Assisted Diagnosis,2021-07-27,158,258,False,52,Rabiee,25,300,4
+Global Data Visualization,2021-07-29,150,255,True,99,Jaber,20,280,5
+Annual Computer Vision,2021-08-03,34,73,True,614,Mechanic,30,150,5
+National Conference Speech Recognition,2021-08-06,230,113,True,26,Theater,18,150,2
+International Workshop Knowledge Graphs,2021-08-07,116,53,True,429,Jabari,10,1000,1
+Forum Social Network Analysis,2021-08-08,291,132,True,76,Mechanic,30,150,5
+National Conference Internet of Things,2021-08-09,222,650,True,24,Jabari,10,1000,1
+Forum Augmented Reality,2021-08-10,137,20,False,86,Jabari,10,1000,1
+World Network Security,2021-08-11,297,35,False,22,Jaber,20,280,5
+National Network Security,2021-08-14,59,64,True,27,Kahroba,120,100,3
+Hackathon Autonomous Systems,2021-08-19,77,160,True,189,Jabari,10,1000,1
+World Forum Information Retrieval,2021-08-19,197,220,False,80,Jaber,20,280,5
+International Congress Internet of Things,2021-08-23,273,126,True,193,Theater,18,150,2
+Annual Precision Medicine,2021-08-25,237,76,True,65,Kahroba,120,100,3
+International Congress Smart Cities,2021-08-28,150,72,False,23,Jaber,20,280,5
+Global Autonomous Systems,2021-08-29,42,91,True,164,Sabz,10,120,1
+International Congress Explainable AI,2021-08-29,288,223,False,12,Jaber,20,280,5
+Virtual Event Internet of Things,2021-08-31,87,66,True,26,Theater,18,150,2
+World Forum Privacy-Preserving Technologies,2021-08-31,105,48,True,106,Borgeii,12,90,2
+Global Data Mining,2021-09-02,162,10,True,1233,Theater,18,150,2
+Hackathon Data Visualization,2021-09-02,80,224,False,24,Jaber,20,280,5
+Summit Data Science,2021-09-03,278,247,True,20,Rabiee,25,300,4
+Industry Expo Explainable AI,2021-09-05,268,87,True,102,Theater,18,150,2
+Technical Colloquium Virtual Reality,2021-09-09,80,72,False,23,Borgeii,12,90,2
+Summit Big Data,2021-09-09,40,406,False,13,Jabari,10,1000,1
+Global Speech Recognition,2021-09-10,236,21,True,81,Borgeii,12,90,2
+National Conference Data Visualization,2021-09-12,230,28,True,26,Theater,18,150,2
+Industry Expo Computer-Assisted Diagnosis,2021-09-13,268,66,True,19,Kahroba,120,100,3
+Forum Human-Computer Interaction,2021-09-14,106,41,False,27,Jaber,20,280,5
+National Conference Reinforcement Learning,2021-09-14,140,68,False,70,Jaber,20,280,5
+Global Natural Language Understanding,2021-09-16,113,574,False,23,Jabari,10,1000,1
+Industry Expo Machine Learning,2021-09-18,90,232,True,87,Rabiee,25,300,4
+Forum Quantum Computing,2021-09-20,125,123,False,27,Rabiee,25,300,4
+Global Summit Human-Computer Interaction,2021-09-20,237,16,True,21,Sabz,10,120,1
+Academic Seminar Augmented Reality,2021-09-21,125,107,True,23,Sabz,10,120,1
+Global Summit Speech Recognition,2021-09-30,272,222,True,1065,Jaber,20,280,5
+Technical Colloquium Text Mining,2021-10-01,226,98,True,196,Mechanic,30,150,5
+Symposium Data Mining,2021-10-01,117,208,True,844,Jaber,20,280,5
+Summit Computer-Assisted Diagnosis,2021-10-05,69,26,False,27,Jabari,10,1000,1
+Summit Computer Vision,2021-10-07,298,29,True,12,Theater,18,150,2
+Technical Colloquium Bioinformatics,2021-10-09,39,134,False,67,Mechanic,30,150,5
+Thought Leadership Retreat Precision Medicine,2021-10-10,279,12,False,12,Mechanic,30,150,5
+National Blockchain,2021-10-14,203,37,False,178,Theater,18,150,2
+Annual Recommender Systems,2021-10-17,42,213,False,1228,Rabiee,25,300,4
+Annual Symposium Network Security,2021-10-17,291,60,False,101,Borgeii,12,90,2
+Academic Seminar Bioinformatics,2021-10-18,160,96,True,19,Jaber,20,280,5
+Summit Recommender Systems,2021-10-18,123,845,False,415,Jabari,10,1000,1
+Hackathon Data Science,2021-10-20,85,227,False,20,Rabiee,25,300,4
+Thought Leadership Retreat Computer-Assisted Language Learning,2021-10-20,169,199,False,1005,Jaber,20,280,5
+Global Internet of Things,2021-10-27,193,144,False,81,Theater,18,150,2
+Industry Expo Text Mining,2021-10-27,195,107,False,72,Theater,18,150,2
+International Workshop Speech Recognition,2021-11-01,271,66,False,98,Kahroba,120,100,3
+Global Summit Internet of Things,2021-11-04,203,164,True,20,Jaber,20,280,5
+National Deep Learning,2021-11-05,123,91,False,23,Mechanic,30,150,5
+Virtual Event Edge Computing,2021-11-06,284,138,True,26,Rabiee,25,300,4
+International Healthcare,2021-11-07,143,10,False,27,Theater,18,150,2
+World Recommender Systems,2021-11-09,109,18,False,654,Theater,18,150,2
+Annual Symposium Smart Cities,2021-11-10,97,81,False,24,Kahroba,120,100,3
+Industry Expo Federated Learning,2021-11-11,42,40,False,781,Sabz,10,120,1
+Conference Intelligent Transportation Systems,2021-11-11,167,227,True,78,Jaber,20,280,5
+Hackathon Cloud Computing,2021-11-12,211,56,False,15,Borgeii,12,90,2
+Annual Symposium Urban Analytics,2021-11-15,167,49,True,14,Borgeii,12,90,2
+World Sports Analytics,2021-11-15,131,21,False,74,Theater,18,150,2
+Annual Machine Vision,2021-11-16,86,116,False,11,Jaber,20,280,5
+World Text Mining,2021-11-16,95,45,False,83,Mechanic,30,150,5
+International Workshop Privacy-Preserving Technologies,2021-11-17,116,28,True,10,Borgeii,12,90,2
+International Sports Analytics,2021-11-20,94,81,False,957,Jaber,20,280,5
+Summit Computer-Assisted Language Learning,2021-11-20,33,46,False,18,Kahroba,120,100,3
+International Privacy-Preserving Technologies,2021-11-21,225,253,True,26,Rabiee,25,300,4
+International Congress Explainable Robotics,2021-11-23,78,68,False,1158,Theater,18,150,2
+Summit Federated Learning,2021-12-02,221,77,True,77,Sabz,10,120,1
+Global Summit Healthcare,2021-12-06,203,46,True,185,Mechanic,30,150,5
+Thought Leadership Retreat Reinforcement Learning,2021-12-07,144,86,False,104,Mechanic,30,150,5
+World Forum Bioinformatics,2021-12-10,262,13,False,177,Rabiee,25,300,4
+International Workshop Swarm Intelligence,2021-12-11,142,112,True,68,Sabz,10,120,1
+Congress Explainable AI,2021-12-11,174,136,True,25,Theater,18,150,2
+Virtual Event Internet of Medical Things,2021-12-16,70,902,False,1457,Jabari,10,1000,1
+Technical Colloquium Information Retrieval,2021-12-20,122,151,False,105,Jaber,20,280,5
+National Machine Learning,2021-12-24,208,34,False,82,Borgeii,12,90,2
+World Forum Machine Vision,2021-12-26,154,548,True,96,Jabari,10,1000,1
+Thought Leadership Retreat Information Retrieval,2021-12-26,261,32,False,12,Theater,18,150,2
+Conference Cognitive Computing,2021-12-28,278,258,False,17,Jaber,20,280,5
+Global Computational Biology,2021-12-29,195,253,False,101,Jaber,20,280,5
+Academic Seminar Social Network Analysis,2021-12-29,35,10,True,26,Kahroba,120,100,3
+Annual Augmented Reality,2021-12-30,267,223,True,444,Jaber,20,280,5
+Symposium Sentiment Analysis,2021-12-31,132,24,False,645,Sabz,10,120,1
+Academic Seminar Deep Learning,2022-01-01,67,60,True,30,Sabz,10,120,1
+Hackathon Reinforcement Learning,2022-01-05,294,532,False,197,Jabari,10,1000,1
+Thought Leadership Retreat Network Security,2022-01-06,253,136,False,107,Theater,18,150,2
+Academic Seminar Computer-Aided Drug Design,2022-01-06,228,73,True,473,Jaber,20,280,5
+Global Summit Cybersecurity,2022-01-06,43,277,True,1438,Jaber,20,280,5
+Forum Computational Biology,2022-01-09,99,191,False,15,Jaber,20,280,5
+International Workshop Predictive Analytics,2022-01-18,56,20,False,21,Theater,18,150,2
+Virtual Event Blockchain,2022-01-19,141,57,True,1090,Sabz,10,120,1
+Annual Symposium Genetic Algorithms,2022-01-19,61,310,False,56,Jabari,10,1000,1
+Symposium Computer Vision,2022-01-21,224,75,False,24,Theater,18,150,2
+Congress Predictive Analytics,2022-01-23,232,135,True,1321,Mechanic,30,150,5
+World Forum Data Mining,2022-01-24,65,496,True,17,Jabari,10,1000,1
+Annual Knowledge Graphs,2022-01-24,183,269,True,654,Jaber,20,280,5
+Virtual Event Machine Vision,2022-01-26,278,129,False,27,Mechanic,30,150,5
+Annual Symposium Sports Analytics,2022-01-27,188,39,False,103,Mechanic,30,150,5
+Industry Expo Natural Language Processing,2022-01-28,268,83,False,27,Theater,18,150,2
+World Swarm Intelligence,2022-01-29,157,10,True,15,Borgeii,12,90,2
+Symposium Computer-Assisted Language Learning,2022-02-06,228,69,True,29,Sabz,10,120,1
+Expert Panel Sentiment Analysis,2022-02-07,135,18,False,24,Mechanic,30,150,5
+Virtual Event Cryptography,2022-02-11,167,27,True,1260,Borgeii,12,90,2
+International Workshop Computer Graphics,2022-02-16,122,137,True,98,Mechanic,30,150,5
+Summit Computer-Aided Drug Design,2022-02-23,176,909,True,24,Jabari,10,1000,1
+National Cybersecurity,2022-03-02,169,37,False,24,Theater,18,150,2
+International Congress Sentiment Analysis,2022-03-05,290,71,False,28,Borgeii,12,90,2
+Conference Healthcare Informatics,2022-03-08,232,963,True,16,Jabari,10,1000,1
+Congress Healthcare Informatics,2022-03-09,66,750,True,367,Jabari,10,1000,1
+International Workshop Healthcare Informatics,2022-03-11,285,124,True,1226,Theater,18,150,2
+Annual Big Data,2022-03-12,83,75,True,13,Kahroba,120,100,3
+National Conference Healthcare,2022-03-12,146,77,True,17,Rabiee,25,300,4
+International Urban Analytics,2022-03-12,73,77,False,30,Theater,18,150,2
+National Conference Intelligent Transportation Systems,2022-03-13,98,77,False,22,Borgeii,12,90,2
+Global Summit Recommender Systems,2022-03-14,137,62,False,1443,Kahroba,120,100,3
+Forum Reinforcement Learning,2022-03-18,157,10,True,12,Rabiee,25,300,4
+Thought Leadership Retreat Human-Computer Interaction,2022-03-20,96,35,True,110,Kahroba,120,100,3
+International Computer-Assisted Diagnosis,2022-03-21,118,218,True,24,Rabiee,25,300,4
+National Conference Swarm Intelligence,2022-03-21,152,166,True,108,Rabiee,25,300,4
+International Internet of Things Applications,2022-03-25,290,150,False,18,Theater,18,150,2
+National Conference Machine Vision,2022-03-26,286,10,False,90,Borgeii,12,90,2
+Academic Seminar Swarm Intelligence,2022-03-31,62,111,False,22,Theater,18,150,2
+International Congress Information Retrieval,2022-04-03,211,32,False,702,Theater,18,150,2
+Industry Expo Explainable Robotics,2022-04-05,256,70,False,26,Jaber,20,280,5
+Symposium Quantum Machine Learning,2022-04-05,79,122,False,10,Mechanic,30,150,5
+National Conference Cybersecurity,2022-04-05,214,32,True,87,Sabz,10,120,1
+Academic Seminar Computational Biology,2022-04-06,68,19,False,83,Borgeii,12,90,2
+International Congress Swarm Intelligence,2022-04-09,53,100,False,61,Mechanic,30,150,5
+National Conference Computer-Aided Drug Design,2022-04-12,208,17,True,16,Sabz,10,120,1
+Hackathon Robotics,2022-04-13,252,25,True,73,Borgeii,12,90,2
+Global High-Performance Computing,2022-04-18,285,58,True,195,Borgeii,12,90,2
+International Bioinformatics,2022-04-24,85,108,True,107,Mechanic,30,150,5
+Congress Virtual Reality,2022-04-24,34,109,False,19,Mechanic,30,150,5
+World Cloud Computing,2022-04-27,73,189,True,766,Rabiee,25,300,4
+Thought Leadership Retreat Computer Vision,2022-04-27,51,18,False,29,Kahroba,120,100,3
+Expert Panel Reinforcement Learning,2022-04-29,134,251,False,1104,Jaber,20,280,5
+Industry Expo Augmented Reality,2022-05-02,250,97,False,20,Kahroba,120,100,3
+Hackathon Big Data,2022-05-04,288,68,False,1336,Rabiee,25,300,4
+Global Information Retrieval,2022-05-06,39,15,True,28,Kahroba,120,100,3
+International Congress Internet of Things Applications,2022-05-10,277,32,True,10,Kahroba,120,100,3
+Academic Seminar Computational Neuroscience,2022-05-15,224,46,True,13,Jabari,10,1000,1
+World Forum Intelligent Transportation Systems,2022-05-16,198,114,True,25,Theater,18,150,2
+World Information Retrieval,2022-05-17,227,59,False,27,Sabz,10,120,1
+Forum Internet of Things Applications,2022-05-19,262,30,True,62,Theater,18,150,2
+Virtual Event Augmented Reality,2022-05-24,34,56,True,28,Kahroba,120,100,3
+World Data Science,2022-05-25,36,88,True,1171,Borgeii,12,90,2
+International Workshop Augmented Reality,2022-05-29,88,135,False,178,Mechanic,30,150,5
+National Conference Augmented Reality,2022-05-30,226,146,True,90,Mechanic,30,150,5
+Expert Panel Human-Robot Interaction,2022-05-31,217,211,False,18,Jaber,20,280,5
+Conference Precision Medicine,2022-06-02,284,181,False,609,Rabiee,25,300,4
+National Conference Explainable AI,2022-06-08,291,524,False,17,Jabari,10,1000,1
+Academic Seminar Machine Vision,2022-06-09,209,17,False,174,Kahroba,120,100,3
+Virtual Event Healthcare,2022-06-11,268,556,False,165,Jabari,10,1000,1
+Global Summit High-Performance Computing,2022-06-13,137,132,False,26,Jaber,20,280,5
+Annual Symposium Recommender Systems,2022-06-15,266,47,True,28,Borgeii,12,90,2
+Hackathon Computer-Aided Drug Design,2022-06-18,257,257,False,1403,Jaber,20,280,5
+Symposium Blockchain,2022-06-20,99,205,False,20,Rabiee,25,300,4
+Forum Bioinformatics,2022-06-21,58,84,False,79,Borgeii,12,90,2
+National Conference Cognitive Computing,2022-06-23,256,142,True,197,Theater,18,150,2
+Annual Symposium Human-Computer Interaction,2022-06-23,245,127,True,747,Jaber,20,280,5
+International Congress Predictive Analytics,2022-06-24,203,23,True,21,Theater,18,150,2
+Global Summit Computer Vision,2022-06-28,37,24,True,88,Borgeii,12,90,2
+International Congress Computer Vision,2022-06-30,115,817,True,26,Jabari,10,1000,1
+Forum Artificial Intelligence,2022-07-02,287,178,False,20,Jaber,20,280,5
+Conference Computational Biology,2022-07-04,209,96,True,28,Jaber,20,280,5
+Thought Leadership Retreat Cognitive Computing,2022-07-07,248,23,True,15,Sabz,10,120,1
+Academic Seminar Cybersecurity,2022-07-08,239,18,True,1024,Mechanic,30,150,5
+Global Summit Edge Computing,2022-07-09,263,142,False,109,Mechanic,30,150,5
+National Augmented Reality,2022-07-10,215,115,True,15,Theater,18,150,2
+Technical Colloquium Data Science,2022-07-12,207,307,False,533,Jabari,10,1000,1
+Summit Sentiment Analysis,2022-07-14,179,194,True,65,Jabari,10,1000,1
+International Workshop Natural Language Understanding,2022-07-19,153,104,True,87,Jabari,10,1000,1
+International Congress Computer-Assisted Diagnosis,2022-07-19,115,58,False,663,Mechanic,30,150,5
+Academic Seminar Natural Language Understanding,2022-07-21,206,123,False,21,Jaber,20,280,5
+Annual Healthcare,2022-07-23,167,90,True,20,Kahroba,120,100,3
+Global Edge Computing,2022-07-29,126,80,True,12,Kahroba,120,100,3
+National Healthcare Informatics,2022-07-30,121,224,True,1309,Jabari,10,1000,1
+International Human-Robot Interaction,2022-07-30,218,82,False,14,Sabz,10,120,1
+World Forum Virtual Reality,2022-08-02,47,35,False,171,Mechanic,30,150,5
+World Forum Computational Biology,2022-08-03,201,124,True,1400,Mechanic,30,150,5
+World Knowledge Graphs,2022-08-07,68,25,False,30,Jaber,20,280,5
+International Big Data,2022-08-09,191,93,True,22,Sabz,10,120,1
+International Quantum Computing,2022-08-10,66,49,False,27,Rabiee,25,300,4
+Summit Speech Recognition,2022-08-18,232,618,False,13,Jabari,10,1000,1
+Virtual Event Precision Medicine,2022-08-25,85,321,False,19,Jabari,10,1000,1
+World Machine Learning,2022-08-26,111,878,True,577,Jabari,10,1000,1
+International Workshop Internet of Medical Things,2022-08-27,68,77,False,173,Sabz,10,120,1
+Global Knowledge Graphs,2022-08-28,277,203,False,29,Rabiee,25,300,4
+National Conference Robotics,2022-08-28,186,73,True,19,Jaber,20,280,5
+Industry Expo Urban Analytics,2022-08-30,148,62,True,54,Mechanic,30,150,5
+Global Summit Computer-Assisted Language Learning,2022-09-05,254,69,True,23,Theater,18,150,2
+Expert Panel Computer-Assisted Diagnosis,2022-09-09,225,11,True,309,Kahroba,120,100,3
+National Conference Computer-Assisted Diagnosis,2022-09-10,52,147,True,23,Jaber,20,280,5
+Technical Colloquium Social Network Analysis,2022-09-14,272,148,True,349,Rabiee,25,300,4
+Conference Internet of Things,2022-09-17,105,117,True,18,Sabz,10,120,1
+Symposium Data Science,2022-09-20,128,35,True,29,Sabz,10,120,1
+International Workshop Machine Learning,2022-09-20,202,74,True,13,Kahroba,120,100,3
+Congress Robotics,2022-09-22,76,17,True,1219,Borgeii,12,90,2
+Global Genetic Algorithms,2022-09-23,256,128,True,52,Jaber,20,280,5
+Congress Internet of Things,2022-09-24,95,98,False,29,Mechanic,30,150,5
+Thought Leadership Retreat Healthcare,2022-09-26,180,79,False,29,Sabz,10,120,1
+Thought Leadership Retreat Bioinformatics,2022-09-29,290,47,True,1358,Kahroba,120,100,3
+Congress Deep Learning,2022-10-01,249,23,False,27,Theater,18,150,2
+World Blockchain,2022-10-01,199,84,False,57,Theater,18,150,2
+Academic Seminar Human-Computer Interaction,2022-10-02,283,47,True,59,Sabz,10,120,1
+Thought Leadership Retreat Knowledge Graphs,2022-10-09,107,114,False,24,Jaber,20,280,5
+International Cryptography,2022-10-15,273,531,True,76,Jabari,10,1000,1
+International Congress Recommender Systems,2022-10-16,262,88,False,96,Borgeii,12,90,2
+Technical Colloquium Autonomous Systems,2022-10-16,136,61,False,23,Sabz,10,120,1
+Global Summit Computer-Assisted Diagnosis,2022-10-16,219,971,True,609,Jabari,10,1000,1
+International Workshop Cybersecurity,2022-10-18,183,11,True,105,Borgeii,12,90,2
+Summit Cryptography,2022-10-19,268,48,False,27,Kahroba,120,100,3
+International Natural Language Understanding,2022-10-22,213,615,False,1342,Jabari,10,1000,1
+Conference Cybersecurity,2022-10-24,224,243,False,16,Jabari,10,1000,1
+International Congress Speech Recognition,2022-10-24,155,39,False,608,Borgeii,12,90,2
+National Conference High-Performance Computing,2022-10-27,195,272,False,176,Jaber,20,280,5
+Global Privacy-Preserving Technologies,2022-10-30,288,37,False,23,Sabz,10,120,1
+International Congress Internet of Medical Things,2022-11-01,237,254,False,22,Jabari,10,1000,1
+Congress Augmented Reality,2022-11-03,132,91,False,108,Kahroba,120,100,3
+Industry Expo Artificial Intelligence,2022-11-05,124,82,False,569,Sabz,10,120,1
+World Forum Big Data,2022-11-08,77,208,False,20,Jabari,10,1000,1
+National Federated Learning,2022-11-11,158,308,True,19,Jabari,10,1000,1
+Academic Seminar Data Mining,2022-11-11,200,74,True,18,Borgeii,12,90,2
+Global Augmented Reality,2022-11-11,130,297,False,23,Rabiee,25,300,4
+Symposium Swarm Intelligence,2022-11-18,40,131,False,24,Mechanic,30,150,5
+Hackathon Computational Neuroscience,2022-11-21,110,258,True,13,Jaber,20,280,5
+World Cybersecurity,2022-11-22,69,146,False,80,Rabiee,25,300,4
+Industry Expo Healthcare,2022-11-22,220,75,True,20,Borgeii,12,90,2
+National Virtual Reality,2022-11-25,83,215,False,18,Rabiee,25,300,4
+Global Summit Natural Language Understanding,2022-11-25,117,539,False,27,Jabari,10,1000,1
+Industry Expo Computer Graphics,2022-11-26,273,139,True,97,Rabiee,25,300,4
+Symposium Data Visualization,2022-11-27,48,75,True,10,Kahroba,120,100,3
+Congress Blockchain,2022-11-29,128,37,False,13,Kahroba,120,100,3
+Technical Colloquium Cybersecurity,2022-11-29,253,44,True,188,Sabz,10,120,1
+Global Network Security,2022-11-29,214,733,True,17,Jabari,10,1000,1
+World Forum Swarm Intelligence,2022-12-02,83,240,True,12,Rabiee,25,300,4
+Thought Leadership Retreat Virtual Reality,2022-12-02,116,27,True,12,Jaber,20,280,5
+Summit Healthcare,2022-12-03,265,25,False,110,Theater,18,150,2
+Hackathon Software Engineering,2022-12-05,159,19,False,83,Borgeii,12,90,2
+Thought Leadership Retreat Recommender Systems,2022-12-05,283,57,True,604,Borgeii,12,90,2
+International Information Retrieval,2022-12-05,60,334,False,110,Jabari,10,1000,1
+Hackathon Computer Graphics,2022-12-06,109,94,False,377,Kahroba,120,100,3
+International Workshop Cryptography,2022-12-11,40,40,True,868,Borgeii,12,90,2
+International Augmented Reality,2022-12-12,67,71,True,17,Rabiee,25,300,4
+Expert Panel Computational Neuroscience,2022-12-13,133,95,True,107,Kahroba,120,100,3
+Technical Colloquium Human-Robot Interaction,2022-12-14,60,49,True,11,Mechanic,30,150,5
+Annual Internet of Medical Things,2022-12-19,118,67,False,21,Mechanic,30,150,5
+International Workshop Natural Language Processing,2022-12-20,66,77,True,87,Borgeii,12,90,2
+International Text Mining,2022-12-21,43,13,False,57,Borgeii,12,90,2
+Symposium Information Retrieval,2022-12-25,88,107,False,1407,Jaber,20,280,5
+Forum Software Engineering,2022-12-30,84,48,True,29,Sabz,10,120,1
+Hackathon Swarm Intelligence,2022-12-31,109,10,False,21,Theater,18,150,2
+Annual Edge Computing,2023-01-01,299,114,False,20,Theater,18,150,2
+Forum Machine Vision,2023-01-06,171,75,False,27,Theater,18,150,2
+Academic Seminar Sentiment Analysis,2023-01-12,82,54,True,12,Borgeii,12,90,2
+National Conference Text Mining,2023-01-12,288,88,True,1081,Theater,18,150,2
+National Conference Computational Neuroscience,2023-01-12,38,511,False,93,Jabari,10,1000,1
+National Conference Computer Vision,2023-01-15,246,62,False,19,Rabiee,25,300,4
+National Conference Social Network Analysis,2023-01-16,32,80,True,25,Borgeii,12,90,2
+Industry Expo Human-Computer Interaction,2023-01-17,110,41,False,28,Theater,18,150,2
+Conference Explainable AI,2023-01-18,116,152,True,648,Rabiee,25,300,4
+Academic Seminar Explainable AI,2023-01-21,178,81,True,27,Sabz,10,120,1
+World Forum Cloud Computing,2023-01-23,237,86,False,344,Jaber,20,280,5
+Academic Seminar Data Science,2023-01-24,196,17,False,22,Theater,18,150,2
+Symposium Network Security,2023-01-26,45,59,False,161,Mechanic,30,150,5
+Symposium Computer-Aided Drug Design,2023-01-26,86,43,True,1199,Sabz,10,120,1
+Industry Expo Data Mining,2023-01-28,219,794,True,66,Jabari,10,1000,1
+Academic Seminar Big Data,2023-01-29,228,32,True,959,Theater,18,150,2
+Virtual Event Explainable AI,2023-01-31,93,562,True,813,Jabari,10,1000,1
+World Forum Computer Graphics,2023-01-31,66,111,False,765,Jaber,20,280,5
+Global Software Engineering,2023-02-02,129,172,True,182,Rabiee,25,300,4
+Thought Leadership Retreat Quantum Machine Learning,2023-02-03,60,27,True,12,Sabz,10,120,1
+Annual Software Engineering,2023-02-05,300,86,False,91,Kahroba,120,100,3
+International Congress Quantum Machine Learning,2023-02-13,52,143,False,15,Mechanic,30,150,5
+National Computational Neuroscience,2023-02-16,246,28,False,60,Kahroba,120,100,3
+Global Quantum Computing,2023-02-17,112,142,False,105,Mechanic,30,150,5
+International Knowledge Graphs,2023-02-22,289,77,True,22,Borgeii,12,90,2
+Global Precision Medicine,2023-02-24,47,953,True,109,Jabari,10,1000,1
+Forum Privacy-Preserving Technologies,2023-02-27,152,69,False,17,Borgeii,12,90,2
+National Smart Cities,2023-02-27,113,758,True,82,Jabari,10,1000,1
+Forum Human-Robot Interaction,2023-03-03,284,43,False,19,Borgeii,12,90,2
+World Human-Computer Interaction,2023-03-07,92,95,True,168,Mechanic,30,150,5
+International Autonomous Systems,2023-03-08,148,79,True,91,Mechanic,30,150,5
+World Forum Speech Recognition,2023-03-10,145,218,False,95,Jaber,20,280,5
+International Computer Vision,2023-03-11,76,254,True,108,Jaber,20,280,5
+World Explainable AI,2023-03-11,169,212,True,21,Rabiee,25,300,4
+World Internet of Medical Things,2023-03-11,276,10,False,85,Sabz,10,120,1
+Annual Symposium Data Mining,2023-03-11,140,56,False,10,Kahroba,120,100,3
+National Conference Edge Computing,2023-03-12,241,132,True,21,Jaber,20,280,5
+Global Blockchain,2023-03-14,85,258,False,10,Rabiee,25,300,4
+World Human-Robot Interaction,2023-03-15,79,98,False,332,Theater,18,150,2
+Conference Quantum Computing,2023-03-17,190,558,False,11,Jabari,10,1000,1
+Conference Privacy-Preserving Technologies,2023-03-20,286,92,True,11,Kahroba,120,100,3
+Thought Leadership Retreat Machine Vision,2023-03-22,74,32,False,28,Sabz,10,120,1
+International Internet of Things,2023-03-28,49,56,True,27,Sabz,10,120,1
+International Cognitive Computing,2023-03-30,107,56,True,13,Sabz,10,120,1
+Virtual Event Data Science,2023-03-30,149,56,False,23,Rabiee,25,300,4
+Technical Colloquium Cryptography,2023-03-31,99,74,True,21,Theater,18,150,2
+International Workshop Federated Learning,2023-04-02,50,58,True,24,Borgeii,12,90,2
+Annual High-Performance Computing,2023-04-06,38,21,False,20,Sabz,10,120,1
+Congress Network Security,2023-04-06,58,43,False,184,Borgeii,12,90,2
+Congress Social Network Analysis,2023-04-11,195,117,True,14,Rabiee,25,300,4
+Expert Panel Computational Biology,2023-04-12,126,72,True,51,Jaber,20,280,5
+Technical Colloquium Computer-Assisted Language Learning,2023-04-12,140,54,False,1497,Sabz,10,120,1
+World Computer Graphics,2023-04-16,298,150,False,74,Mechanic,30,150,5
+Forum Data Science,2023-04-18,248,11,False,604,Borgeii,12,90,2
+International Explainable AI,2023-04-22,119,49,False,92,Kahroba,120,100,3
+International Internet of Medical Things,2023-04-22,47,40,False,64,Sabz,10,120,1
+Conference Federated Learning,2023-04-23,112,105,False,195,Sabz,10,120,1
+Industry Expo Smart Cities,2023-04-24,217,92,False,28,Theater,18,150,2
+Annual Virtual Reality,2023-04-26,231,122,True,86,Theater,18,150,2
+Conference Big Data,2023-04-26,77,43,True,174,Kahroba,120,100,3
+World Cognitive Computing,2023-04-28,290,296,False,885,Rabiee,25,300,4
+Academic Seminar Computer Graphics,2023-05-03,299,33,False,173,Borgeii,12,90,2
+International Computer-Assisted Language Learning,2023-05-03,207,71,True,20,Mechanic,30,150,5
+Global Summit Cognitive Computing,2023-05-04,160,60,False,192,Jaber,20,280,5
+Symposium Autonomous Systems,2023-05-07,247,10,False,12,Kahroba,120,100,3
+International Explainable Robotics,2023-05-08,112,167,True,100,Jabari,10,1000,1
+Congress Federated Learning,2023-05-10,208,87,False,15,Theater,18,150,2
+Expert Panel Big Data,2023-05-13,232,44,True,26,Mechanic,30,150,5
+Technical Colloquium Quantum Computing,2023-05-15,226,15,False,496,Theater,18,150,2
+Global Summit Blockchain,2023-05-15,126,323,True,11,Jabari,10,1000,1
+Annual Symposium Reinforcement Learning,2023-05-20,138,88,True,20,Theater,18,150,2
+Technical Colloquium Computer Graphics,2023-05-22,130,71,False,90,Kahroba,120,100,3
+Industry Expo Recommender Systems,2023-05-22,130,57,True,509,Jaber,20,280,5
+Academic Seminar Cryptography,2023-05-22,256,64,False,62,Borgeii,12,90,2
+Annual Symposium Precision Medicine,2023-05-23,285,48,True,79,Borgeii,12,90,2
+Symposium Quantum Computing,2023-05-23,237,90,False,88,Theater,18,150,2
+Academic Seminar Recommender Systems,2023-05-26,59,81,False,76,Kahroba,120,100,3
+Academic Seminar Computer-Assisted Language Learning,2023-05-28,136,21,False,108,Sabz,10,120,1
+Industry Expo Cognitive Computing,2023-05-29,172,19,True,54,Theater,18,150,2
+Thought Leadership Retreat Blockchain,2023-05-30,84,57,True,24,Mechanic,30,150,5
+Annual Symposium Virtual Reality,2023-05-31,202,61,True,10,Borgeii,12,90,2
+Thought Leadership Retreat Software Engineering,2023-05-31,60,68,True,12,Mechanic,30,150,5
+National Conference Sentiment Analysis,2023-06-01,186,171,False,12,Jaber,20,280,5
+Annual Symposium Augmented Reality,2023-06-04,125,67,False,171,Kahroba,120,100,3
+Global Recommender Systems,2023-06-07,80,60,False,21,Kahroba,120,100,3
+Industry Expo Natural Language Understanding,2023-06-11,281,39,True,59,Sabz,10,120,1
+World Forum Genetic Algorithms,2023-06-11,59,39,True,10,Mechanic,30,150,5
+Virtual Event Deep Learning,2023-06-12,283,156,True,637,Rabiee,25,300,4
+Congress High-Performance Computing,2023-06-13,195,84,True,27,Sabz,10,120,1
+International Reinforcement Learning,2023-06-13,199,43,False,163,Borgeii,12,90,2
+Academic Seminar Reinforcement Learning,2023-06-13,98,10,False,18,Rabiee,25,300,4
+Thought Leadership Retreat Cloud Computing,2023-06-14,122,130,False,341,Mechanic,30,150,5
+Summit Human-Computer Interaction,2023-06-14,86,50,False,23,Theater,18,150,2
+World Genetic Algorithms,2023-06-18,191,181,False,323,Jabari,10,1000,1
+Thought Leadership Retreat Explainable AI,2023-06-19,128,44,False,198,Sabz,10,120,1
+World Software Engineering,2023-06-20,174,86,True,335,Mechanic,30,150,5
+International Congress Bioinformatics,2023-06-21,108,46,False,18,Sabz,10,120,1
+Hackathon Internet of Things,2023-06-28,250,137,False,24,Mechanic,30,150,5
+Industry Expo Quantum Computing,2023-06-28,255,21,True,1207,Rabiee,25,300,4
+Symposium Natural Language Understanding,2023-07-02,85,919,True,23,Jabari,10,1000,1
+Conference Text Mining,2023-07-03,193,118,False,11,Jaber,20,280,5
+Expert Panel Healthcare Informatics,2023-07-03,130,85,True,28,Borgeii,12,90,2
+National Cognitive Computing,2023-07-11,275,77,True,17,Borgeii,12,90,2
+Conference Blockchain,2023-07-12,30,83,False,14,Borgeii,12,90,2
+World Forum Augmented Reality,2023-07-13,223,30,False,565,Kahroba,120,100,3
+International Software Engineering,2023-07-13,159,264,True,463,Jaber,20,280,5
+World Healthcare Informatics,2023-07-16,147,108,True,15,Sabz,10,120,1
+Industry Expo Deep Learning,2023-07-18,194,23,False,331,Borgeii,12,90,2
+Congress Bioinformatics,2023-07-22,132,171,False,100,Jaber,20,280,5
+International Congress Machine Vision,2023-07-22,49,44,True,80,Jaber,20,280,5
+Global Summit Deep Learning,2023-07-22,129,276,False,19,Jaber,20,280,5
+Forum Machine Learning,2023-07-24,125,767,True,10,Jabari,10,1000,1
+Congress Privacy-Preserving Technologies,2023-07-25,290,113,False,10,Jaber,20,280,5
+Virtual Event Software Engineering,2023-07-26,211,52,False,23,Sabz,10,120,1
+Hackathon Urban Analytics,2023-07-27,271,14,True,435,Sabz,10,120,1
+Conference Virtual Reality,2023-07-28,282,795,True,175,Jabari,10,1000,1
+International Workshop Information Retrieval,2023-07-31,278,16,True,10,Sabz,10,120,1
+Technical Colloquium Artificial Intelligence,2023-08-01,64,64,True,193,Mechanic,30,150,5
+International Machine Vision,2023-08-01,43,61,True,419,Jabari,10,1000,1
+Symposium Predictive Analytics,2023-08-03,170,143,False,174,Mechanic,30,150,5
+Conference Data Visualization,2023-08-05,223,30,False,30,Mechanic,30,150,5
+Academic Seminar Internet of Things Applications,2023-08-06,158,973,True,85,Jabari,10,1000,1
+Symposium Edge Computing,2023-08-08,227,24,False,16,Theater,18,150,2
+Annual Computer-Aided Drug Design,2023-08-10,97,47,True,11,Jaber,20,280,5
+National Machine Vision,2023-08-11,230,985,False,484,Jabari,10,1000,1
+Thought Leadership Retreat Computer-Assisted Diagnosis,2023-08-13,239,74,False,194,Sabz,10,120,1
+National Conference Urban Analytics,2023-08-18,147,39,True,105,Rabiee,25,300,4
+Annual Network Security,2023-08-21,158,30,True,723,Borgeii,12,90,2
+Global Data Science,2023-08-22,183,62,False,75,Sabz,10,120,1
+Thought Leadership Retreat Human-Robot Interaction,2023-08-22,269,53,True,1126,Borgeii,12,90,2
+Hackathon Blockchain,2023-08-22,140,83,False,20,Jaber,20,280,5
+Industry Expo Big Data,2023-08-24,103,71,False,173,Mechanic,30,150,5
+Expert Panel Information Retrieval,2023-08-25,232,45,False,97,Theater,18,150,2
+World Reinforcement Learning,2023-08-25,46,53,False,189,Kahroba,120,100,3
+Annual Symposium Robotics,2023-08-29,76,144,False,1366,Rabiee,25,300,4
+Thought Leadership Retreat Quantum Computing,2023-08-30,60,110,True,625,Jabari,10,1000,1
+International Congress Cybersecurity,2023-08-31,34,143,True,54,Theater,18,150,2
+Congress Genetic Algorithms,2023-09-03,182,86,False,15,Borgeii,12,90,2
+Summit Privacy-Preserving Technologies,2023-09-03,183,148,True,29,Theater,18,150,2
+Global Virtual Reality,2023-09-04,71,52,False,89,Sabz,10,120,1
+Thought Leadership Retreat Augmented Reality,2023-09-05,231,195,False,200,Rabiee,25,300,4
+Conference Human-Computer Interaction,2023-09-07,147,147,True,18,Theater,18,150,2
+Annual Symposium Deep Learning,2023-09-10,157,79,True,14,Kahroba,120,100,3
+Hackathon Sentiment Analysis,2023-09-10,253,181,False,19,Jaber,20,280,5
+Hackathon Cybersecurity,2023-09-16,238,230,False,25,Jaber,20,280,5
+Symposium Knowledge Graphs,2023-09-16,133,196,True,1353,Jabari,10,1000,1
+Expert Panel Cryptography,2023-09-16,177,201,False,30,Jaber,20,280,5
+Conference Predictive Analytics,2023-09-16,103,144,True,15,Theater,18,150,2
+World Machine Vision,2023-09-19,141,201,False,95,Rabiee,25,300,4
+Global Summit Precision Medicine,2023-09-20,58,14,True,68,Rabiee,25,300,4
+Conference Cloud Computing,2023-09-22,217,95,False,19,Rabiee,25,300,4
+Global Intelligent Transportation Systems,2023-09-25,236,67,False,63,Mechanic,30,150,5
+Academic Seminar Text Mining,2023-09-29,174,238,False,153,Jaber,20,280,5
+World High-Performance Computing,2023-09-29,237,241,False,70,Rabiee,25,300,4
+International Robotics,2023-10-02,287,257,False,25,Rabiee,25,300,4
+National Conference Explainable Robotics,2023-10-04,81,96,False,171,Jaber,20,280,5
+Hackathon Machine Vision,2023-10-04,250,10,True,19,Theater,18,150,2
+Summit Robotics,2023-10-04,283,29,True,1425,Jaber,20,280,5
+Summit Healthcare Informatics,2023-10-11,288,34,True,939,Borgeii,12,90,2
+Hackathon Internet of Medical Things,2023-10-14,71,299,False,13,Rabiee,25,300,4
+International Congress Autonomous Systems,2023-10-14,294,87,True,14,Rabiee,25,300,4
+International Workshop Computer Vision,2023-10-17,223,11,True,696,Sabz,10,120,1
+Symposium Genetic Algorithms,2023-10-17,174,101,True,531,Mechanic,30,150,5
+World Forum Data Visualization,2023-10-19,75,727,False,13,Jabari,10,1000,1
+Annual Swarm Intelligence,2023-10-20,36,111,True,701,Rabiee,25,300,4
+Expert Panel Text Mining,2023-10-21,82,19,False,24,Theater,18,150,2
+Expert Panel Bioinformatics,2023-10-22,212,39,False,512,Rabiee,25,300,4
+Annual Bioinformatics,2023-10-27,231,135,False,20,Theater,18,150,2
+Summit Natural Language Understanding,2023-10-28,189,72,False,24,Theater,18,150,2
+Thought Leadership Retreat Artificial Intelligence,2023-10-28,66,130,False,15,Jabari,10,1000,1
+Thought Leadership Retreat Internet of Medical Things,2023-10-31,188,52,True,196,Rabiee,25,300,4
+National Conference Network Security,2023-11-02,34,64,False,19,Mechanic,30,150,5
+Forum Sports Analytics,2023-11-05,256,84,False,13,Theater,18,150,2
+Forum Explainable AI,2023-11-06,146,62,True,29,Mechanic,30,150,5
+International Computer Graphics,2023-11-06,149,107,True,21,Theater,18,150,2
+Conference Autonomous Systems,2023-11-09,297,235,True,156,Rabiee,25,300,4
+Annual Cryptography,2023-11-09,131,259,False,150,Jaber,20,280,5
+International Sentiment Analysis,2023-11-12,288,10,False,849,Mechanic,30,150,5
+National Conference Data Science,2023-11-12,286,140,True,27,Theater,18,150,2
+International Congress Intelligent Transportation Systems,2023-11-14,43,123,False,401,Theater,18,150,2
+National Conference Human-Computer Interaction,2023-11-17,91,120,False,13,Sabz,10,120,1
+National Speech Recognition,2023-11-17,35,114,False,12,Mechanic,30,150,5
+International Network Security,2023-11-18,153,64,False,26,Sabz,10,120,1
+National Intelligent Transportation Systems,2023-11-19,52,43,True,55,Theater,18,150,2
+Summit Quantum Computing,2023-11-27,163,298,True,20,Rabiee,25,300,4
+Academic Seminar Autonomous Systems,2023-11-27,223,295,True,14,Rabiee,25,300,4
+Technical Colloquium Human-Computer Interaction,2023-12-01,50,21,True,23,Kahroba,120,100,3
+Industry Expo Sentiment Analysis,2023-12-02,139,48,True,53,Mechanic,30,150,5
+Technical Colloquium Machine Vision,2023-12-03,60,68,True,29,Theater,18,150,2
+Academic Seminar Predictive Analytics,2023-12-04,210,56,False,19,Kahroba,120,100,3
+Conference Deep Learning,2023-12-05,72,31,False,24,Jabari,10,1000,1
+International Workshop Deep Learning,2023-12-09,225,137,True,26,Mechanic,30,150,5
+National Computer-Aided Drug Design,2023-12-11,217,20,False,574,Kahroba,120,100,3
+Global Computer-Aided Drug Design,2023-12-12,87,409,True,15,Jabari,10,1000,1
+Thought Leadership Retreat Explainable Robotics,2023-12-16,103,73,True,11,Sabz,10,120,1
+Global Summit Augmented Reality,2023-12-17,66,570,True,53,Jabari,10,1000,1
+Forum Explainable Robotics,2023-12-17,262,88,True,569,Borgeii,12,90,2
+Global Summit Healthcare Informatics,2023-12-17,44,30,True,89,Borgeii,12,90,2
+Expert Panel Blockchain,2023-12-18,120,130,True,640,Theater,18,150,2
+World Data Visualization,2023-12-20,205,84,True,99,Sabz,10,120,1
+Industry Expo Network Security,2023-12-20,146,92,False,157,Jabari,10,1000,1
+International Virtual Reality,2023-12-20,206,130,False,20,Jaber,20,280,5
+World Internet of Things Applications,2023-12-26,257,107,False,92,Sabz,10,120,1
+Summit Computer Graphics,2023-12-26,228,176,True,19,Rabiee,25,300,4
+Virtual Event Explainable Robotics,2023-12-28,53,84,True,28,Rabiee,25,300,4
+Symposium Computer Graphics,2023-12-28,109,116,False,11,Mechanic,30,150,5
+Expert Panel Cloud Computing,2023-12-30,139,125,True,102,Mechanic,30,150,5
+Virtual Event Computer-Assisted Language Learning,2023-12-30,218,113,False,86,Mechanic,30,150,5
+Technical Colloquium Privacy-Preserving Technologies,2023-12-31,54,233,True,167,Jabari,10,1000,1

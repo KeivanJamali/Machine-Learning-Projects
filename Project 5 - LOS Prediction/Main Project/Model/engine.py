@@ -19,7 +19,6 @@ def train_step(model: torch.nn.Module,
         loss.backward()
         optimizer.step()
         y_pred_class = torch.argmax(torch.softmax(y_logit, dim=1), dim=1)
-        train_acc += (y_pred_class == y).sum().item() / len(y_logit)
 
     train_loss /= len(dataloader)
     train_acc /= len(dataloader)
@@ -61,6 +60,7 @@ def train(model: torch.nn.Module,
                "train_acc": [],
                "val_loss": [],
                "val_acc": []}
+    data = {"pred":[], "true":[]}
     model.to(device)
 
     writer = create_writer(experiment_name=experiment_name,

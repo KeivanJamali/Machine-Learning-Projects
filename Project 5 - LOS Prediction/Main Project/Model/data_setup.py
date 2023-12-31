@@ -84,6 +84,8 @@ class My_Dataset(Dataset):
         self.data = pd.read_csv(data_dir / f"{group}_data_{city_code}.csv")
         self.data.index = self.data.iloc[:, 0]
         self.data = self.data.iloc[:, 1:]
+        self.data = self.data[self.data["rainfall"] > 0]
+
         # self.data = self.data[["flow", "occ", "rainfall", "visibility", "windspeed", "feelslike", "LOS_index"]]
         # self.data = self.data[["rainfall", "visibility", "windspeed", "feelslike", "LOS_index"]]
         self.data = self.data.drop("date", axis=1)
@@ -93,7 +95,8 @@ class My_Dataset(Dataset):
         return len(self.data)
 
     def __getitem__(self, index):
-        X = self.data.drop(["LOS", "LOS_index", "flow", "occ"], axis=1)
+        # X = self.data.drop(["LOS", "LOS_index", "flow", "occ"], axis=1)
+        X = self.data.drop(["LOS", "LOS_index"], axis=1)
         # print(f"[INFO] number of features: {len(X.columns)}")
         inputs = torch.tensor(X.values[index], dtype=torch.float)  # Select all columns for input
         class_index = self.data["LOS_index"].values[index]  # Select the column as the label
