@@ -3,5 +3,5 @@
   <component name="Black">
     <option name="sdkName" value="Pure_Python" />
   </component>
-  <component name="ProjectRootManager" version="2" project-jdk-name="Machine_Learning_GPU117" project-jdk-type="Python SDK" />
+  <component name="ProjectRootManager" version="2" project-jdk-name="Machine_Learning" project-jdk-type="Python SDK" />
 </project>
