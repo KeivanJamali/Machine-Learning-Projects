@@ -154,6 +154,7 @@ class DataLoader_MultiCity:
         return data
 
     def _occupancy_to_speed(self, car_length=0.0049):
+        self.detector = self.detectors_data[self.detectors_data["detid"] == self.data["detid"][0]]
         self.detector_length = self.detectors_data[self.detectors_data["detid"] == self.data["detid"][0]].length
         self.transformed_data["density"] = self.transformed_data["occ"].apply(
             lambda x: (x * 1) / (car_length + self.detector_length))
@@ -183,13 +184,13 @@ class DataLoader_MultiCity:
         """In this function we will make columns of 'LOS' and 'LOS_index'."""
         max_flow = max(self.merged_data["flow"])
         self.merged_data["LOS"] = self.merged_data["flow"].apply(
-            lambda x: self._classification(x / max_flow, type="name"))
+            lambda x: self._classification(x / max_flow, type_="name"))
         self.merged_data["LOS_index"] = self.merged_data["flow"].apply(
-            lambda x: self._classification(x / max_flow, type="index"))
+            lambda x: self._classification(x / max_flow, type_="index"))
 
     @staticmethod
-    def _classification(x, type: str):
-        if type == "name":
+    def _classification(x, type_: str):
+        if type_ == "name":
             if 0 < x <= 0.6:
                 return "A"
             elif 0.6 < x <= 0.7:
@@ -202,7 +203,7 @@ class DataLoader_MultiCity:
                 return "E"
             elif x > 1:
                 return "F"
-        elif type == "index":
+        elif type_ == "index":
             if 0 < x <= 0.6:
                 return 0
             elif 0.6 < x <= 0.7:
