@@ -4,7 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dad042aa-356a-437a-acd8-e3457c040c1e" name="Changes" comment="implement healt model." />
+    <list default="true" id="dad042aa-356a-437a-acd8-e3457c040c1e" name="Changes" comment="Updating Health model. Making my toolkit better.">
+      <change afterPath="$PROJECT_DIR$/Toolkit_for_ML/Information.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project 7 - Health/DataLoader.py" beforeDir="false" afterPath="$PROJECT_DIR$/Project 7 - Health/DataLoader.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project 7 - Health/Engine.py" beforeDir="false" afterPath="$PROJECT_DIR$/Project 7 - Health/Engine.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Toolkit_for_ML/DataLoader.py" beforeDir="false" afterPath="$PROJECT_DIR$/Toolkit_for_ML/DataLoader.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Toolkit_for_ML/Engine.py" beforeDir="false" afterPath="$PROJECT_DIR$/Toolkit_for_ML/Engine.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Toolkit_for_ML/Machine_Model.py" beforeDir="false" afterPath="$PROJECT_DIR$/Toolkit_for_ML/Machine_Model.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Toolkit_for_ML/app.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Toolkit_for_ML/app.ipynb" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -13,8 +22,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Python Script" />
         <option value="Jupyter Notebook" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
@@ -35,29 +44,29 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "Python.Statistical_Hypothesis_Tests.executor": "Run",
-    "Python.create_data (1).executor": "Run",
-    "Python.create_data.executor": "Run",
-    "Python.environment_files.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "database.data.extractors.current.export.id": "Excel (xlsx)",
-    "git-widget-placeholder": "main",
-    "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "D:/All Python/Machine-Learning-Projects/Toolkit_for_ML",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;Python.Statistical_Hypothesis_Tests.executor&quot;: &quot;Run&quot;,
+    &quot;Python.create_data (1).executor&quot;: &quot;Run&quot;,
+    &quot;Python.create_data.executor&quot;: &quot;Run&quot;,
+    &quot;Python.environment_files.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;database.data.extractors.current.export.id&quot;: &quot;Excel (xlsx)&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/All Python/Machine-Learning-Projects/Toolkit_for_ML&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\All Python\Machine-Learning-Projects\Toolkit_for_ML" />
@@ -202,7 +211,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-python-sdk-50da183f06c8-2887949eec09-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-233.13135.95" />
+        <option value="bundled-python-sdk-5a2391486177-2887949eec09-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-233.13763.11" />
       </set>
     </attachedChunks>
   </component>
@@ -286,7 +295,14 @@
       <workItem from="1706021741285" duration="892000" />
       <workItem from="1706114484666" duration="1311000" />
       <workItem from="1706116857485" duration="2345000" />
-      <workItem from="1706198096462" duration="8141000" />
+      <workItem from="1706198096462" duration="9844000" />
+      <workItem from="1706424998901" duration="8000" />
+      <workItem from="1706539985882" duration="10340000" />
+      <workItem from="1706551306143" duration="42000" />
+      <workItem from="1706603308708" duration="26000" />
+      <workItem from="1706615063993" duration="1647000" />
+      <workItem from="1706768289099" duration="222000" />
+      <workItem from="1706768635520" duration="4752000" />
     </task>
     <task id="LOCAL-00001" summary="implement healt model.">
       <option name="closed" value="true" />
@@ -305,7 +321,8 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="implement healt model." />
-    <option name="LAST_COMMIT_MESSAGE" value="implement healt model." />
+    <MESSAGE value="Updating Health model. Making my toolkit better." />
+    <option name="LAST_COMMIT_MESSAGE" value="Updating Health model. Making my toolkit better." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

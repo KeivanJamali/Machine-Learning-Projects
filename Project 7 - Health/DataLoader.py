@@ -24,20 +24,26 @@ class Health_Dataset(Dataset):
         self.y = self.data[Health_Dataloader.target].values
 
     def __len__(self):
+        """You most probably need to change the slices."""
         if Health_Dataloader.model == "RNN":
             return len(self.data) - self.sequence
         elif Health_Dataloader.model == "CNN":
             return len(self.data)
+        # else:
+        #     return ?
 
     def __getitem__(self, item):
-        if Health_Dataloader.model == "RNN":
-            x = torch.tensor(self.X[item:item + self.sequence], dtype=torch.float)
-            y = torch.tensor(self.y[item + self.sequence], dtype=torch.float)
-            return x, y
-        elif Health_Dataloader.model == "CNN":
-            x = torch.tensor(self.X[item], dtype=torch.float)
-            y = torch.tensor(self.y[item], dtype=torch.float)
-            return x, y
+        """You most probably need to change the slices."""
+        slicing_x = [item, item + 1] if Health_Dataloader.model == "CNN" else [item, item + self.sequence]
+        slicing_y = [item, item + 1] if Health_Dataloader.model == "CNN" else [item + self.sequence,
+                                                                               item + self.sequence + 1]
+        # If you need a unique slice, you can use the following code
+        # slicing_x = ?
+        # slicing_y = ?
+
+        x = torch.tensor(self.X[slicing_x[0]:slicing_x[1]], dtype=torch.float)
+        y = torch.tensor(self.y[slicing_y[0]:slicing_y[1]], dtype=torch.float)
+        return x, y
 
 
 class Health_Dataloader:

@@ -1,19 +1,22 @@
+import os
 import torch
-from torch.utils.tensorboard import SummaryWriter
 import numpy as np
 import pandas as pd
-from sklearn.metrics import r2_score
+import Information as Info
+import matplotlib.pylab as plt
+
 from tqdm.auto import tqdm
 from datetime import datetime
-import os
+from sklearn.metrics import confusion_matrix
+from torch.utils.tensorboard import SummaryWriter
+from sklearn.metrics import classification_report
 
 
 class Machine_Engine:
     def __init__(self, model: torch.nn.Module,
                  train_dataloader: torch.utils.data.DataLoader,
                  val_dataloader: torch.utils.data.DataLoader,
-                 test_dataloader: torch.utils.data.DataLoader,
-                 approach: str):
+                 test_dataloader: torch.utils.data.DataLoader):
         """
         Initializes the class object with the given model, dataloaders, and device.
 
@@ -22,17 +25,17 @@ class Machine_Engine:
             train_dataloader (torch.utils.data.DataLoader): The dataloader for the training data.
             val_dataloader (torch.utils.data.DataLoader): The dataloader for the validation data.
             test_dataloader (torch.utils.data.DataLoader): The dataloader for the test data.
-            approach(str): [classification, regression]
         """
         self.model = model
         self.train_dataloader = train_dataloader
         self.val_dataloader = val_dataloader
         self.test_dataloader = test_dataloader
         self.device = None
+        self.result = None
         self.train_true_predict_list, self.val_true_predict_list, self.test_true_predict_list = None, None, None
-        if approach not in ["regression", "classification"]:
+        if Info.approach not in ["regression", "classification"]:
             raise ValueError("The approach must be either 'regression' or 'classification'.")
-        self.approach = approach
+        self.approach = Info.approach
 
     def _train_step(self, loss_fn: torch.nn.Module, optimizer: torch.optim.Optimizer) -> tuple:
         """
@@ -60,7 +63,7 @@ class Machine_Engine:
             loss = loss_fn(y_logit, y)
             train_loss += loss.item()
             if self.approach == "regression":
-                train_acc += r2_score(y_true=y.detach().cpu().numpy(), y_pred=y_logit.detach().cpu().numpy())
+                train_acc += self.r2_score(y_true=y.detach().cpu().numpy(), y_pred=y_logit.detach().cpu().numpy())
             elif self.approach == "classification":
                 y_pred_labels = y_logit.argmax(dim=1)
                 train_acc += (y_pred_labels == y).sum().item() / len(y_logit)
@@ -101,7 +104,7 @@ class Machine_Engine:
                 y_logit = self.model(x)
                 val_loss += loss_fn(y_logit, y).item()
                 if self.approach == "regression":
-                    val_acc += r2_score(y_true=y.detach().cpu().numpy(), y_pred=y_logit.detach().cpu().numpy())
+                    val_acc += self.r2_score(y_true=y.detach().cpu().numpy(), y_pred=y_logit.detach().cpu().numpy())
                 elif self.approach == "classification":
                     y_pred_labels = y_logit.argmax(dim=1)
                     val_acc += (y_pred_labels == y).sum().item() / len(y_logit)
@@ -113,7 +116,6 @@ class Machine_Engine:
             return val_loss, val_acc, true_predict_list
 
     def train(self,
-              model_name: str,
               loss_fn: torch.nn.Module,
               optimizer: torch.optim.Optimizer,
               epochs_num: int,
@@ -146,7 +148,7 @@ class Machine_Engine:
 
         try:
             if writer:
-                writer = Machine_Engine._create_writer(model_name=model_name, epochs=str(epochs_num))
+                writer = Machine_Engine._create_writer(Info.model_name, Info.model_architecture, Info.model_version)
         except:
             raise EnvironmentError("No writer found. Please check your torch.utils.tensorboard.SummaryWriter()")
 
@@ -168,7 +170,7 @@ class Machine_Engine:
             results["val_acc"].append(val_acc)
             results["val_loss"].append(val_loss)
 
-            if writer:
+            if writer and epoch % 10 == 0:
                 writer.add_scalars(main_tag="Loss",
                                    tag_scalar_dict={"Train_loss": train_loss,
                                                     "Validation_Loss": val_loss},
@@ -189,7 +191,8 @@ class Machine_Engine:
                 break
         self.train_true_predict_list = train_true_predict_list
         self.val_true_predict_list = val_true_predict_list
-        return results
+        self.result = results
+        return self.result
 
     def test(self, loss_fn: torch.nn.Module) -> tuple:
         """
@@ -216,7 +219,7 @@ class Machine_Engine:
                 y_logit = self.model(x)
                 test_loss += loss_fn(y_logit, y).item()
                 if self.approach == "regression":
-                    test_acc += r2_score(y_true=y.detach().cpu().numpy(), y_pred=y_logit.detach().cpu().numpy())
+                    test_acc += self.r2_score(y_true=y.detach().cpu().numpy(), y_pred=y_logit.detach().cpu().numpy())
                 elif self.approach == "classification":
                     y_pred_labels = y_logit.argmax(dim=1)
                     test_acc += (y_pred_labels == y).sum().item() / len(y_logit)
@@ -228,11 +231,11 @@ class Machine_Engine:
             return test_loss, test_acc, true_predict_list
 
     @staticmethod
-    def _create_writer(model_name: str, epochs: str) -> SummaryWriter:
+    def _create_writer(model_name: str, model_architecture: str, model_version: str) -> SummaryWriter:
         """Creates torch.utils.tensorboard.writer.SummaryWriter() instance tracking to a specific directory."""
         # get timestamp of current date in reverse order : YYYY_MM_DD | datetime.now().strftime("%Y-%m-%d-%H-%M-%S") |
         timestamp = datetime.now().strftime("%Y-%m-%d-%H")
-        log_dir = os.path.join("runs", model_name, f"epochs_{epochs}", timestamp)
+        log_dir = os.path.join("runs", model_name, model_architecture, model_version)
         print(f"[INFO] create SummaryWriter saving to {log_dir}")
         return SummaryWriter(log_dir=log_dir)
 
@@ -248,8 +251,7 @@ class Machine_Engine:
         Returns:
             pd.DataFrame: A DataFrame containing the predicted output.
         """
-        from DataLoader import Health_Dataloader
-        x = pd.DataFrame(x, columns=Health_Dataloader.features)
+        x = pd.DataFrame(x, columns=Info.features)
         if scaler_input:
             x_scaled = scaler_input.transform(x)
         else:
@@ -261,5 +263,62 @@ class Machine_Engine:
         y_predict = main_scaler.inverse_transform(np.array(y_scaled).reshape(1, -1))
 
         predict = pd.DataFrame(np.concatenate((x_predict, y_predict), axis=1),
-                               columns=Health_Dataloader.columns)
+                               columns=Info.columns)
         return predict
+
+    @staticmethod
+    def r2_score(y_true: np.ndarray, y_pred: np.ndarray) -> float:
+        """
+        Calculate the R-squared (coefficient of determination) for a regression model.
+
+        Args:
+            y_true (np.ndarray): The true target values.
+            y_pred (np.ndarray): The predicted target values.
+
+        Returns:
+            float: The R-squared value.
+        """
+        mean = np.mean(y_true)
+        # total sum of squares
+        tss = np.sum((y_true - mean) ** 2)
+        # residual sum of squares
+        rss = np.sum((y_true - y_pred) ** 2)
+        # coefficient of determination
+        r2 = 1 - (rss / tss)
+        return r2
+
+    def confusion_matrix(self, data: str):
+        """
+        Calculate the confusion matrix and classification report for the specified data. Must be for
+        classification approach.
+
+        Parameters:
+            data (str): The type of data for which to calculate the confusion matrix and classification report.
+
+        Returns:
+            tuple: A tuple containing the confusion matrix and the classification report.
+        """
+        if self.approach != "classification":
+            raise ValueError("The approach must be 'classification' for confusion matrix calculation.")
+        if data not in ["train", "val", "test"]:
+            raise ValueError("Data must be either 'train', 'val', or 'test'.")
+        choices = [self.train_true_predict_list, self.val_true_predict_list, self.test_true_predict_list]
+        choice = choices[["train", "val", "test"].index(data)]
+        true_labels = np.concatenate(choice["true"], axis=0)
+        predicted_labels = np.concatenate(choice["predict"], axis=0)
+        confusion_m = confusion_matrix(true_labels, predicted_labels)
+        report = classification_report(true_labels, predicted_labels, zero_division=1)
+        return confusion_m, report
+
+    def plot_loss(self):
+        plt.plot(range(len(self.result["train_loss"])), self.result["train_loss"], label="train")
+        plt.plot(range(len(self.result["val_loss"])), self.result["val_loss"], label="val")
+        plt.legend()
+        plt.show()
+
+    def plot_acc(self):
+        plt.plot(range(len(self.result["train_acc"])), self.result["train_acc"], label="train")
+        plt.plot(range(len(self.result["val_acc"])), self.result["val_acc"], label="val")
+        plt.legend()
+        plt.show()
+

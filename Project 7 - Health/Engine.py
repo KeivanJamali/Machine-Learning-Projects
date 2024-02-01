@@ -2,10 +2,11 @@ import torch
 from torch.utils.tensorboard import SummaryWriter
 import numpy as np
 import pandas as pd
-from sklearn.metrics import r2_score
 from tqdm.auto import tqdm
 from datetime import datetime
 import os
+from sklearn.metrics import confusion_matrix
+from sklearn.metrics import classification_report
 
 
 class Machine_Engine:
@@ -60,7 +61,7 @@ class Machine_Engine:
             loss = loss_fn(y_logit, y)
             train_loss += loss.item()
             if self.approach == "regression":
-                train_acc += r2_score(y_true=y.detach().cpu().numpy(), y_pred=y_logit.detach().cpu().numpy())
+                train_acc += self.r2_score(y_true=y.detach().cpu().numpy(), y_pred=y_logit.detach().cpu().numpy())
             elif self.approach == "classification":
                 y_pred_labels = y_logit.argmax(dim=1)
                 train_acc += (y_pred_labels == y).sum().item() / len(y_logit)
@@ -101,7 +102,7 @@ class Machine_Engine:
                 y_logit = self.model(x)
                 val_loss += loss_fn(y_logit, y).item()
                 if self.approach == "regression":
-                    val_acc += r2_score(y_true=y.detach().cpu().numpy(), y_pred=y_logit.detach().cpu().numpy())
+                    val_acc += self.r2_score(y_true=y.detach().cpu().numpy(), y_pred=y_logit.detach().cpu().numpy())
                 elif self.approach == "classification":
                     y_pred_labels = y_logit.argmax(dim=1)
                     val_acc += (y_pred_labels == y).sum().item() / len(y_logit)
@@ -216,7 +217,7 @@ class Machine_Engine:
                 y_logit = self.model(x)
                 test_loss += loss_fn(y_logit, y).item()
                 if self.approach == "regression":
-                    test_acc += r2_score(y_true=y.detach().cpu().numpy(), y_pred=y_logit.detach().cpu().numpy())
+                    test_acc += self.r2_score(y_true=y.detach().cpu().numpy(), y_pred=y_logit.detach().cpu().numpy())
                 elif self.approach == "classification":
                     y_pred_labels = y_logit.argmax(dim=1)
                     test_acc += (y_pred_labels == y).sum().item() / len(y_logit)
@@ -263,3 +264,37 @@ class Machine_Engine:
         predict = pd.DataFrame(np.concatenate((x_predict, y_predict), axis=1),
                                columns=Health_Dataloader.columns)
         return predict
+
+    @staticmethod
+    def r2_score(y_true: np.ndarray, y_pred: np.ndarray) -> float:
+        mean = np.mean(y_true)
+        # total sum of squares
+        tss = np.sum((y_true - mean) ** 2)
+        # residual sum of squares
+        rss = np.sum((y_true - y_pred) ** 2)
+        # coefficient of determination
+        r2 = 1 - (rss / tss)
+        return r2
+
+    def confusion_matrix(self, data: str):
+        """
+        Calculate the confusion matrix and classification report for the specified data. Must be for
+        classification approach.
+
+        Parameters:
+            data (str): The type of data for which to calculate the confusion matrix and classification report.
+
+        Returns:
+            tuple: A tuple containing the confusion matrix and the classification report.
+        """
+        if self.approach != "classification":
+            raise ValueError("The approach must be 'classification' for confusion matrix calculation.")
+        if data not in ["train", "val", "test"]:
+            raise ValueError("Data must be either 'train', 'val', or 'test'.")
+        choices = [self.train_true_predict_list, self.val_true_predict_list, self.test_true_predict_list]
+        choice = choices[["train", "val", "test"].index(data)]
+        true_labels = np.concatenate(choice["true"], axis=0)
+        predicted_labels = np.concatenate(choice["predict"], axis=0)
+        confusion_m = confusion_matrix(true_labels, predicted_labels)
+        report = classification_report(true_labels, predicted_labels, zero_division=1)
+        return confusion_m, report
