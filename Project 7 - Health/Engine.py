@@ -168,7 +168,7 @@ class Machine_Engine:
             results["val_acc"].append(val_acc)
             results["val_loss"].append(val_loss)
 
-            if writer:
+            if writer and epoch % 10 == 0:
                 writer.add_scalars(main_tag="Loss",
                                    tag_scalar_dict={"Train_loss": train_loss,
                                                     "Validation_Loss": val_loss},

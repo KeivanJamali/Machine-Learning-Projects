@@ -24,27 +24,40 @@ class Health_Dataset(Dataset):
         self.y = self.data[Health_Dataloader.target].values
 
     def __len__(self):
-        return len(self.data) - self.sequence + 1
+        if Health_Dataloader.model == "RNN":
+            return len(self.data) - self.sequence
+        elif Health_Dataloader.model == "CNN":
+            return len(self.data)
 
     def __getitem__(self, item):
-        x = torch.tensor(self.X[item:item + self.sequence], dtype=torch.float)
-        y = torch.tensor(self.y[item + self.sequence - 1], dtype=torch.float)
-        return x, y
+        if Health_Dataloader.model == "RNN":
+            x = torch.tensor(self.X[item:item + self.sequence], dtype=torch.float)
+            y = torch.tensor(self.y[item + self.sequence], dtype=torch.float)
+            return x, y
+        elif Health_Dataloader.model == "CNN":
+            x = torch.tensor(self.X[item], dtype=torch.float)
+            y = torch.tensor(self.y[item], dtype=torch.float)
+            return x, y
 
 
 class Health_Dataloader:
-    features = ["y", "number_of_beds", "markaze_behdasht", "number_of_labs", "number_of_active_beds",
-                "number_of_employees", "number_of_doctors", "number_of_pir_doctors", "number_of_stuff",
-                "number_of_persons_in_hotels", "number_of_travels_bus_inside", "number_of_travels_bus_outside",
-                "number_of_travels_minibus_inside", "number_of_travels_minibus_outside", "number_of_travels_car_inside",
-                "number_of_travels_car_outside", "number_of_person_bus_inside", "number_of_person_bus_outside",
-                "number_of_person_minibus_inside", "number_of_person_minibus_outside", "number_of_person_car_inside",
-                "number_of_person_car_outside"]
+    # model = "RNN"
+    model = "CNN"
+    # features = ["y", "number_of_beds", "markaze_behdasht", "number_of_labs", "number_of_active_beds",
+    #             "number_of_employees", "number_of_doctors", "number_of_pir_doctors", "number_of_stuff",
+    #             "number_of_persons_in_hotels", "number_of_travels_bus_inside", "number_of_travels_bus_outside",
+    #             "number_of_travels_minibus_inside", "number_of_travels_minibus_outside", "number_of_travels_car_inside",
+    #             "number_of_travels_car_outside", "number_of_person_bus_inside", "number_of_person_bus_outside",
+    #             "number_of_person_minibus_inside", "number_of_person_minibus_outside", "number_of_person_car_inside",
+    #             "number_of_person_car_outside", "covid", "month", "season"]
+    # features = ["y", "number_of_labs", "number_of_employees", "number_of_doctors", "number_of_pir_doctors",
+    #             "number_of_stuff", "covid", "month", "season"]
+    features = ["x"]
     target = ["y"]
     columns = features + target
 
-    def __init__(self, file_path: str, sequence: int, train_percent: float, val_percent: float, random_state: int,
-                 batch_size: int):
+    def __init__(self, file_path: str, train_percent: float, val_percent: float, random_state: int,
+                 batch_size: int, sequence: int = None):
         """
         Initializes the object with the specified parameters.
 
@@ -60,7 +73,7 @@ class Health_Dataloader:
         file_path = Path(file_path)
         self.data = pd.read_csv(file_path)
         self.random_state = random_state
-        self.sequence = sequence
+        self.sequence = sequence if sequence else None
         self.batch_size = batch_size
         train_data, val_data, test_data = self._split_data(train_percent=train_percent, val_percent=val_percent,
                                                            test_percent=(1 - train_percent - val_percent))
