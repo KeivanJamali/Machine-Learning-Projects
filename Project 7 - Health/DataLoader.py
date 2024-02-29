@@ -114,7 +114,7 @@ class Health_Dataloader:
 
     def _scale_data(self, train_data, val_data, test_data) -> tuple[pd.DataFrame, pd.DataFrame, pd.DataFrame]:
         """
-        Scale the input data using MinMaxScaler.
+        Scale the data data using MinMaxScaler.
 
         Parameters:
             train_data (pd.DataFrame): The training data.

@@ -239,12 +239,12 @@ class Machine_Engine:
 
     def predict(self, x: np.ndarray, main_scaler, scaler_input=None) -> pd.DataFrame:
         """
-        Predicts the output for the given input using the trained model.
+        Predicts the output for the given data using the trained model.
 
         Parameters:
-            x (np.ndarray): The input data to be predicted.
+            x (np.ndarray): The data data to be predicted.
             main_scaler: The scaler used for inverse transformation of the predicted output.
-            scaler_input: The optional scaler used for scaling the input data.
+            scaler_input: The optional scaler used for scaling the data data.
 
         Returns:
             pd.DataFrame: A DataFrame containing the predicted output.

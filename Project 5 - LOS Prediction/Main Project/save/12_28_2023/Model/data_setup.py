@@ -95,6 +95,6 @@ class My_Dataset(Dataset):
         inputs = torch.tensor(
             # self.data[["flow", "occ", "rainfall", "visibility", "windspeed", "feelslike"]].values[index],
             self.data[["rainfall", "visibility", "windspeed", "feelslike"]].values[index],
-            dtype=torch.float)  # Select all columns for input
+            dtype=torch.float)  # Select all columns for data
         class_index = self.data["LOS_index"].values[index]  # Select the column as the label
         return inputs, class_index

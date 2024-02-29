@@ -98,6 +98,6 @@ class My_Dataset(Dataset):
         # X = self.data.drop(["LOS", "LOS_index", "flow", "occ"], axis=1)
         X = self.data.drop(["LOS", "LOS_index"], axis=1)
         # print(f"[INFO] number of features: {len(X.columns)}")
-        inputs = torch.tensor(X.values[index], dtype=torch.float)  # Select all columns for input
+        inputs = torch.tensor(X.values[index], dtype=torch.float)  # Select all columns for data
         class_index = self.data["LOS_index"].values[index]  # Select the column as the label
         return inputs, class_index

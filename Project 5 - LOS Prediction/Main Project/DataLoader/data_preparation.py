@@ -93,7 +93,7 @@ class DataLoader_MultiCity:
     def _split_scale(data: pd.DataFrame, train_size=0.8, val_size=0.1, test_size=0.1, seed=42) -> (
             pd.DataFrame, pd.DataFrame, pd.DataFrame):
         """
-        This function will prepare train, validation and test data from an input data.
+        This function will prepare train, validation and test data from an data data.
         params:
             seed: int: random seed or random state.
         """

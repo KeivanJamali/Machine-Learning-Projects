@@ -141,8 +141,8 @@ def scale_data(data: pd.DataFrame, start=1, end=10) -> pd.DataFrame:
 def split_scale(data_x: pd.DataFrame, y: pd.DataFrame, test_size: float = 0.2, random_state: int = None):
     """
     it split data to train and test
-    :param data_x: input x
-    :param y: input y
+    :param data_x: data x
+    :param y: data y
     :param test_size: test size
     :param random_state: random state
     :return: Data_train, Data_test, y,train, y_test

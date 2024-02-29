@@ -175,8 +175,8 @@ def train_model(model: torch.nn.Module, train: torch.utils.data.DataLoader, val:
                 early_stop_counter += 1
 
             count_epoch.append(epoch)
-            loss_values.append(train_loss)
-            val_loss_values.append(val_loss)
+            loss_values.append(train_loss.item())
+            val_loss_values.append(val_loss.item())
 
             if early_stop_counter >= patient:
                 print(f"Early_Stop_at_ {epoch} Epoch")

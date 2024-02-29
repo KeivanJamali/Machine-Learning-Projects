@@ -108,8 +108,8 @@ if scale:
             test_result.append([np.array(test_rmse), np.array(test_mae), test_r2])
 
             print(f"R2 is in mis of {iteration} == {test_r2}")
-            ML.plot_fn(data_test, save=True, show=False, model=f"{zone}_{seed}_{iteration}",
-                       bins=np.arange(float(bin_[0]), float(bin_[1]), float(bin_[2])))
+            # ML.plot_fn(data_test, save=True, show=False, model=f"{zone}_{seed}_{iteration}",
+            #            bins=np.arange(float(bin_[0]), float(bin_[1]), float(bin_[2])))
 
             if not os.path.exists(f"Results/NN_Results/{zone}_results/random_{seed}"):
                 os.makedirs(f"Results/NN_Results/{zone}_results/random_{seed}")
@@ -120,16 +120,20 @@ if scale:
             else:
                 data_last = pd.read_csv(f"Results/NN_Results/{zone}_results/random_{seed}/data_NN_model.csv")
                 data_last = data_last.iloc[:, 1:]
-                data_last[f"Predict{iteration*10:.1f}"] = data_test[0].squeeze()[0:len(data_last.index)]
-                data_last[f"Real{iteration*10:.1f}"] = data_test[1].squeeze()[0:len(data_last.index)]
+                data_last[f"Predict{iteration * 10:.1f}"] = data_test[0].squeeze()[0:len(data_last.index)]
+                data_last[f"Real{iteration * 10:.1f}"] = data_test[1].squeeze()[0:len(data_last.index)]
                 data_last.to_csv(f"Results/NN_Results/{zone}_results/random_{seed}/data_NN_model.csv")
 
             with torch.inference_mode():
-                plt.clf()
-                plt.plot(count_epoch, loss_values, c="b", label="Train")
-                plt.plot(count_epoch, val_loss_values, c="r", label="val")
-                plt.legend()
-                plt.show()
+                # plt.clf()
+                # plt.plot(count_epoch, loss_values, c="b", label="Train")
+                # plt.plot(count_epoch, val_loss_values, c="r", label="val")
+                # plt.legend()
+                # plt.show()
+                data_loss_val = pd.DataFrame(
+                    {"epoch": count_epoch, "train_loss": loss_values, "validation_loss": val_loss_values})
+                data_loss_val.to_csv(f"prepare_results_for_paper/loss/{zone}.csv")
+
                 if not os.path.exists(f"Models/{zone}"):
                     os.makedirs(f"Models/{zone}")
                 torch.save(model, f"Models/{zone}/{zone}{seed}_{int(iteration * 100)}_model_nn.pth")
@@ -215,8 +219,8 @@ else:
             else:
                 data_last = pd.read_csv(f"Results/NN_Results/{zone}_results/random_{seed}/data_NN_model.csv")
                 data_last = data_last.iloc[:, 1:]
-                data_last[f"Predict{iteration*10:.1f}"] = data_test[0].squeeze()
-                data_last[f"Real{iteration*10:.1f}"] = data_test[1].squeeze()
+                data_last[f"Predict{iteration * 10:.1f}"] = data_test[0].squeeze()
+                data_last[f"Real{iteration * 10:.1f}"] = data_test[1].squeeze()
                 data_last.to_csv(f"Results/NN_Results/{zone}_results/random_{seed}/data_NN_model.csv")
 
             with torch.inference_mode():
