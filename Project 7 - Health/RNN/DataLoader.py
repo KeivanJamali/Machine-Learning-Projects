@@ -98,14 +98,18 @@ class MyDataloader:
         """
         self.scaler_x = MinMaxScaler(feature_range=(0, 1))
         self.scaler_y = MinMaxScaler(feature_range=(0, 1))
-        train_data.loc[:, Information.features] = self.scaler_x.fit_transform(train_data[Information.features])
-        train_data.loc[:, Information.target] = self.scaler_y.fit_transform(train_data[Information.target])
-        val_data.loc[:, Information.features] = self.scaler_x.transform(val_data[Information.features])
-        val_data.loc[:, Information.target] = self.scaler_y.transform(val_data[Information.target])
+        train_data2 = train_data.copy()
+        val_data2 = val_data.copy()
+        test_data2 = test_data.copy() if test_data else test_data
+
+        train_data2.loc[:, Information.features] = self.scaler_x.fit_transform(train_data[Information.features])
+        train_data2.loc[:, Information.target] = self.scaler_y.fit_transform(train_data[Information.target])
+        val_data2.loc[:, Information.features] = self.scaler_x.transform(val_data[Information.features])
+        val_data2.loc[:, Information.target] = self.scaler_y.transform(val_data[Information.target])
         if test_data:
-            test_data.loc[:, Information.features] = self.scaler_x.transform(test_data[Information.features])
-            test_data.loc[:, Information.target] = self.scaler_y.transform(test_data[Information.target])
-        return train_data, val_data, test_data
+            test_data2.loc[:, Information.features] = self.scaler_x.transform(test_data[Information.features])
+            test_data2.loc[:, Information.target] = self.scaler_y.transform(test_data[Information.target])
+        return train_data2, val_data2, test_data2
 
     @staticmethod
     def _make_datasets(train_data, val_data, test_data) -> tuple:

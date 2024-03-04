@@ -33,6 +33,7 @@ class Machine_Engine:
         self.test_dataloader = test_dataloader
         self.device = None
         self.result = None
+        self.prediction = None
         self.train_true_predict_list, self.val_true_predict_list, self.test_true_predict_list = None, None, None
         if Information.approach not in ["regression", "classification"]:
             raise ValueError("The approach must be either 'regression' or 'classification'.")
@@ -203,6 +204,10 @@ class Machine_Engine:
             if early_stop_patience and early_stop >= early_stop_patience:
                 print(f"Early_Stop_at {epoch} Epoch")
                 break
+
+            if best_loss < 0.025:
+                print(f"[INFO] great!!!")
+                break
         self.train_true_predict_list = train_true_predict_list
         self.val_true_predict_list = val_true_predict_list
         self.result = results
@@ -223,6 +228,11 @@ class Machine_Engine:
         print("The test_function provided here is intended solely for the final model analysis and reporting purposes.")
         print("Please refrain from using it as a general-purpose function in your own projects. Always refer to")
         print("the appropriate train and validation data for developing and fine-tuning your own models.")
+        try:
+            len(self.test_dataloader)
+        except:
+            print("[INFO] There is no test in your data")
+            raise ValueError
         self.model.eval()
         test_loss, test_acc = 0, 0
         true_predict_list = {"true": [], "predict": []}
@@ -253,7 +263,7 @@ class Machine_Engine:
         print(f"[INFO] create SummaryWriter saving to {log_dir}")
         return SummaryWriter(log_dir=log_dir)
 
-    def predict(self, x: np.ndarray, y_scaler, x_scaler=None) -> pd.DataFrame:
+    def predict(self, x: np.ndarray, y_scaler, x_scaler=None, n: int = 1, p: int = 0) -> pd.DataFrame:
         """
         Predicts the output for the given data using the trained model.
 
@@ -261,24 +271,37 @@ class Machine_Engine:
             x (np.ndarray): The data to be predicted.
             y_scaler: The scaler used for inverse transformation of the predicted output.
             x_scaler: The optional scaler used for scaling the data.
+            n: how many prediction do you want?
+            p: only parameter for function.
 
         Returns:
             pd.DataFrame: A DataFrame containing the predicted output.
         """
+        if p == n:
+            return self.prediction
         x = pd.DataFrame(x, columns=Information.features)
         if x_scaler:
             x_scaled = x_scaler.transform(x)
         else:
             x_scaled = x.values.copy()
         x_scaled = torch.tensor(x_scaled, dtype=torch.float32).unsqueeze(dim=0)
-        y_scaled = self.model(x_scaled.to(self.device)).cpu().detach().numpy()
+        x1 = x_scaled[:, :, 0].unsqueeze(dim=2)
+        y_logit = self.model(x1)
+        x2 = torch.cat((y_logit, x_scaled[:, -1, 1:]), dim=1)
+        y_scaled = self.model1(x2.to(self.device)).cpu().detach().numpy()
+        y_scaled = pd.DataFrame(np.array(y_scaled).reshape(1, -1), columns=Information.target)
 
         x_predict = x.values[-1].reshape(1, -1)
-        y_predict = y_scaler.inverse_transform(np.array(y_scaled).reshape(1, -1))
-
-        predict = pd.DataFrame(np.concatenate((x_predict, y_predict), axis=1),
-                               columns=Information.columns)
-        return predict
+        y_predict = y_scaler.inverse_transform(y_scaled)
+        if self.prediction is None:
+            self.prediction = pd.DataFrame(np.concatenate((x_predict, y_predict), axis=1),
+                                           columns=Information.columns)
+        else:
+            self.prediction = pd.concat([self.prediction, pd.DataFrame(np.concatenate((x_predict, y_predict), axis=1),
+                                                                       columns=Information.columns)], axis=0)
+        new_x = np.concatenate((x.values[1:], np.concatenate((y_predict, x_predict[:, 1:]), axis=1)), axis=0)
+        self.predict(new_x, y_scaler, x_scaler, n, p + 1)
+        return self.predict
 
     @staticmethod
     def r2_score(y_true: np.ndarray, y_pred: np.ndarray) -> float:
