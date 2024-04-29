@@ -5,9 +5,29 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dad042aa-356a-437a-acd8-e3457c040c1e" name="Changes" comment="Updating my toolkit.&#10;now is doing everything.">
+      <change afterPath="$PROJECT_DIR$/Project 7 - Health/RNN/plot/Health_RNN_V0_compare.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Project 7 - Health/RNN/plot/Health_RNN_V0_loss.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Project 7 - Health/RNN/plot/Health_RNN_V0acc.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Project 8 - Music Love/01-Music_Lover.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Project 8 - Music Love/tt.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RNN_Sample/DataLoader.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RNN_Sample/Engine.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RNN_Sample/Information.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RNN_Sample/Machine_Model.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RNN_Sample/Prepare_data.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RNN_Sample/app.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RNN_Sample/data/data_complete.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RNN_Sample/model/RNN/Health_RNN_V0.pt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RNN_Sample/model/RNN/Health_RNN_V02.pt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RNN_Sample/plot/Health_RNN_V0_compare.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RNN_Sample/plot/Health_RNN_V0_loss.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RNN_Sample/plot/Health_RNN_V0acc.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Machine-Learning-Projects.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Machine-Learning-Projects.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project 7 - Health/RNN/DataLoader.py" beforeDir="false" afterPath="$PROJECT_DIR$/Project 7 - Health/RNN/DataLoader.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Project 7 - Health/RNN/Engine.py" beforeDir="false" afterPath="$PROJECT_DIR$/Project 7 - Health/RNN/Engine.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project 7 - Health/RNN/Information.py" beforeDir="false" afterPath="$PROJECT_DIR$/Project 7 - Health/RNN/Information.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project 7 - Health/RNN/Machine_Model.py" beforeDir="false" afterPath="$PROJECT_DIR$/Project 7 - Health/RNN/Machine_Model.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Project 7 - Health/RNN/app.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Project 7 - Health/RNN/app.ipynb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Project 7 - Health/RNN/model/RNN/Health_RNN_V0.pt" beforeDir="false" afterPath="$PROJECT_DIR$/Project 7 - Health/RNN/model/RNN/Health_RNN_V0.pt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Project 7 - Health/RNN/model/RNN/Health_RNN_V02.pt" beforeDir="false" afterPath="$PROJECT_DIR$/Project 7 - Health/RNN/model/RNN/Health_RNN_V02.pt" afterDir="false" />
@@ -20,14 +40,26 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Python Script" />
         <option value="Jupyter Notebook" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;KeivanJamali&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/KeivanJamali/Machine-Learning-Projects.git&quot;,
+    &quot;accountId&quot;: &quot;1878b6df-5d65-494b-b143-611186d00171&quot;
+  }
+}</component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -42,34 +74,34 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "Python.Information.executor": "Run",
-    "Python.Siouxfalls.executor": "Run",
-    "Python.Statistical_Hypothesis_Tests.executor": "Run",
-    "Python.create_data (1).executor": "Run",
-    "Python.create_data.executor": "Run",
-    "Python.environment_files.executor": "Run",
-    "Python.makeready (1).executor": "Run",
-    "Python.makeready (2).executor": "Run",
-    "Python.tests.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "database.data.extractors.current.export.id": "Excel (xlsx)",
-    "git-widget-placeholder": "main",
-    "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "D:/All Python/Machine-Learning-Projects",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;Python.Information.executor&quot;: &quot;Run&quot;,
+    &quot;Python.Siouxfalls.executor&quot;: &quot;Run&quot;,
+    &quot;Python.Statistical_Hypothesis_Tests.executor&quot;: &quot;Run&quot;,
+    &quot;Python.create_data (1).executor&quot;: &quot;Run&quot;,
+    &quot;Python.create_data.executor&quot;: &quot;Run&quot;,
+    &quot;Python.environment_files.executor&quot;: &quot;Run&quot;,
+    &quot;Python.makeready (1).executor&quot;: &quot;Run&quot;,
+    &quot;Python.makeready (2).executor&quot;: &quot;Run&quot;,
+    &quot;Python.tests.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;database.data.extractors.current.export.id&quot;: &quot;Excel (xlsx)&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/All Python/Machine-Learning-Projects&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\All Python\Machine-Learning-Projects\Project 2 - Transportation\Main Project\prepare_results_for_paper\Correct the order of Stupid data of mmreza\random10-siouxfalls" />
@@ -86,7 +118,7 @@
       <recent name="D:\All Python\Machine-Learning-Projects\Project 7 - Health\Dataloader\raw-data" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.makeready (2)">
+  <component name="RunManager" selected="Python.Information">
     <configuration name="Information" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Machine-Learning-Projects" />
       <option name="ENV_FILES" value="" />
@@ -204,10 +236,10 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.Information" />
         <item itemvalue="Python.makeready (2)" />
         <item itemvalue="Python.makeready (1)" />
         <item itemvalue="Python.makeready" />
-        <item itemvalue="Python.Information" />
         <item itemvalue="Python.tests" />
       </list>
     </recent_temporary>
@@ -215,7 +247,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-python-sdk-5a2391486177-2887949eec09-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-233.13763.11" />
+        <option value="bundled-js-predefined-1d06a55b98c1-74d2a5396914-JavaScript-PY-241.14494.241" />
+        <option value="bundled-python-sdk-0509580d9d50-28c9f5db9ffe-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-241.14494.241" />
       </set>
     </attachedChunks>
   </component>
@@ -319,6 +352,27 @@
       <workItem from="1707470995039" duration="4715000" />
       <workItem from="1708116035034" duration="5000" />
       <workItem from="1709584746141" duration="8157000" />
+      <workItem from="1709617057138" duration="596000" />
+      <workItem from="1709673662740" duration="717000" />
+      <workItem from="1709791198802" duration="794000" />
+      <workItem from="1709794204531" duration="58000" />
+      <workItem from="1709796602476" duration="1891000" />
+      <workItem from="1709799105523" duration="963000" />
+      <workItem from="1709800092084" duration="1515000" />
+      <workItem from="1709801639921" duration="4067000" />
+      <workItem from="1709806011658" duration="1889000" />
+      <workItem from="1709885054942" duration="9139000" />
+      <workItem from="1710269561584" duration="65000" />
+      <workItem from="1711192569582" duration="108000" />
+      <workItem from="1711228354100" duration="4568000" />
+      <workItem from="1711278574590" duration="3145000" />
+      <workItem from="1711811198498" duration="5563000" />
+      <workItem from="1711871978186" duration="598000" />
+      <workItem from="1712948567471" duration="2736000" />
+      <workItem from="1712979112734" duration="6000" />
+      <workItem from="1713896189249" duration="7000" />
+      <workItem from="1714190374441" duration="661000" />
+      <workItem from="1714290454547" duration="11000" />
     </task>
     <task id="LOCAL-00001" summary="implement healt model.">
       <option name="closed" value="true" />
@@ -376,5 +430,6 @@
     <SUITE FILE_PATH="coverage/Machine_Learning_Projects$Information.coverage" NAME="Information Coverage Results" MODIFIED="1706975183682" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Project 7 - Health/RNN" />
     <SUITE FILE_PATH="coverage/Machine_Learning_Projects$environment_files.coverage" NAME="environment_files Coverage Results" MODIFIED="1703414362144" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Project 5 - LOS Prediction/Main Project/DataLoader" />
     <SUITE FILE_PATH="coverage/1_start_ipynb$makeready__2_.coverage" NAME="makeready (2) Coverage Results" MODIFIED="1707474007370" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Project 2 - Transportation/Main Project/prepare_results_for_paper/data prepration" />
+    <SUITE FILE_PATH="coverage/1_start_ipynb$Information.coverage" NAME="Information Coverage Results" MODIFIED="1711812409920" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Project 7 - Health/RNN" />
   </component>
 </project>
