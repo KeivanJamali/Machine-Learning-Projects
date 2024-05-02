@@ -5,29 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dad042aa-356a-437a-acd8-e3457c040c1e" name="Changes" comment="Updating my toolkit.&#10;now is doing everything.">
-      <change afterPath="$PROJECT_DIR$/Project 7 - Health/RNN/plot/Health_RNN_V0_compare.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project 7 - Health/RNN/plot/Health_RNN_V0_loss.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project 7 - Health/RNN/plot/Health_RNN_V0acc.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project 8 - Music Love/01-Music_Lover.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project 8 - Music Love/tt.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RNN_Sample/DataLoader.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RNN_Sample/Engine.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RNN_Sample/Information.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RNN_Sample/Machine_Model.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RNN_Sample/Prepare_data.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RNN_Sample/app.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RNN_Sample/data/data_complete.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RNN_Sample/model/RNN/Health_RNN_V0.pt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RNN_Sample/model/RNN/Health_RNN_V02.pt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RNN_Sample/plot/Health_RNN_V0_compare.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RNN_Sample/plot/Health_RNN_V0_loss.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RNN_Sample/plot/Health_RNN_V0acc.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Project 7 - Health/RNN/health.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Project 7 - Health/RNN/plot/health.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/Machine-Learning-Projects.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Machine-Learning-Projects.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Project 7 - Health/RNN/Engine.py" beforeDir="false" afterPath="$PROJECT_DIR$/Project 7 - Health/RNN/Engine.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project 7 - Health/RNN/Information.py" beforeDir="false" afterPath="$PROJECT_DIR$/Project 7 - Health/RNN/Information.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project 7 - Health/RNN/Machine_Model.py" beforeDir="false" afterPath="$PROJECT_DIR$/Project 7 - Health/RNN/Machine_Model.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Project 7 - Health/RNN/app.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Project 7 - Health/RNN/app.ipynb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Project 7 - Health/RNN/model/RNN/Health_RNN_V0.pt" beforeDir="false" afterPath="$PROJECT_DIR$/Project 7 - Health/RNN/model/RNN/Health_RNN_V0.pt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Project 7 - Health/RNN/model/RNN/Health_RNN_V02.pt" beforeDir="false" afterPath="$PROJECT_DIR$/Project 7 - Health/RNN/model/RNN/Health_RNN_V02.pt" afterDir="false" />
@@ -98,7 +81,7 @@
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -121,7 +104,6 @@
   <component name="RunManager" selected="Python.Information">
     <configuration name="Information" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Machine-Learning-Projects" />
-      <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -142,9 +124,30 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration default="true" type="PythonConfigurationType" factoryName="Python">
+      <module name="Machine-Learning-Projects" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="makeready (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Machine-Learning-Projects" />
-      <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -167,7 +170,6 @@
     </configuration>
     <configuration name="makeready (2)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Machine-Learning-Projects" />
-      <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -190,7 +192,6 @@
     </configuration>
     <configuration name="makeready" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Machine-Learning-Projects" />
-      <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -213,7 +214,6 @@
     </configuration>
     <configuration name="tests" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Machine-Learning-Projects" />
-      <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -373,6 +373,10 @@
       <workItem from="1713896189249" duration="7000" />
       <workItem from="1714190374441" duration="661000" />
       <workItem from="1714290454547" duration="11000" />
+      <workItem from="1714416371368" duration="385000" />
+      <workItem from="1714416768849" duration="3107000" />
+      <workItem from="1714585437193" duration="131000" />
+      <workItem from="1714590015398" duration="135000" />
     </task>
     <task id="LOCAL-00001" summary="implement healt model.">
       <option name="closed" value="true" />
@@ -416,20 +420,25 @@
           <line>96</line>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Project 7 - Health/RNN/Engine.py</url>
+          <line>170</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/Machine_Learning_Projects$Siouxfalls.coverage" NAME="Siouxfalls Coverage Results" MODIFIED="1707470215555" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Project 2 - Transportation/Main Project/prepare_results_for_paper/Correct the order of Stupid data of mmreza" />
+    <SUITE FILE_PATH="coverage/Machine_Learning_Projects$ML_vir_nn.coverage" NAME="ML_vir_nn Coverage Results" MODIFIED="1700133466340" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Project 2 - Transportation/Main Project" />
     <SUITE FILE_PATH="coverage/Machine_Learning_Projects$Statistical_Hypothesis_Tests.coverage" NAME="Statistical_Hypothesis_Tests Coverage Results" MODIFIED="1703782002878" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Project 5 - LOS Prediction/Main Project/DataLoader" />
     <SUITE FILE_PATH="coverage/Machine_Learning_Projects$create_data.coverage" NAME="create_data Coverage Results" MODIFIED="1703983332939" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Project 6 - Management course/Dataloader" />
-    <SUITE FILE_PATH="coverage/Machine_Learning_Projects$makeready__1_.coverage" NAME="makeready (1) Coverage Results" MODIFIED="1707470892212" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Project 2 - Transportation/Main Project/prepare_results_for_paper/Correct the order of Stupid data of mmreza" />
+    <SUITE FILE_PATH="coverage/Machine_Learning_Projects$Siouxfalls.coverage" NAME="Siouxfalls Coverage Results" MODIFIED="1707470215555" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Project 2 - Transportation/Main Project/prepare_results_for_paper/Correct the order of Stupid data of mmreza" />
     <SUITE FILE_PATH="coverage/Machine_Learning_Projects$tests.coverage" NAME="tests Coverage Results" MODIFIED="1706794735614" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Project 7 - Health" />
-    <SUITE FILE_PATH="coverage/Machine_Learning_Projects$ML_vir_nn.coverage" NAME="ML_vir_nn Coverage Results" MODIFIED="1700133466340" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Project 2 - Transportation/Main Project" />
+    <SUITE FILE_PATH="coverage/1_start_ipynb$Information.coverage" NAME="Information Coverage Results" MODIFIED="1711812409920" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Project 7 - Health/RNN" />
+    <SUITE FILE_PATH="coverage/1_start_ipynb$makeready__2_.coverage" NAME="makeready (2) Coverage Results" MODIFIED="1707474007370" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Project 2 - Transportation/Main Project/prepare_results_for_paper/data prepration" />
+    <SUITE FILE_PATH="coverage/Machine_Learning_Projects$makeready__1_.coverage" NAME="makeready (1) Coverage Results" MODIFIED="1707470892212" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Project 2 - Transportation/Main Project/prepare_results_for_paper/Correct the order of Stupid data of mmreza" />
     <SUITE FILE_PATH="coverage/Machine_Learning_Projects$create_data__1_.coverage" NAME="create_data (1) Coverage Results" MODIFIED="1704143338494" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Project 6 - Management course" />
     <SUITE FILE_PATH="coverage/Machine_Learning_Projects$Information.coverage" NAME="Information Coverage Results" MODIFIED="1706975183682" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Project 7 - Health/RNN" />
     <SUITE FILE_PATH="coverage/Machine_Learning_Projects$environment_files.coverage" NAME="environment_files Coverage Results" MODIFIED="1703414362144" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Project 5 - LOS Prediction/Main Project/DataLoader" />
-    <SUITE FILE_PATH="coverage/1_start_ipynb$makeready__2_.coverage" NAME="makeready (2) Coverage Results" MODIFIED="1707474007370" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Project 2 - Transportation/Main Project/prepare_results_for_paper/data prepration" />
-    <SUITE FILE_PATH="coverage/1_start_ipynb$Information.coverage" NAME="Information Coverage Results" MODIFIED="1711812409920" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Project 7 - Health/RNN" />
   </component>
 </project>

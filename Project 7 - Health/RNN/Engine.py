@@ -374,11 +374,14 @@ class Machine_Engine:
         x2 = [i for i in range(len(r1), len(r1) + len(r2))]
 
         plt.figure(figsize=(10, 5))
-        plt.plot(x1, y1, label="predict")
-        plt.plot(x2, y2, label="predict")
-        plt.plot(x1, r1, label="true")
-        plt.plot(x2, r2, label="true")
+        plt.plot(x1, y1, label="Train Output", c="green")
+        plt.plot(x2, y2, label="predicted Output", c="red")
+        plt.plot(x1+x2, r1+r2, label="Actual Output", c="Blue")
+        # plt.plot(x2, r2, label="true", c="black")
+        plt.ylabel("Health Tourist")
+        plt.xlabel("Data")
         plt.legend()
+        plt.savefig("plot/health.png")
         plt.show()
 
     def save(self):
