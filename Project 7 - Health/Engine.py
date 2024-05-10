@@ -1,20 +1,23 @@
+import os
 import torch
-from torch.utils.tensorboard import SummaryWriter
+import Information
 import numpy as np
 import pandas as pd
+import matplotlib.pylab as plt
+
 from tqdm.auto import tqdm
 from datetime import datetime
 import os
 from sklearn.metrics import confusion_matrix
+# from torch.utils.tensorboard import SummaryWriter
 from sklearn.metrics import classification_report
 
 
 class Machine_Engine:
-    def __init__(self, model: torch.nn.Module,
+    def __init__(self, model: torch.nn.Module, model1: torch.nn.Module,
                  train_dataloader: torch.utils.data.DataLoader,
                  val_dataloader: torch.utils.data.DataLoader,
-                 test_dataloader: torch.utils.data.DataLoader,
-                 approach: str):
+                 test_dataloader: torch.utils.data.DataLoader):
         """
         Initializes the class object with the given model, dataloaders, and device.
 
@@ -24,18 +27,22 @@ class Machine_Engine:
             val_dataloader (torch.utils.data.DataLoader): The dataloader for the validation data.
             test_dataloader (torch.utils.data.DataLoader): The dataloader for the test data.
             approach(str): [classification, regression]
+
         """
         self.model = model
+        self.model1 = model1
         self.train_dataloader = train_dataloader
         self.val_dataloader = val_dataloader
         self.test_dataloader = test_dataloader
         self.device = None
+        self.result = None
+        self.prediction = None
         self.train_true_predict_list, self.val_true_predict_list, self.test_true_predict_list = None, None, None
-        if approach not in ["regression", "classification"]:
+        if Information.approach not in ["regression", "classification"]:
             raise ValueError("The approach must be either 'regression' or 'classification'.")
-        self.approach = approach
 
-    def _train_step(self, loss_fn: torch.nn.Module, optimizer: torch.optim.Optimizer) -> tuple:
+    def _train_step(self, loss_fn: torch.nn.Module, optimizer: torch.optim.Optimizer,
+                    optimizer1: torch.optim.Optimizer) -> tuple:
         """
         Trains the model for one step.
 
@@ -52,25 +59,31 @@ class Machine_Engine:
                                               The "true" list contains the true labels of the train data,
                                               and the "predict" list contains the predicted labels."""
         self.model.train()
+        self.model1.train()
         train_loss, train_acc = 0, 0
         true_predict_list = {"true": [], "predict": []}
 
         for batch, (x, y) in enumerate(self.train_dataloader):
             x, y = x.to(self.device), y.to(self.device)
-            y_logit = self.model(x)
+            x1 = x[:, :, 0].unsqueeze(dim=2)
+            y_logit = self.model(x1)
+            x2 = torch.cat((y_logit, x[:, -1, 1:]), dim=1)
+            y_logit = self.model1(x2)
             loss = loss_fn(y_logit, y)
             train_loss += loss.item()
-            if self.approach == "regression":
+            if Information.approach == "regression":
                 train_acc += self.r2_score(y_true=y.detach().cpu().numpy(), y_pred=y_logit.detach().cpu().numpy())
-            elif self.approach == "classification":
+            elif Information.approach == "classification":
                 y_pred_labels = y_logit.argmax(dim=1)
                 train_acc += (y_pred_labels == y).sum().item() / len(y_logit)
             true_predict_list["true"].append(y.detach().cpu().numpy())
             true_predict_list["predict"].append(y_logit.detach().cpu().numpy())
 
             optimizer.zero_grad()
+            optimizer1.zero_grad()
             loss.backward()
             optimizer.step()
+            optimizer1.step()
 
         train_loss /= len(self.train_dataloader)
         train_acc /= len(self.train_dataloader)
@@ -98,12 +111,16 @@ class Machine_Engine:
 
         with torch.inference_mode():
             for x, y in self.val_dataloader:
-                x, y = x.to(self.device), y.to(self.device),
-                y_logit = self.model(x)
+                x, y = x.to(self.device), y.to(self.device)
+                x1 = x[:, :, 0].unsqueeze(dim=2)
+                y_logit = self.model(x1)
+                x2 = torch.cat((y_logit, x[:, -1, 1:]), dim=1)
+                y_logit = self.model1(x2)
+                self.ys = y_logit.detach().cpu().numpy()
                 val_loss += loss_fn(y_logit, y).item()
-                if self.approach == "regression":
+                if Information.approach == "regression":
                     val_acc += self.r2_score(y_true=y.detach().cpu().numpy(), y_pred=y_logit.detach().cpu().numpy())
-                elif self.approach == "classification":
+                elif Information.approach == "classification":
                     y_pred_labels = y_logit.argmax(dim=1)
                     val_acc += (y_pred_labels == y).sum().item() / len(y_logit)
                 true_predict_list["true"].append(y.detach().cpu().numpy())
@@ -114,24 +131,24 @@ class Machine_Engine:
             return val_loss, val_acc, true_predict_list
 
     def train(self,
-              model_name: str,
               loss_fn: torch.nn.Module,
               optimizer: torch.optim.Optimizer,
+              optimizer1: torch.optim.Optimizer,
               epochs_num: int,
               writer: bool = False,
               device: str = "cuda" if torch.cuda.is_available() else "cpu",
-              early_stop_patience: int = None) -> dict:
+              early_stop_patience: int = None, resolution: int = 1) -> dict:
         """
         Trains the model for a specified number of epochs.
 
         Args:
-            model_name (str): The name of the model.
             loss_fn (torch.nn.Module): The loss function.
             optimizer (torch.optim.Optimizer): The optimizer.
             epochs_num (int): The number of epochs to train.
             writer (bool, optional): If True, creates a Tensorboard writer. Defaults to False.
             device (str, optional): The device to use for training. Defaults to "cuda" if available, otherwise "cpu".
             early_stop_patience (int, optional): The number of epochs to wait for early stopping. Defaults to None, means no stop.
+            resolution (int, optional): epoch / resolution = every writing. Defaults to 1.
 
         Returns:
             dict: A dictionary containing training and validation loss and accuracy.
@@ -144,23 +161,26 @@ class Machine_Engine:
         results = {"train_loss": [], "train_acc": [], "val_loss": [], "val_acc": []}
         train_true_predict_list = {"true": [], "predict": []}
         val_true_predict_list = {"true": [], "predict": []}
+        torch.manual_seed(Information.random_seed)
 
         try:
             if writer:
-                writer = Machine_Engine._create_writer(model_name=model_name, epochs=str(epochs_num))
+                writer = Machine_Engine._create_writer(Information.model_name, Information.model_architecture,
+                                                       Information.model_version)
         except:
             raise EnvironmentError("No writer found. Please check your torch.utils.tensorboard.SummaryWriter()")
 
         self.device = device
         self.model.to(device)
-        for epoch in tqdm(range(epochs_num)):
-            train_loss, train_acc, true_predict_list = self._train_step(loss_fn=loss_fn, optimizer=optimizer)
-            train_true_predict_list["true"].extend(true_predict_list["true"])
-            train_true_predict_list["predict"].extend(true_predict_list["predict"])
+        for epoch in tqdm(range(1, epochs_num + 1)):
+            train_loss, train_acc, true_predict_list = self._train_step(loss_fn=loss_fn, optimizer=optimizer,
+                                                                        optimizer1=optimizer1)
+            train_true_predict_list["true"].append(true_predict_list["true"])
+            train_true_predict_list["predict"].append(true_predict_list["predict"])
 
             val_loss, val_acc, true_predict_list = self._val_step(loss_fn=loss_fn)
-            val_true_predict_list["true"].extend(true_predict_list["true"])
-            val_true_predict_list["predict"].extend(true_predict_list["predict"])
+            val_true_predict_list["true"].append(true_predict_list["true"])
+            val_true_predict_list["predict"].append(true_predict_list["predict"])
             print(
                 f"Epoch {epoch} | train: Loss {train_loss:.6f} Accuracy {train_acc:.4f} | validation: Loss {val_loss:.6f} Accuracy {val_acc:.4f}")
 
@@ -169,7 +189,7 @@ class Machine_Engine:
             results["val_acc"].append(val_acc)
             results["val_loss"].append(val_loss)
 
-            if writer and epoch % 10 == 0:
+            if writer and epoch % resolution == 0:
                 writer.add_scalars(main_tag="Loss",
                                    tag_scalar_dict={"Train_loss": train_loss,
                                                     "Validation_Loss": val_loss},
@@ -188,9 +208,19 @@ class Machine_Engine:
             if early_stop_patience and early_stop >= early_stop_patience:
                 print(f"Early_Stop_at {epoch} Epoch")
                 break
+
+            # if val_loss < 0.0136 and train_acc > 0.9:
+            #     # print(
+            #     # f"Epoch {epoch} | train: Loss {train_loss:.6f} Accuracy {train_acc:.4f} | validation: Loss {val_loss:.6f} Accuracy {val_acc:.4f}")
+            #     print(f"[INFO] great!!!")
+            #     break
         self.train_true_predict_list = train_true_predict_list
         self.val_true_predict_list = val_true_predict_list
-        return results
+        self.result = results
+        print(
+              f"Epoch {epoch} | train: Loss {train_loss:.6f} Accuracy {train_acc:.4f} | validation: Loss {val_loss:.6f} Accuracy {val_acc:.4f}")
+
+        return self.result
 
     def test(self, loss_fn: torch.nn.Module) -> tuple:
         """
@@ -207,18 +237,23 @@ class Machine_Engine:
         print("The test_function provided here is intended solely for the final model analysis and reporting purposes.")
         print("Please refrain from using it as a general-purpose function in your own projects. Always refer to")
         print("the appropriate train and validation data for developing and fine-tuning your own models.")
+        try:
+            len(self.test_dataloader)
+        except:
+            print("[INFO] There is no test in your data")
+            raise ValueError
         self.model.eval()
         test_loss, test_acc = 0, 0
         true_predict_list = {"true": [], "predict": []}
 
         with torch.inference_mode():
             for x, y in self.test_dataloader:
-                x, y = x.to(self.device), y.to(self.device),
+                x, y = x.to(self.device), y.to(self.device)
                 y_logit = self.model(x)
                 test_loss += loss_fn(y_logit, y).item()
-                if self.approach == "regression":
+                if Information.approach == "regression":
                     test_acc += self.r2_score(y_true=y.detach().cpu().numpy(), y_pred=y_logit.detach().cpu().numpy())
-                elif self.approach == "classification":
+                elif Information.approach == "classification":
                     y_pred_labels = y_logit.argmax(dim=1)
                     test_acc += (y_pred_labels == y).sum().item() / len(y_logit)
                 true_predict_list["true"].append(y.detach().cpu().numpy())
@@ -229,44 +264,66 @@ class Machine_Engine:
             return test_loss, test_acc, true_predict_list
 
     @staticmethod
-    def _create_writer(model_name: str, epochs: str) -> SummaryWriter:
+    def _create_writer(model_name: str, model_architecture: str, model_version: str):
         """Creates torch.utils.tensorboard.writer.SummaryWriter() instance tracking to a specific directory."""
         # get timestamp of current date in reverse order : YYYY_MM_DD | datetime.now().strftime("%Y-%m-%d-%H-%M-%S") |
         timestamp = datetime.now().strftime("%Y-%m-%d-%H")
-        log_dir = os.path.join("runs", model_name, f"epochs_{epochs}", timestamp)
+        log_dir = os.path.join("runs", model_name, model_architecture, model_version, timestamp)
         print(f"[INFO] create SummaryWriter saving to {log_dir}")
         return SummaryWriter(log_dir=log_dir)
 
-    def predict(self, x: np.ndarray, main_scaler, scaler_input=None) -> pd.DataFrame:
+    def predict(self, x: np.ndarray, y_scaler, x_scaler=None, n: int = 1, p: int = 0) -> pd.DataFrame:
         """
         Predicts the output for the given data using the trained model.
 
         Parameters:
-            x (np.ndarray): The data data to be predicted.
-            main_scaler: The scaler used for inverse transformation of the predicted output.
-            scaler_input: The optional scaler used for scaling the data data.
+            x (np.ndarray): The data to be predicted.
+            y_scaler: The scaler used for inverse transformation of the predicted output.
+            x_scaler: The optional scaler used for scaling the data.
+            n: how many prediction do you want?
+            p: only parameter for function.
 
         Returns:
             pd.DataFrame: A DataFrame containing the predicted output.
         """
-        from DataLoader import Health_Dataloader
-        x = pd.DataFrame(x, columns=Health_Dataloader.features)
-        if scaler_input:
-            x_scaled = scaler_input.transform(x)
+        if p == n:
+            return self.prediction
+        x = pd.DataFrame(x, columns=Information.features)
+        if x_scaler:
+            x_scaled = x_scaler.transform(x)
         else:
             x_scaled = x.values.copy()
         x_scaled = torch.tensor(x_scaled, dtype=torch.float32).unsqueeze(dim=0)
-        y_scaled = self.model(x_scaled.to(self.device)).cpu().detach().numpy()
+        x1 = x_scaled[:, :, 0].unsqueeze(dim=2)
+        y_logit = self.model(x1)
+        x2 = torch.cat((y_logit, x_scaled[:, -1, 1:]), dim=1)
+        y_scaled = self.model1(x2.to(self.device)).cpu().detach().numpy()
+        y_scaled = pd.DataFrame(np.array(y_scaled).reshape(1, -1), columns=Information.target)
 
         x_predict = x.values[-1].reshape(1, -1)
-        y_predict = main_scaler.inverse_transform(np.array(y_scaled).reshape(1, -1))
-
-        predict = pd.DataFrame(np.concatenate((x_predict, y_predict), axis=1),
-                               columns=Health_Dataloader.columns)
-        return predict
+        y_predict = y_scaler.inverse_transform(y_scaled)
+        if self.prediction is None:
+            self.prediction = pd.DataFrame(np.concatenate((x_predict, y_predict), axis=1),
+                                           columns=Information.columns)
+        else:
+            self.prediction = pd.concat([self.prediction, pd.DataFrame(np.concatenate((x_predict, y_predict), axis=1),
+                                                                       columns=Information.columns)], axis=0)
+        new_x = np.concatenate((x.values[1:], np.concatenate((y_predict, x_predict[:, 1:]), axis=1)), axis=0)
+        self.predict(new_x, y_scaler, x_scaler, n, p + 1)
+        return self.predict
 
     @staticmethod
     def r2_score(y_true: np.ndarray, y_pred: np.ndarray) -> float:
+        """
+        Calculate the R-squared (coefficient of determination) for a regression model.
+
+        Args:
+            y_true (np.ndarray): The true target values.
+            y_pred (np.ndarray): The predicted target values.
+
+        Returns:
+            float: The R-squared value.
+        """
         mean = np.mean(y_true)
         # total sum of squares
         tss = np.sum((y_true - mean) ** 2)
@@ -287,7 +344,7 @@ class Machine_Engine:
         Returns:
             tuple: A tuple containing the confusion matrix and the classification report.
         """
-        if self.approach != "classification":
+        if Information.approach != "classification":
             raise ValueError("The approach must be 'classification' for confusion matrix calculation.")
         if data not in ["train", "val", "test"]:
             raise ValueError("Data must be either 'train', 'val', or 'test'.")
@@ -298,3 +355,57 @@ class Machine_Engine:
         confusion_m = confusion_matrix(true_labels, predicted_labels)
         report = classification_report(true_labels, predicted_labels, zero_division=1)
         return confusion_m, report
+
+    def plot_loss(self):
+        plt.figure(figsize=(10, 5))
+        plt.plot(range(len(self.result["train_loss"])), self.result["train_loss"], label="train")
+        plt.plot(range(len(self.result["val_loss"])), self.result["val_loss"], label="val")
+        plt.legend()
+        plt.title("Loss")
+        plt.ylabel("Loss")
+        plt.xlabel("Epoch")
+        plt.savefig("plot/health_loss.png")
+        plt.show()
+
+    def plot_acc(self):
+        plt.figure(figsize=(10, 5))
+        v_a = self.result["val_acc"]
+        v_a = [100*i if i > 0 else 0 for i in v_a]
+        t_a = self.result["train_acc"]
+        t_a = [100*i if i > 0 else 0 for i in t_a]
+        plt.plot(range(len(self.result["train_acc"])), t_a, label="train")
+        plt.plot(range(len(self.result["val_acc"])), v_a, label="val")
+        plt.legend()
+        plt.title("Accuracy")
+        plt.ylabel("Accuracy(%)")
+        plt.xlabel("Epoch")
+        plt.savefig("plot/health_acuracy.png")
+        plt.show()
+
+    def plot_predict_real(self):
+        y1 = [item for sublist in self.train_true_predict_list["predict"][-1] for item in sublist]
+        y2 = [item for sublist in self.val_true_predict_list["predict"][-1] for item in sublist]
+
+        r1 = [item for sublist in self.train_true_predict_list["true"][-1] for item in sublist]
+        r2 = [item for sublist in self.val_true_predict_list["true"][-1] for item in sublist]
+
+        x1 = [i for i in range(len(r1))]
+        x2 = [i for i in range(len(r1), len(r1) + len(r2))]
+
+        plt.figure(figsize=(10, 5))
+        plt.plot(x1, y1, label="Train Output", c="green")
+        plt.plot(x2, y2, label="predicted Output", c="red")
+        plt.plot(x1+x2, r1+r2, label="Actual Output", c="Blue")
+        # plt.plot(x2, r2, label="true", c="black")
+        plt.ylabel("Health Tourist")
+        plt.xlabel("Data")
+        plt.title("Actual Vaues VS Predicted Value")
+        plt.legend()
+        plt.savefig("plot/health.png")
+        plt.show()
+
+    def save(self):
+        save_path = f"model/{Information.model_architecture}/{Information.model_name}_{Information.model_architecture}_{Information.model_version}_N1.pt"
+        save_path1 = f"model/{Information.model_architecture}/{Information.model_name}_{Information.model_architecture}_{Information.model_version}_N2.pt"
+        torch.save(self.model.state_dict(), save_path)
+        torch.save(self.model1.state_dict(), save_path1)
