@@ -1,6 +1,7 @@
 import torch
 import Information
 import pandas as pd
+import numpy as np
 
 from pathlib import Path
 from sklearn.preprocessing import MinMaxScaler
@@ -10,7 +11,7 @@ from torch.utils.data import DataLoader, Dataset
 class MyDataset(Dataset):
     def __init__(self, data: pd.DataFrame):
         """
-        Initializes a new instance of the class.
+        Initializes a new instance of the class
 
         Args:
             data (pd.DataFrame): The data to be used for initialization.
@@ -101,6 +102,14 @@ class MyDataloader:
         train_data2 = train_data.copy()
         val_data2 = val_data.copy()
         test_data2 = test_data.copy() if test_data else test_data
+
+        train_data2[Information.features] = train_data[Information.features].astype(np.float64)
+        train_data2[Information.target] = train_data[Information.target].astype(np.float64)
+        val_data2[Information.features] = val_data[Information.features].astype(np.float64)
+        val_data2[Information.target] = val_data[Information.target].astype(np.float64)
+        if test_data:
+            test_data2[Information.features] = test_data[Information.features].astype(np.float64)
+            test_data2[Information.target] = test_data[Information.target].astype(np.float64)
 
         train_data2.loc[:, Information.features] = self.scaler_x.fit_transform(train_data[Information.features])
         train_data2.loc[:, Information.target] = self.scaler_y.fit_transform(train_data[Information.target])

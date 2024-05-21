@@ -57,7 +57,7 @@ class Machine_Engine:
                    - val_acc (float): The average train accuracy for one epoch.
                    - true_predict_list (dict): A dictionary containing two lists: "true" and "predict".
                                               The "true" list contains the true labels of the train data,
-                                              and the "predict" list contains the predicted labels."""
+                                              and the "predict" list contains the predicted labels.."""
         self.model.train()
         self.model1.train()
         train_loss, train_acc = 0, 0
@@ -65,9 +65,9 @@ class Machine_Engine:
 
         for batch, (x, y) in enumerate(self.train_dataloader):
             x, y = x.to(self.device), y.to(self.device)
-            x1 = x[:, :, 0].unsqueeze(dim=2)
+            x1 = x[:, :, 0].unsqueeze(dim=2).to(self.device)
             y_logit = self.model(x1)
-            x2 = torch.cat((y_logit, x[:, -1, 1:]), dim=1)
+            x2 = torch.cat((y_logit, x[:, -1, 1:]), dim=1).to(self.device)
             y_logit = self.model1(x2)
             loss = loss_fn(y_logit, y)
             train_loss += loss.item()
@@ -172,6 +172,7 @@ class Machine_Engine:
 
         self.device = device
         self.model.to(device)
+        self.model1.to(device)
         for epoch in tqdm(range(1, epochs_num + 1)):
             train_loss, train_acc, true_predict_list = self._train_step(loss_fn=loss_fn, optimizer=optimizer,
                                                                         optimizer1=optimizer1)
@@ -209,7 +210,7 @@ class Machine_Engine:
                 print(f"Early_Stop_at {epoch} Epoch")
                 break
 
-            # if val_loss < 0.0136 and train_acc > 0.9:
+            # if val_loss < 0.0100 and train_acc > 0.9:
             #     # print(
             #     # f"Epoch {epoch} | train: Loss {train_loss:.6f} Accuracy {train_acc:.4f} | validation: Loss {val_loss:.6f} Accuracy {val_acc:.4f}")
             #     print(f"[INFO] great!!!")
