@@ -245,7 +245,7 @@ class Machine_Engine:
         with torch.inference_mode():
             for x, y in self.dataloader.test_dataloader:
                 x, y = x.to(self.device).unsqueeze(1), y.to(self.device).unsqueeze(1)
-                y_logit = self.model(x)
+                y_logit = self.model(x) # Wrong. We have input data here that does not exist in real life.
                 test_loss += Metrics.MSE(y_logit, y, mode="numpy")
                 test_acc += Metrics.r2_score(y_pred=y_logit.detach().cpu().numpy(), y_true=y.detach().cpu().numpy(),
                                              mode="numpy")

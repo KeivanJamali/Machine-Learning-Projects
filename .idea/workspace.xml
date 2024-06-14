@@ -5,44 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dad042aa-356a-437a-acd8-e3457c040c1e" name="Changes" comment="Updating my toolkit.&#10;now is doing everything.">
-      <change afterPath="$PROJECT_DIR$/Project 10 - TimeSeries/00-Exercise.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project 10 - TimeSeries/01-Basics.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project 10 - TimeSeries/raw_data/SPY.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project 10 - TimeSeries/raw_data/airline_passengers.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project 10 - TimeSeries/raw_data/raperrin-freres-monthly-champagne.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project 10 - TimeSeries/raw_data/sp500_close.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project 7 - Health/Engine_old.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project 7 - Health/app3.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project 7 - Health/save/01/DataLoader.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project 7 - Health/save/01/Engine.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project 7 - Health/save/01/Engine_copy.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project 7 - Health/save/01/Engine_old.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project 7 - Health/save/01/Information.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project 7 - Health/save/01/Machine_Model.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project 7 - Health/save/01/Metrics.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project 7 - Health/save/01/Prepare_data.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project 7 - Health/save/01/Results.xlsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project 7 - Health/save/01/app.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project 7 - Health/save/01/app2.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project 7 - Health/save/01/app3.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project 7 - Health/save/01/app4-ARIMA.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project 7 - Health/save/01/app4-ETS.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project 7 - Health/save/01/data/data_complete.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project 7 - Health/save/01/health.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project 7 - Health/save/01/health_prediction.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project 7 - Health/save/01/health_prediction_covid.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project 7 - Health/save/01/health_prediction_doctor.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Project 10 - TimeSeries/04-MachineLearning.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Project 10 - TimeSeries/raw_data/us_macro_quarterly.xlsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/Machine-Learning-Projects.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Machine-Learning-Projects.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project 7 - Health/DataLoader.py" beforeDir="false" afterPath="$PROJECT_DIR$/Project 7 - Health/DataLoader.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vscode/settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/.vscode/settings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project 10 - TimeSeries/02-ARIMA.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Project 10 - TimeSeries/02-ARIMA.ipynb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Project 7 - Health/Engine.py" beforeDir="false" afterPath="$PROJECT_DIR$/Project 7 - Health/Engine.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project 7 - Health/Information.py" beforeDir="false" afterPath="$PROJECT_DIR$/Project 7 - Health/Information.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project 7 - Health/Machine_Model.py" beforeDir="false" afterPath="$PROJECT_DIR$/Project 7 - Health/Machine_Model.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project 7 - Health/app.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Project 7 - Health/app.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project 7 - Health/data/data_complete.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Project 7 - Health/data/data_complete.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project 7 - Health/plot/health.png" beforeDir="false" afterPath="$PROJECT_DIR$/Project 7 - Health/plot/health.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project 7 - Health/plot/health_loss.png" beforeDir="false" afterPath="$PROJECT_DIR$/Project 7 - Health/plot/health_loss.png" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -110,7 +80,7 @@
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.codeium.AppSettingsConfigurable&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -435,6 +405,14 @@
       <workItem from="1717418674007" duration="1430000" />
       <workItem from="1717420239956" duration="211000" />
       <workItem from="1717420469220" duration="946000" />
+      <workItem from="1717764871871" duration="414000" />
+      <workItem from="1717765307509" duration="1000" />
+      <workItem from="1718211313878" duration="95000" />
+      <workItem from="1718211500994" duration="197000" />
+      <workItem from="1718211708313" duration="184000" />
+      <workItem from="1718402542532" duration="179000" />
+      <workItem from="1718402737280" duration="27000" />
+      <workItem from="1718402772825" duration="349000" />
     </task>
     <task id="LOCAL-00001" summary="implement healt model.">
       <option name="closed" value="true" />
