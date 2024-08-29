@@ -5,14 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dad042aa-356a-437a-acd8-e3457c040c1e" name="Changes" comment="Updating my toolkit.&#10;now is doing everything.">
-      <change afterPath="$PROJECT_DIR$/Project 10 - TimeSeries/04-MachineLearning.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project 10 - TimeSeries/raw_data/us_macro_quarterly.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/Machine-Learning-Projects.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Machine-Learning-Projects.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vscode/settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/.vscode/settings.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project 10 - TimeSeries/02-ARIMA.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Project 10 - TimeSeries/02-ARIMA.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project 7 - Health/Engine.py" beforeDir="false" afterPath="$PROJECT_DIR$/Project 7 - Health/Engine.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project 10 - TimeSeries/04-MachineLearning.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Project 10 - TimeSeries/04-MachineLearning.ipynb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -413,6 +406,7 @@
       <workItem from="1718402542532" duration="179000" />
       <workItem from="1718402737280" duration="27000" />
       <workItem from="1718402772825" duration="349000" />
+      <workItem from="1720601759786" duration="13000" />
     </task>
     <task id="LOCAL-00001" summary="implement healt model.">
       <option name="closed" value="true" />
