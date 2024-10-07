@@ -1,0 +1,22 @@
+Ok. Let me explain the input data first.
+Data Explanation:
+I have 3 places. Souxfalss, Anaheim and Chicago. from each, I have 10 samples with different randomness in data. Each sample, has 11 different approaches. these 11 approaches are: 10, 20, 30, 40, 50, 60, 70, 80, 90, 95, 97 percent of missing data.
+
+The data folder structure is:
+"data/(Anaheim, Souxfalls, Chicago)/Scaled/random_(0, 5, 10, 15, 20, 25, 30, 35, 40, 50)/(10, 20, 30, 40, 50, 60, 70, 80, 90, 95, 97)/[here are data]
+
+And in the last folder we have several CSV files. I will explain each of them for you.
+- file1: "at_miss0.[missing_rate]_test_od_matrix.csv"
+-- It contains a matrix that include the test data. This matrix is the full OD matrix that some of the cells have the value "False" which means these are missing. some have the value of "No_connection", that is for the main diameter, as the zones have no flow to itself. The rest are scaled numbers.
+- file2: "at_miss0.[missing_rate]_train_od_matrix.csv"
+-- It's structure is similar to the previous one but with training data.
+- file3: "at_miss0.[missiong_rate]_val_od_matrix.csv"
+-- It's structure is similar to the previous one but with validation data.
+- file4: "attraction.csv"
+-- this file contains the attraction for all the zones in a places. With 2 column. First is the number of zone and the other one is the value of attraction there.
+- file5: "production.csv"
+-- this file contains the production for all the zones in a places. With 2 column. First is the number of zone and the other one is the value of production there.
+- file6: "real_od_matrix.csv"
+-- this file has the complete and True OD matrix. it can be used to find the accuracy of our prediction in the project.
+- file7: "travel_time_matrix.csv"
+-- this file is the same format and size as other matrixes. It includes the travel time between two zones.
